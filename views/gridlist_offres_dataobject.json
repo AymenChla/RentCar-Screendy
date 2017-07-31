@@ -1,9 +1,9 @@
 {
     "properties": {
-        "id": "-742422988",
-        "name": "productsdynamic",
+        "id": "393596356",
+        "name": "gridlist_offres",
         "type": "CUSTOM",
-        "style": "",
+        "style": "pageStyle",
         "parameters": "",
         "cache": "true",
         "cacheDelay": "0",
@@ -44,7 +44,7 @@
             "comment": "",
             "order": "1",
             "dataObject": "",
-            "style": "",
+            "style": "page-container",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},
@@ -102,7 +102,7 @@
                             "comment": "",
                             "order": "1",
                             "dataObject": "",
-                            "style": "reservation_btn",
+                            "style": "myReservation_btn",
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
@@ -142,7 +142,7 @@
                             "dynamic": "false",
                             "custom": {
                                 "internalLink": "967179739",
-                                "parameters": "image=$image;&marque=$marque;&prix=$prix;",
+                                "parameters": "image=$image;&marque=$marque;&prix=$prix;&description=$description;&model=$model;&nbPortes=$nbPortes;&nbPassagers=$nbPassagers;&nbValises=$nbValises;&consommation=$consommation;",
                                 "target": "Blank",
                                 "root": "DataObjectProcudts"
                             },

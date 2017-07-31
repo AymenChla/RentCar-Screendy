@@ -11,7 +11,8 @@ function listItem() {
         finalData = {
             marque: obj[t].marque,
             model: obj[t].model,
-            prix: obj[t].prix
+            prix: obj[t].prix,
+            image: obj[t].image
         };
 
         $('principalpage.myList').addItem(JSON.stringify(finalData));
@@ -30,9 +31,9 @@ function AddUser(len) {
     var pass = $('signup.password').val('value');
 
     // Setting the parameters that will be passed to the method POST
-    //var id = parseInt(len);
-    //var id = len;
-    var param = '{firstName :' + firstName + ',lastName :' + lastName + ',tel :' + tel + ',email :' + email + ',password:' + pass + '}';
+    var id = parseInt(len);
+    var id = len;
+    var param = '{"' + id + '":{firstName :' + firstName + ',lastName :' + lastName + ',tel :' + tel + ',email :' + email + ',password:' + pass + '}}';
 
     // The url of the database created on Firebase in a json format
     var $url = 'https://reservationvehicules-91687.firebaseio.com/clients/.json';
@@ -43,16 +44,17 @@ function AddUser(len) {
     //$.alert("Welcome !");
 
     //delete duplicated data
-    /*var obj2 = JSON.parse($.get($url));
+    var obj2 = JSON.parse($.get($url));
     for (var j in obj2) {
+        js.alert(JSON.stringify(j));
         for (var i in obj2[j]) {
             if (i == id) {
-                $urlfav2 = "https://reservationvehicules-91687.firebaseio.com/clients" + j + "/.json";
+                $urlfav2 = "https://reservationvehicules-91687.firebaseio.com/clients/" + j + "/.json";
                 urljson2 = '{"url":"' + $urlfav2 + '","method":"DELETE","parameters":' + param + ',"headers":"contenttype=application/json","parametersFormat":"JSON",' + '"parametersMarkup":"Body"}';
                 datafav = $.post(urljson2);
             }
         }
-    }*/
+    }
 
 }
 
@@ -87,12 +89,11 @@ function signUp() {
                 }
             }
             if (exist == false) {
-                //var len = JSON.parse($.get("https://reservationvehicules-91687.firebaseio.com/clients/.json")).length;
+                var len = JSON.parse($.get("https://reservationvehicules-91687.firebaseio.com/clients/.json")).length;
                 //$.alert(len);
-                //AddUser(len);
-                AddUser();
+                AddUser(len);
                 js.saveData("client", email);
-                js.navigateToPage('mainpage');
+                js.navigateToPage('gridlist_offres');
             } else
                 $.alert("Email already exist, please change it!");
 

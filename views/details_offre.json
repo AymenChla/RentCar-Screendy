@@ -3,151 +3,408 @@
         "id": "967179739",
         "name": "details_offre",
         "type": "CUSTOM",
-        "style": "",
+        "style": "pageStyle",
         "parameters": "",
-        "layout": "LINEAR",
-        "preloading": "false",
         "cache": "true",
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
         "title": ""
     },
     "components": {
-        "Slideshow_187": {
-            "type": "SLIDESHOW",
+        "Container_164": {
+            "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
             "comment": "",
-            "style": "slide_show",
+            "order": "0",
+            "dataObject": "",
+            "style": "page-container",
             "styleSelection": "",
-            "custom": {
-                "duration": "5",
-                "loop": "FALSE",
-                "showDots": "TRUE",
-                "autoSlide": "TRUE"
-            },
+            "dynamic": "false",
+            "custom": {},
             "events": {},
             "components": {
-                "SlideShowItem_94": {
-                    "type": "SlideShowItem",
+                "Spacer_33": {
+                    "type": "SAUT_DE_LIGNE",
                     "align": "ALIGN_LEFT",
-                    "dynamic": "FALSE",
-                    "dataObject": "",
                     "comment": "",
-                    "style": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "grid_item_spacer",
                     "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Image_561": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "slide_show",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "request.getParameter(image)",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Spacer_350": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "details_infos_spacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Container_272": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "details_first_section",
+                    "styleSelection": "",
+                    "dynamic": "false",
                     "custom": {},
                     "events": {},
                     "components": {
-                        "Image_89": {
+                        "Text_85": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "details_designation",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(marque) - request.getParameter(model)"
+                            },
+                            "events": {}
+                        },
+                        "Text_78": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "details_price",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "price:"
+                            },
+                            "events": {}
+                        },
+                        "Text_252": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "Productslist-priceGrid",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(prix)"
+                            },
+                            "events": {}
+                        }
+                    }
+                },
+                "Image_button_723": {
+                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "4",
+                    "dataObject": "",
+                    "style": "hr_grise",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "line_grise.png",
+                        "srcImgSelection": "",
+                        "async": "false",
+                        "linkType": "LIEN_INTERNE",
+                        "internLink": "-1",
+                        "targetLink": "HTTP",
+                        "externLink": "",
+                        "target": "blank",
+                        "parameters": "",
+                        "frame": "",
+                        "transition": "UIViewAnimationTransitionNone"
+                    },
+                    "events": {}
+                },
+                "Text_211": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "5",
+                    "dataObject": "",
+                    "style": "details_description",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Details"
+                    },
+                    "events": {}
+                },
+                "Spacer_116": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "6",
+                    "dataObject": "",
+                    "style": "grid_item_spacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Container_83": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "7",
+                    "dataObject": "",
+                    "style": "infos_vehicule",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_55": {
                             "type": "PHOTO_ADAPTATIVE",
                             "align": "ALIGN_LEFT",
-                            "dynamic": "FALSE",
-                            "dataObject": "",
                             "comment": "",
-                            "style": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "logo_infos_car",
                             "styleSelection": "",
+                            "dynamic": "false",
                             "custom": {
-                                "srcImg": "$image",
+                                "srcImg": "car-door.png",
                                 "async": "false"
                             },
-                            "events": {},
-                            "order": 0
+                            "events": {}
+                        },
+                        "Text_561": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "infos_vehicule_text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(nbPortes) doors."
+                            },
+                            "events": {}
+                        },
+                        "Image_6": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "logo_infos_car",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "seat-belt.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_148": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "infos_vehicule_text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(nbPassagers) seats."
+                            },
+                            "events": {}
+                        },
+                        "Spacer_457": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "4",
+                            "dataObject": "",
+                            "style": "details_infos_spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        },
+                        "Image_39": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "logo_infos_car",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "suitcase.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_640": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "6",
+                            "dataObject": "",
+                            "style": "infos_vehicule_text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(nbValises) Suitecases."
+                            },
+                            "events": {}
+                        },
+                        "Image_230": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "7",
+                            "dataObject": "",
+                            "style": "logo_infos_car",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "old-petrol-station.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_42": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "8",
+                            "dataObject": "",
+                            "style": "infos_vehicule_text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(consommation) l/km."
+                            },
+                            "events": {}
                         }
+                    }
+                },
+                "Image_327": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "8",
+                    "dataObject": "",
+                    "style": "hr_grise",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "line_grise.png",
+                        "async": "false"
                     },
-                    "order": 0
+                    "events": {}
+                },
+                "Text_9": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "9",
+                    "dataObject": "",
+                    "style": "details_description",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Description"
+                    },
+                    "events": {}
+                },
+                "Spacer_88": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "10",
+                    "dataObject": "",
+                    "style": "grid_item_spacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Text_496": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "11",
+                    "dataObject": "",
+                    "style": "details_description_text",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(description)"
+                    },
+                    "events": {}
+                },
+                "Spacer_273": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "12",
+                    "dataObject": "",
+                    "style": "miniSpacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "External_link_53": {
+                    "type": "LIEN_EXTERNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "13",
+                    "dataObject": "",
+                    "style": "reservation_btn",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "title": "Reservation",
+                        "externLink": "",
+                        "parameters": ""
+                    },
+                    "events": {}
                 }
-            },
-            "order": 0
-        },
-        "Text_85": {
-            "type": "TEXTE",
-            "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
-            "comment": "",
-            "style": "",
-            "styleSelection": "",
-            "custom": {
-                "direction": "left",
-                "text": "request.getParameter(marque)"
-            },
-            "events": {},
-            "order": 1
-        },
-        "Text_78": {
-            "type": "TEXTE",
-            "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
-            "comment": "",
-            "style": "",
-            "styleSelection": "",
-            "custom": {
-                "direction": "left",
-                "text": "price:"
-            },
-            "events": {},
-            "order": 2
-        },
-        "Text_252": {
-            "type": "TEXTE",
-            "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
-            "comment": "",
-            "style": "",
-            "styleSelection": "",
-            "custom": {
-                "direction": "left",
-                "text": "request.getParameter(prix)"
-            },
-            "events": {},
-            "order": 3
-        },
-        "Image_327": {
-            "type": "PHOTO_ADAPTATIVE",
-            "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
-            "comment": "",
-            "style": "",
-            "styleSelection": "",
-            "custom": {
-                "srcImg": "hr.png",
-                "async": "false"
-            },
-            "events": {},
-            "order": 4
-        },
-        "Text_9": {
-            "type": "TEXTE",
-            "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
-            "comment": "",
-            "style": "",
-            "styleSelection": "",
-            "custom": {
-                "direction": "left",
-                "text": "Lorem Ipsum"
-            },
-            "events": {},
-            "order": 5
-        },
-        "Text_496": {
-            "type": "TEXTE",
-            "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
-            "comment": "",
-            "style": "",
-            "styleSelection": "",
-            "custom": {
-                "direction": "left",
-                "text": "Lorem Ipsum"
-            },
-            "events": {},
-            "order": 6
+            }
         }
     },
     "events": {}

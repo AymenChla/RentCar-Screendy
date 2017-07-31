@@ -1,3 +1,6 @@
+.logo_infos_car {
+	width: 10%;
+}
 .page-container {
 	background-image: url(principal_bg.png);
 	background-size: 100%;
@@ -27,10 +30,10 @@
 	background-color: #FFFFFF;
 	border-radius: 5px;
 }
-.Productslist-itemGrid {
-	margin-left: 2%;
-	height: 41%;
-	margin-top: 2%;
+.details_description {
+	margin-left: 5%;
+	width: 90%;
+	font-size: 23px;
 }
 .grid_item_designation {
 	margin-left: 2%;
@@ -40,11 +43,22 @@
 	font-weight: bold;
 	text-align: center;
 }
+.Productslist-itemGrid {
+	margin-left: 2%;
+	height: 41%;
+	margin-top: 2%;
+}
 .container_btns {
 	margin-left: 5%;
 	margin-bottom: 2%;
 	margin-top: 2%;
 	text-align: center;
+}
+.details_description_text {
+	margin-left: 5%;
+	color: #6B6767;
+	width: 90%;
+	font-size: 16px;
 }
 .login_form {
 	height: 44%;
@@ -63,6 +77,14 @@
 	margin-right: 0;
 	height: 129px;
 }
+.myReservation_btn {
+	color: #D45D2F;
+	border: 1px solid rgb(255, 190, 38);
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 45%;
+	text-align: center;
+}
 .hr {
 	background-image: url(hr.png);
 	margin-bottom: 3%;
@@ -72,6 +94,7 @@
 }
 .miniSpacer {
 	height: 5%;
+	background-color: #FFFFFF;
 }
 .Productslist-imageGrid {
 	height: 30%;
@@ -112,11 +135,22 @@
 	padding-bottom: 1%;
 	width: 100%;
 }
+.details_designation {
+	color: #000000;
+	margin-bottom: 1%;
+	width: 100%;
+	font-weight: bold;
+	text-align: left;
+}
 .main_body {
 	height: 100%;
 	width: 100%;
 	background-color: #FFFFFF;
 	margin-top: 1%;
+}
+.details_first_section {
+	margin-left: 5%;
+	width: 90%;
 }
 .header {
 	background-image: url(background.png);
@@ -176,10 +210,27 @@
 	padding-left: 7%;
 	height: 7%;
 }
+.infos_vehicule {
+	margin-left: 5%;
+	width: 90%;
+	text-align: center;
+}
+.hr_grise {
+	margin-left: 5%;
+	background-image: url(line_grise.png);
+	margin-bottom: 3%;
+	width: 90%;
+	margin-top: 5%;
+	text-align: center;
+}
 .link {
 	color: #FFFFFF;
 	font-size: 16px;
 	text-align: center;
+}
+.details_infos_spacer {
+	height: 4px;
+	width: 100%;
 }
 .itemStyle {
 	width: 50%;
@@ -189,7 +240,12 @@
 	width: 10%;
 }
 .Productslist-priceGrid {
-	color: #d45d2f;
+	color: #D45D2F;
+	font-size: 16px;
+	text-align: left;
+}
+.details_price {
+	color: #B5B5B5;
 	font-size: 16px;
 	text-align: left;
 }
@@ -207,6 +263,9 @@
 	width: 12.5%;
 	margin-top: 3%;
 }
+.slide_show {
+	height: 45%;
+}
 .grid_item_spacer {
 	height: 3px;
 	margin-bottom: 1%;
@@ -217,18 +276,21 @@
 	width: 100%;
 	font-size: 100%;
 }
+.infos_vehicule_text {
+	padding-left: 1%;
+	width: 30%;
+	text-align: left;
+}
 .reservation_btn {
-	color: #D45D2F;
-	border: 1px solid rgb(255, 190, 38);
+	margin-left: 25%;
+	color: #FFFFFF;
 	padding-top: 1%;
 	padding-bottom: 1%;
-	width: 45%;
+	width: 50%;
+	background-color: #FFBF25;
 	text-align: center;
 }
 .Productslist-spGrid {
 	height: 3px;
 	width: 44%;
-}
-.slide_show {
-	height: 45%;
 }
