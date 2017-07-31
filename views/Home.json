@@ -1,0 +1,205 @@
+{
+    "properties": {
+        "id": "-487210999",
+        "name": "Home",
+        "type": "DEFAULT",
+        "style": "pageStyle",
+        "parameters": "",
+        "cache": "true",
+        "cacheDelay": 0,
+        "preloading": "false"
+    },
+    "components": {
+        "Image_68": {
+            "type": "PHOTO_ADAPTATIVE",
+            "align": "ALIGN_CENTER",
+            "comment": "",
+            "order": "0",
+            "dataObject": "",
+            "style": "logo",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "srcImg": "temp_logo.png",
+                "async": "false"
+            },
+            "events": {}
+        },
+        "Form_493": {
+            "type": "FORM",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "login_form",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "name": "form",
+                "actionType": "url",
+                "action": "http://screendydev.cloudapp.net/screendy/cloudCode/form/action.jsp",
+                "ParamsSeparator": "",
+                "FieldsSeparator": "",
+                "ActionSeparator": "",
+                "enctype": "text/plain",
+                "Target": "blank",
+                "method": "post",
+                "authType": "none",
+                "headers": "",
+                "username": "",
+                "password": "",
+                "parametersMarkup": "Parameters",
+                "progressTitle": "Sending data",
+                "parametersFormat": "KeyValue",
+                "progressMessage": "Uploading data, please wait ..."
+            },
+            "events": {},
+            "components": {
+                "email": {
+                    "type": "INPUT",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "input_field",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "name": "input",
+                        "type": "text",
+                        "size": "30",
+                        "required": "false",
+                        "value": "",
+                        "alertMessage": "",
+                        "validator": "email",
+                        "keyboard": "email",
+                        "returnKey": "default",
+                        "placeholder": "Email",
+                        "save": "false"
+                    },
+                    "events": {}
+                },
+                "password": {
+                    "type": "INPUT",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "input_field",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "name": "input",
+                        "type": "password",
+                        "size": "30",
+                        "required": "false",
+                        "value": "",
+                        "alertMessage": "",
+                        "validator": "alphanumerique",
+                        "keyboard": "default",
+                        "returnKey": "default",
+                        "placeholder": "Password",
+                        "save": "false"
+                    },
+                    "events": {}
+                },
+                "Submit_384": {
+                    "type": "SUBMIT",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "login_btn",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "name": "",
+                        "value": "Login",
+                        "parameters": ""
+                    },
+                    "events": {
+                        "onClick": "signIn()"
+                    }
+                },
+                "Internal_link_157": {
+                    "type": "LIEN_INTERNE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "simple_text",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "title": "Forgot Password?",
+                        "internLink": "42796419",
+                        "parameters": "",
+                        "Target": "blank",
+                        "frame": "",
+                        "subStringToUnderline": ""
+                    },
+                    "events": {}
+                }
+            }
+        },
+        "Spacer_330": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "2",
+            "dataObject": "",
+            "style": "",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {}
+        },
+        "Image_654": {
+            "type": "PHOTO_ADAPTATIVE",
+            "align": "ALIGN_CENTER",
+            "comment": "",
+            "order": "3",
+            "dataObject": "",
+            "style": "hr",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "srcImg": "hr.png",
+                "async": "false"
+            },
+            "events": {}
+        },
+        "Internal_link_331": {
+            "type": "LIEN_INTERNE",
+            "align": "ALIGN_CENTER",
+            "comment": "",
+            "order": "4",
+            "dataObject": "",
+            "style": "link",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "title": "Sign Up! It’s free and always will be.",
+                "internLink": "-1513407512",
+                "parameters": "",
+                "Target": "blank",
+                "frame": "",
+                "subStringToUnderline": ""
+            },
+            "events": {}
+        },
+        "Spacer_286": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "5",
+            "dataObject": "",
+            "style": "",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {}
+        }
+    },
+    "events": {}
+}

@@ -1,0 +1,236 @@
+{
+    "properties": {
+        "id": "85599344",
+        "name": "principalpage",
+        "type": "CUSTOM",
+        "style": "pageStyle",
+        "parameters": "",
+        "cache": "true",
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
+        "title": ""
+    },
+    "components": {
+        "Text_122": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "0",
+            "dataObject": "",
+            "style": "",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "direction": "left",
+                "text": "Lorem Ipsum"
+            },
+            "events": {}
+        },
+        "Container_11": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_CENTER",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "page-container",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Text_118": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "title_info",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Offres"
+                    },
+                    "events": {}
+                },
+                "Container_871": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "container_btns",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Internal_link_38": {
+                            "type": "LIEN_INTERNE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "offres_btn",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "title": "Offres",
+                                "internLink": "-1",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
+                            },
+                            "events": {}
+                        },
+                        "Internal_link_22": {
+                            "type": "LIEN_INTERNE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "reservation_btn",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "title": "Mes réservations",
+                                "internLink": "-1",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
+                            },
+                            "events": {}
+                        }
+                    }
+                },
+                "myList": {
+                    "type": "LISTE_OBJECT",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "grid_list",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "target": "blank",
+                        "dataObject": "",
+                        "size": "10",
+                        "pullToRefresh": "true",
+                        "filter": "js"
+                    },
+                    "events": {},
+                    "components": {
+                        "itemListObject_470": {
+                            "type": "itemListObject",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "internalLink": "-1",
+                                "parameters": "",
+                                "target": "Blank",
+                                "root": ""
+                            },
+                            "events": {},
+                            "components": {
+                                "Container_9": {
+                                    "type": "COMPOSANT",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "grid_pair_items",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {},
+                                    "events": {},
+                                    "components": {
+                                        "Container_509": {
+                                            "type": "COMPOSANT",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "0",
+                                            "dataObject": "",
+                                            "style": "grid_item",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {},
+                                            "events": {},
+                                            "components": {
+                                                "Image_button_215": {
+                                                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "0",
+                                                    "dataObject": "",
+                                                    "style": "grid_item_image",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "srcImg": "",
+                                                        "srcImgSelection": "",
+                                                        "async": "false",
+                                                        "linkType": "LIEN_INTERNE",
+                                                        "internLink": "-1",
+                                                        "targetLink": "HTTP",
+                                                        "externLink": "",
+                                                        "target": "blank",
+                                                        "parameters": "",
+                                                        "frame": "",
+                                                        "transition": "UIViewAnimationTransitionNone"
+                                                    },
+                                                    "events": {}
+                                                },
+                                                "Text_229": {
+                                                    "type": "TEXTE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "1",
+                                                    "dataObject": "",
+                                                    "style": "grid_price_text",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "direction": "left",
+                                                        "text": "Price: $prix;"
+                                                    },
+                                                    "events": {}
+                                                },
+                                                "Text_145": {
+                                                    "type": "TEXTE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "2",
+                                                    "dataObject": "",
+                                                    "style": "grid_item_designation",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "direction": "left",
+                                                        "text": "$marque; - $model;"
+                                                    },
+                                                    "events": {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "events": {
+        "onLoad": "listItem()"
+    }
+}

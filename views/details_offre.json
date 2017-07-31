@@ -1,0 +1,154 @@
+{
+    "properties": {
+        "id": "967179739",
+        "name": "details_offre",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "layout": "LINEAR",
+        "preloading": "false",
+        "cache": "true",
+        "title": ""
+    },
+    "components": {
+        "Slideshow_187": {
+            "type": "SLIDESHOW",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "slide_show",
+            "styleSelection": "",
+            "custom": {
+                "duration": "5",
+                "loop": "FALSE",
+                "showDots": "TRUE",
+                "autoSlide": "TRUE"
+            },
+            "events": {},
+            "components": {
+                "SlideShowItem_94": {
+                    "type": "SlideShowItem",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_89": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "custom": {
+                                "srcImg": "$image",
+                                "async": "false"
+                            },
+                            "events": {},
+                            "order": 0
+                        }
+                    },
+                    "order": 0
+                }
+            },
+            "order": 0
+        },
+        "Text_85": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "request.getParameter(marque)"
+            },
+            "events": {},
+            "order": 1
+        },
+        "Text_78": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "price:"
+            },
+            "events": {},
+            "order": 2
+        },
+        "Text_252": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "request.getParameter(prix)"
+            },
+            "events": {},
+            "order": 3
+        },
+        "Image_327": {
+            "type": "PHOTO_ADAPTATIVE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "srcImg": "hr.png",
+                "async": "false"
+            },
+            "events": {},
+            "order": 4
+        },
+        "Text_9": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "Lorem Ipsum"
+            },
+            "events": {},
+            "order": 5
+        },
+        "Text_496": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "Lorem Ipsum"
+            },
+            "events": {},
+            "order": 6
+        }
+    },
+    "events": {}
+}

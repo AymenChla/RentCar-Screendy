@@ -1,0 +1,26 @@
+background{
+	1x: 214,378
+	1.5x: 321,567
+	2x: 428,756
+	3x: 642,1134
+}
+
+inputfield{
+	1x: 188,28
+	1.5x: 282,42
+	2x: 376,84
+	3x: 564,84
+}
+font-family: "SinkinSans";
+line{
+
+	1x: 16,1
+}
+
+back_icone{
+	1x: 18,18
+}
+
+image_item{
+	1x: 94,104
+}
