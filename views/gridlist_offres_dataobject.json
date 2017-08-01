@@ -3,7 +3,7 @@
         "id": "393596356",
         "name": "gridlist_offres",
         "type": "CUSTOM",
-        "style": "pageStyle",
+        "style": "",
         "parameters": "",
         "cache": "true",
         "cacheDelay": "0",
@@ -38,13 +38,44 @@
             },
             "events": {}
         },
+        "Container_45": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "topbar",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_664": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "icons-nav",
+                    "styleSelection": "",
+                    "custom": {
+                        "srcImg": "icon-nav.png",
+                        "async": "false"
+                    },
+                    "events": {
+                        "onClick": "showMenu()"
+                    },
+                    "order": 0
+                }
+            },
+            "order": 1
+        },
         "Container_22": {
             "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
             "comment": "",
             "order": "1",
             "dataObject": "",
-            "style": "page-container",
+            "style": "container-body",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},

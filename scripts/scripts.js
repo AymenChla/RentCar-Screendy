@@ -1,3 +1,7 @@
+function showMenu() {
+    js.navigateToPage('menu', 'slideUp', ' ');
+}
+
 function listItem() {
     var url = "https://reservationvehicules-91687.firebaseio.com/vehicules.json";
     var obj = JSON.parse($.get(url));

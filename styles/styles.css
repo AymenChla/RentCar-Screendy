@@ -1,11 +1,6 @@
 .logo_infos_car {
 	width: 10%;
 }
-.page-container {
-	background-image: url(principal_bg.png);
-	background-size: 100%;
-	background-repeat: no-repeat;
-}
 .simple_text {
 	color: #FFFFFF;
 }
@@ -19,6 +14,26 @@
 	width: 100%;
 	font-size: 20px;
 	text-align: center;
+}
+.topbar {
+	height: 10%;
+	margin-bottom: 2%;
+	width: 100%;
+	background-image: url(background.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.icons-nav {
+	border-radius: 0;
+	width: 21px;
+	margin-left: 5%;
+	border-style: none;
+	padding-right: 0;
+	padding-top: 0;
+	margin-top: 3%;
+	padding-bottom: 0;
+	padding-left: 0;
+	height: 21px;
 }
 .Productslist-list {
 	margin-left: 2%;
@@ -94,7 +109,6 @@
 }
 .miniSpacer {
 	height: 5%;
-	background-color: #FFFFFF;
 }
 .Productslist-imageGrid {
 	height: 30%;
@@ -282,15 +296,19 @@
 	text-align: left;
 }
 .reservation_btn {
-	margin-left: 25%;
+	margin-left: 5%;
 	color: #FFFFFF;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	width: 50%;
 	background-color: #FFBF25;
 	text-align: center;
+	font-size: 18px;
 }
 .Productslist-spGrid {
 	height: 3px;
 	width: 44%;
+}
+.container-body {
+	background-color: #ffffff;
 }
