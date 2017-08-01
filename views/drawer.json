@@ -1,0 +1,90 @@
+{
+    "properties": {
+        "id": "-1042094507",
+        "name": "drawer",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "layout": "LINEAR",
+        "preloading": "false",
+        "cache": "true",
+        "title": ""
+    },
+    "components": {
+        "Drawer_302": {
+            "type": "Drawer",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "initialPage": "85599344",
+                "orientation": "left"
+            },
+            "events": {},
+            "components": {
+                "drawerContainer_204": {
+                    "type": "drawerContainer",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Text_185": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Menu 1"
+                            },
+                            "events": {},
+                            "order": 0
+                        }
+                    },
+                    "order": 0
+                },
+                "DrawerHeader_359": {
+                    "type": "DrawerHeader",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "DrawerIcon_311": {
+                            "type": "DrawerIcon",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "logo_infos_car",
+                            "styleSelection": "",
+                            "custom": {
+                                "icon": "suitcase.png"
+                            },
+                            "events": {},
+                            "order": 1
+                        }
+                    },
+                    "order": 1
+                }
+            },
+            "order": 0
+        }
+    },
+    "events": {}
+}

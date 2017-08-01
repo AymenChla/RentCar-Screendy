@@ -9,14 +9,20 @@ function listItem() {
     //$.alert(JSON.stringify(obj, null, 2));
     var finalData = {};
 
-    //$('principalpage.myList').clear();
+    $('principalpage.myList').clear();
 
     for (var t = 0; t < obj.length; t++) {
         finalData = {
             marque: obj[t].marque,
             model: obj[t].model,
             prix: obj[t].prix,
-            image: obj[t].image
+            image: obj[t].image,
+            description: obj[t].description,
+            categorie: obj[t].categorie,
+            nbValises: obj[t].nbValises,
+            nbPassagers: obj[t].nbPassagers,
+            consommation: obj[t].consommation,
+            nbPortes: obj[t].nbPortes
         };
 
         $('principalpage.myList').addItem(JSON.stringify(finalData));

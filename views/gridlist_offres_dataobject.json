@@ -41,39 +41,39 @@
         "Container_45": {
             "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
             "comment": "",
+            "order": "1",
+            "dataObject": "",
             "style": "topbar",
             "styleSelection": "",
+            "dynamic": "false",
             "custom": {},
             "events": {},
             "components": {
                 "Image_664": {
                     "type": "PHOTO_ADAPTATIVE",
                     "align": "ALIGN_LEFT",
-                    "dynamic": "FALSE",
-                    "dataObject": "",
                     "comment": "",
+                    "order": "0",
+                    "dataObject": "",
                     "style": "icons-nav",
                     "styleSelection": "",
+                    "dynamic": "false",
                     "custom": {
                         "srcImg": "icon-nav.png",
                         "async": "false"
                     },
                     "events": {
                         "onClick": "showMenu()"
-                    },
-                    "order": 0
+                    }
                 }
-            },
-            "order": 1
+            }
         },
         "Container_22": {
             "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
             "comment": "",
-            "order": "1",
+            "order": "2",
             "dataObject": "",
             "style": "container-body",
             "styleSelection": "",

@@ -15,22 +15,24 @@
         "Container_125": {
             "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
-            "dynamic": "FALSE",
-            "dataObject": "",
             "comment": "",
+            "order": "0",
+            "dataObject": "",
             "style": "",
             "styleSelection": "",
+            "dynamic": "false",
             "custom": {},
             "events": {},
             "components": {
                 "Image_button_482": {
                     "type": "LIEN_PHOTO_ADAPTATIVE",
                     "align": "ALIGN_LEFT",
-                    "dynamic": "FALSE",
-                    "dataObject": "",
                     "comment": "",
+                    "order": "0",
+                    "dataObject": "",
                     "style": "icons-nav",
                     "styleSelection": "",
+                    "dynamic": "false",
                     "custom": {
                         "srcImg": "back_icon.png",
                         "srcImgSelection": "",
@@ -44,11 +46,9 @@
                         "frame": "",
                         "transition": "UIViewAnimationTransitionNone"
                     },
-                    "events": {},
-                    "order": 0
+                    "events": {}
                 }
-            },
-            "order": 0
+            }
         },
         "Spacer_402": {
             "type": "SAUT_DE_LIGNE",
@@ -275,7 +275,7 @@
             "type": "SAUT_DE_LIGNE",
             "align": "ALIGN_LEFT",
             "comment": "",
-            "order": "6",
+            "order": "4",
             "dataObject": "",
             "style": "miniSpacer",
             "styleSelection": "",
@@ -287,7 +287,7 @@
             "type": "PHOTO_ADAPTATIVE",
             "align": "ALIGN_CENTER",
             "comment": "",
-            "order": "4",
+            "order": "5",
             "dataObject": "",
             "style": "hr",
             "styleSelection": "",
@@ -302,7 +302,7 @@
             "type": "LIEN_INTERNE",
             "align": "ALIGN_CENTER",
             "comment": "",
-            "order": "5",
+            "order": "6",
             "dataObject": "",
             "style": "link",
             "styleSelection": "",

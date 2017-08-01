@@ -3,7 +3,7 @@
         "id": "85599344",
         "name": "principalpage",
         "type": "CUSTOM",
-        "style": "pageStyle",
+        "style": "",
         "parameters": "",
         "cache": "true",
         "cacheDelay": "0",
@@ -12,20 +12,34 @@
         "title": ""
     },
     "components": {
-        "Text_122": {
-            "type": "TEXTE",
+        "Container_282": {
+            "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
             "comment": "",
             "order": "0",
             "dataObject": "",
-            "style": "",
+            "style": "topbar",
             "styleSelection": "",
             "dynamic": "false",
-            "custom": {
-                "direction": "left",
-                "text": "Lorem Ipsum"
-            },
-            "events": {}
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_21": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "icons-nav",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "icon-nav.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                }
+            }
         },
         "Container_11": {
             "type": "COMPOSANT",
@@ -33,7 +47,7 @@
             "comment": "",
             "order": "1",
             "dataObject": "",
-            "style": "page-container",
+            "style": "container-body",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},
@@ -76,7 +90,7 @@
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "title": "Offres",
+                                "title": "Offers",
                                 "internLink": "-1",
                                 "parameters": "",
                                 "Target": "blank",
@@ -91,11 +105,11 @@
                             "comment": "",
                             "order": "1",
                             "dataObject": "",
-                            "style": "reservation_btn",
+                            "style": "myReservation_btn",
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "title": "Mes réservations",
+                                "title": "Reservations",
                                 "internLink": "-1",
                                 "parameters": "",
                                 "Target": "blank",
@@ -112,7 +126,7 @@
                     "comment": "",
                     "order": "2",
                     "dataObject": "",
-                    "style": "grid_list",
+                    "style": "Productslist-list",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
@@ -124,9 +138,9 @@
                     },
                     "events": {},
                     "components": {
-                        "itemListObject_470": {
+                        "itemListObject_28": {
                             "type": "itemListObject",
-                            "align": "ALIGN_CENTER",
+                            "align": "ALIGN_LEFT",
                             "comment": "",
                             "order": "0",
                             "dataObject": "",
@@ -134,14 +148,14 @@
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "internalLink": "-1",
-                                "parameters": "",
+                                "internalLink": "967179739",
+                                "parameters": "image=$image;&marque=$marque;&prix=$prix;&description=$description;&model=$model;&nbPortes=$nbPortes;&nbPassagers=$nbPassagers;&nbValises=$nbValises;&consommation=$consommation;",
                                 "target": "Blank",
                                 "root": ""
                             },
                             "events": {},
                             "components": {
-                                "Container_9": {
+                                "Container_301": {
                                     "type": "COMPOSANT",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
@@ -153,69 +167,75 @@
                                     "custom": {},
                                     "events": {},
                                     "components": {
-                                        "Container_509": {
-                                            "type": "COMPOSANT",
+                                        "Image_307": {
+                                            "type": "PHOTO_ADAPTATIVE",
                                             "align": "ALIGN_LEFT",
                                             "comment": "",
                                             "order": "0",
                                             "dataObject": "",
-                                            "style": "grid_item",
+                                            "style": "grid_item_image",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "srcImg": "$image;",
+                                                "async": "false"
+                                            },
+                                            "events": {}
+                                        },
+                                        "Container_7": {
+                                            "type": "COMPOSANT",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "1",
+                                            "dataObject": "",
+                                            "style": "item_infos",
                                             "styleSelection": "",
                                             "dynamic": "false",
                                             "custom": {},
                                             "events": {},
                                             "components": {
-                                                "Image_button_215": {
-                                                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                                                "Text_0": {
+                                                    "type": "TEXTE",
                                                     "align": "ALIGN_LEFT",
                                                     "comment": "",
                                                     "order": "0",
                                                     "dataObject": "",
-                                                    "style": "grid_item_image",
+                                                    "style": "price_info",
                                                     "styleSelection": "",
                                                     "dynamic": "false",
                                                     "custom": {
-                                                        "srcImg": "",
-                                                        "srcImgSelection": "",
-                                                        "async": "false",
-                                                        "linkType": "LIEN_INTERNE",
-                                                        "internLink": "-1",
-                                                        "targetLink": "HTTP",
-                                                        "externLink": "",
-                                                        "target": "blank",
-                                                        "parameters": "",
-                                                        "frame": "",
-                                                        "transition": "UIViewAnimationTransitionNone"
+                                                        "direction": "left",
+                                                        "text": "$prix; MAD/jour"
                                                     },
                                                     "events": {}
                                                 },
-                                                "Text_229": {
+                                                "Text_10": {
                                                     "type": "TEXTE",
                                                     "align": "ALIGN_LEFT",
                                                     "comment": "",
                                                     "order": "1",
                                                     "dataObject": "",
-                                                    "style": "grid_price_text",
+                                                    "style": "categorie_info",
                                                     "styleSelection": "",
                                                     "dynamic": "false",
                                                     "custom": {
                                                         "direction": "left",
-                                                        "text": "Price: $prix;"
+                                                        "text": "$categorie;"
                                                     },
                                                     "events": {}
                                                 },
-                                                "Text_145": {
+                                                "Text_320": {
                                                     "type": "TEXTE",
                                                     "align": "ALIGN_LEFT",
                                                     "comment": "",
                                                     "order": "2",
                                                     "dataObject": "",
-                                                    "style": "grid_item_designation",
+                                                    "style": "additional_info",
                                                     "styleSelection": "",
                                                     "dynamic": "false",
                                                     "custom": {
                                                         "direction": "left",
-                                                        "text": "$marque; - $model;"
+                                                        "text": "$nbPassagers; passagers, $nbValises; valises"
                                                     },
                                                     "events": {}
                                                 }
@@ -226,6 +246,18 @@
                             }
                         }
                     }
+                },
+                "Spacer_102": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
                 }
             }
         }
