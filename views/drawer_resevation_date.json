@@ -1,0 +1,74 @@
+{
+    "properties": {
+        "id": "-1552240793",
+        "name": "reservation_date_drawer",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "layout": "LINEAR",
+        "preloading": "false",
+        "cache": "true",
+        "title": ""
+    },
+    "components": {
+        "Drawer_71": {
+            "type": "Drawer",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {
+                "initialPage": "133139147",
+                "orientation": "left"
+            },
+            "events": {},
+            "components": {
+                "drawerContainer_188": {
+                    "type": "drawerContainer",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "custom": {},
+                    "events": {},
+                    "components": {},
+                    "order": 0
+                },
+                "DrawerHeader_23": {
+                    "type": "DrawerHeader",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "drawer_header",
+                    "styleSelection": "",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "DrawerIcon_73": {
+                            "type": "DrawerIcon",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "custom": {
+                                "icon": ""
+                            },
+                            "events": {},
+                            "order": 1
+                        }
+                    },
+                    "order": 1
+                }
+            },
+            "order": 0
+        }
+    },
+    "events": {}
+}

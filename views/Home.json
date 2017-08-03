@@ -1,6 +1,6 @@
 {
     "properties": {
-        "id": "-487210999",
+        "id": "1634549901",
         "name": "Home",
         "type": "DEFAULT",
         "style": "pageStyle",
@@ -20,10 +20,12 @@
             "styleSelection": "",
             "dynamic": "false",
             "custom": {
-                "srcImg": "temp_logo.png",
+                "srcImg": "logo.png",
                 "async": "false"
             },
-            "events": {}
+            "events": {
+                "onClick": "text_val()"
+            }
         },
         "Form_493": {
             "type": "FORM",
@@ -118,21 +120,33 @@
                         "parameters": ""
                     },
                     "events": {
-                        "onClick": "signIn()"
+                        "onClick": "forTest()"
                     }
+                },
+                "Spacer_86": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "grid_item_spacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
                 },
                 "Internal_link_157": {
                     "type": "LIEN_INTERNE",
                     "align": "ALIGN_CENTER",
                     "comment": "",
-                    "order": "3",
+                    "order": "4",
                     "dataObject": "",
                     "style": "simple_text",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
                         "title": "Forgot Password?",
-                        "internLink": "-1042094507",
+                        "internLink": "85599344",
                         "parameters": "",
                         "Target": "blank",
                         "frame": "",
@@ -180,7 +194,7 @@
             "dynamic": "false",
             "custom": {
                 "title": "Sign Up! It’s free and always will be.",
-                "internLink": "-1513407512",
+                "internLink": "-1489903249",
                 "parameters": "",
                 "Target": "blank",
                 "frame": "",

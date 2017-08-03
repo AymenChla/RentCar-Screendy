@@ -1,5 +1,7 @@
 .logo_infos_car {
 	width: 10%;
+	height: 34px;
+	background-image: url(arrow-point-to-right.png);
 }
 .additional_info {
 	color: #ACACB0;
@@ -82,7 +84,7 @@
 	border: 1px solid rgb(255, 190, 38);
 	padding-top: 2%;
 	padding-bottom: 2%;
-	width: 47%;
+	width: 48%;
 	font-weight: bold;
 	text-align: center;
 }
@@ -141,12 +143,9 @@
 	width: 100%;
 }
 .topbar {
-	height: 10%;
 	background-image: url(background.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	margin-bottom: 2%;
-	width: 100%;
 }
 .details_designation {
 	color: #000000;
@@ -156,16 +155,10 @@
 	text-align: left;
 }
 .icons-nav {
-	border-radius: 0;
-	width: 21px;
 	margin-left: 5%;
-	border-style: none;
-	padding-right: 0;
-	padding-top: 0;
-	margin-top: 3%;
-	padding-bottom: 0;
-	padding-left: 0;
-	height: 21px;
+	margin-top: 2%;
+	width: 30px;
+	height: 30px;
 }
 .main_body {
 	height: 100%;
@@ -201,6 +194,14 @@
 }
 .login_btn {
 	height: 8%;
+	color: #FFFFFF;
+	width: 86%;
+	background-color: #FFBE26;
+	border-style: none;
+	text-align: center;
+}
+.signup_btn {
+	height: 7%;
 	color: #FFFFFF;
 	width: 86%;
 	background-color: #FFBE26;
@@ -280,10 +281,10 @@
 }
 .offres_btn {
 	color: #000000;
-	border: 1px solid rgb(255, 190, 38);
 	padding-top: 2%;
 	padding-bottom: 2%;
-	width: 46%;
+	width: 48%;
+	border: 1px solid rgb(255, 190, 38);
 	background-color: #F5F5F5;
 	font-weight: bold;
 	text-align: center;
@@ -332,4 +333,77 @@
 .Productslist-spGrid {
 	height: 3px;
 	width: 44%;
+}
+.drawer_header {
+	background-repeat: no-repeat;
+	background-color: #de7143;
+	border-bottom: 1px solid #d95e29;
+}
+.date_chooser {
+	width: 42%;
+	margin-right: 4%;
+	margin-left: 8%;
+	border: none;
+	border-bottom: 1px solid #000000;
+}
+.container_date_time {
+	margin-left: 2%;
+}
+.time_chooser {
+	width: 28%;
+	border: none;
+	border-bottom: 1px solid #000000;
+}
+.reservation_date_page {
+	background-color: #b04d4d;
+}
+.title_chooser {
+	color: #454545;
+	margin-left: 2%;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: 700;
+}
+.showoffers_btn {
+	background-color: #ffbe26;
+}
+.next_icon {
+	width: 20px;
+	height: 20px;
+}
+.show_offer_text {
+	color: #ffffff;
+	text-align: center;
+}
+.container_next {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: #ffbe26;
+	width: 43%;
+	margin-left: 19%;
+}
+.text_icon {
+	width: 40%;
+	margin-left: 5%;
+}
+.tab_selected {
+	width: 50%;
+	background-color: #de7143;
+	color: #ffffff;
+	text-align: center;
+	border-bottom: 2px solid #ffbe26;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.tab_unselected {
+	width: 50%;
+	background-color: #de7143;
+	color: #bfbfbf;
+	text-align: center;
+	border-bottom: 2px solid #de7143;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.tab_header {
+	padding-top: 0px;
 }

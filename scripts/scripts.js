@@ -1,15 +1,43 @@
+function defaultDateTime() {
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    var current = dd + '/' + mm + '/' + yyyy;
+
+    $('reservation_date.Text_21').remove();
+
+}
+
 function showMenu() {
     js.navigateToPage('menu', 'slideUp', ' ');
 }
 
+function tessst() {
+    $('reservation_date_form.Text_20').val('text', 'bonjour');
+}
+
+function getCurrentDate() {
+    var date = new Date();
+    js.alert(date);
+}
+
 function listItem() {
-    var url = "https://reservationvehicules-91687.firebaseio.com/vehicules.json";
+    var url = "https://reservationvehicules-91687.firebaseio.com/vehicules/.json";
     var obj = JSON.parse($.get(url));
 
     //$.alert(JSON.stringify(obj, null, 2));
     var finalData = {};
 
-    $('principalpage.myList').clear();
+    //$('principalpage.myList').clear();
 
     for (var t = 0; t < obj.length; t++) {
         finalData = {
@@ -34,11 +62,11 @@ function listItem() {
 function AddUser(len) {
     // Getting the data from our objects
 
-    var firstName = $('signup.firstName').val('value');
-    var lastName = $('signup.lastName').val('value');
-    var email = $('signup.email').val('value');
-    var tel = $('signup.tel').val('value');
-    var pass = $('signup.password').val('value');
+    var firstName = $('register.firstName').val('value');
+    var lastName = $('register.lastName').val('value');
+    var email = $('register.email').val('value');
+    var tel = $('register.tel').val('value');
+    var pass = $('register.password').val('value');
 
     // Setting the parameters that will be passed to the method POST
     var id = parseInt(len);
@@ -56,7 +84,7 @@ function AddUser(len) {
     //delete duplicated data
     var obj2 = JSON.parse($.get($url));
     for (var j in obj2) {
-        js.alert(JSON.stringify(j));
+        //js.alert(JSON.stringify(j));
         for (var i in obj2[j]) {
             if (i == id) {
                 $urlfav2 = "https://reservationvehicules-91687.firebaseio.com/clients/" + j + "/.json";
@@ -70,12 +98,13 @@ function AddUser(len) {
 
 function signUp() {
 
-    var firstName = $('signup.firstName').val('value');
-    var lastName = $('signup.lastName').val('value');
-    var email = $('signup.email').val('value');
-    var tel = $('signup.tel').val('value');
-    var pass = $('signup.password').val('value');
-    var passConfirm = $('signup.passwordConfirm').val('value');
+    var firstName = $('register.firstName').val('value');
+    $.alert(firstName);
+    var lastName = $('register.lastName').val('value');
+    var email = $('register.email').val('value');
+    var tel = $('register.tel').val('value');
+    var pass = $('register.password').val('value');
+    var passConfirm = $('register.passwordConfirm').val('value');
 
 
     var $url = "https://reservationvehicules-91687.firebaseio.com/clients/.json";
@@ -102,13 +131,18 @@ function signUp() {
                 var len = JSON.parse($.get("https://reservationvehicules-91687.firebaseio.com/clients/.json")).length;
                 //$.alert(len);
                 AddUser(len);
-                js.saveData("client", email);
+
+                js.saveData("idClient", len)
                 js.navigateToPage('gridlist_offres');
             } else
                 $.alert("Email already exist, please change it!");
 
         }
     }
+}
+
+function forTest() {
+    js.navigateToPage('reservation_date_drawer');
 }
 
 function signIn() {
@@ -138,11 +172,11 @@ function onSignInSuccess(data) {
                 break;
             }
         }
-
+        $.alert(index);
         $.hideLoader();
         if (found == true) {
-            js.saveData("client", email);
-            js.navigateToPage('mainpage');
+            js.saveData("idClient", index);
+            js.navigateToPage('drawer_reservation_date');
         } else {
             $.alert("Email or Password incorrect !");
         }

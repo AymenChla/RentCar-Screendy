@@ -1,0 +1,370 @@
+{
+    "properties": {
+        "id": "-2051992263",
+        "name": "reservation_date",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "layout": "LINEAR",
+        "preloading": "false",
+        "cache": "true",
+        "title": ""
+    },
+    "components": {
+        "Container_339": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "tab_header",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Internal_link_141": {
+                    "type": "LIEN_INTERNE",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "tab_selected",
+                    "styleSelection": "",
+                    "custom": {
+                        "title": "OFFERS",
+                        "internLink": "-1",
+                        "parameters": "",
+                        "Target": "blank",
+                        "frame": "",
+                        "subStringToUnderline": ""
+                    },
+                    "events": {},
+                    "order": 0
+                },
+                "Internal_link_675": {
+                    "type": "LIEN_INTERNE",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "tab_unselected",
+                    "styleSelection": "",
+                    "custom": {
+                        "title": "RESERVATIONS",
+                        "internLink": "-1",
+                        "parameters": "",
+                        "Target": "blank",
+                        "frame": "",
+                        "subStringToUnderline": ""
+                    },
+                    "events": {},
+                    "order": 1
+                }
+            },
+            "order": 0
+        },
+        "Spacer_330": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "order": 1
+        },
+        "Text_406": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "title_chooser",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "PICKUP"
+            },
+            "events": {},
+            "order": 1
+        },
+        "Spacer_140": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "miniSpacer",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "order": 2
+        },
+        "Container_331": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "container_date_time",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_44": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "logo_infos_car",
+                    "styleSelection": "",
+                    "custom": {
+                        "srcImg": "event-calendar-symbol.png",
+                        "async": "false"
+                    },
+                    "events": {},
+                    "order": 0
+                },
+                "pickup_date": {
+                    "type": "SELECT",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "date_chooser",
+                    "styleSelection": "",
+                    "custom": {
+                        "name": "",
+                        "type": "DATE",
+                        "DefaultValue": "",
+                        "required": "false",
+                        "disabled": "false",
+                        "multiple": "false",
+                        "placeholder": "Pickup date",
+                        "DataObjectName": ""
+                    },
+                    "events": {},
+                    "components": {},
+                    "order": 0
+                },
+                "pickup_time": {
+                    "type": "SELECT",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "time_chooser",
+                    "styleSelection": "",
+                    "custom": {
+                        "name": "",
+                        "type": "TIME",
+                        "DefaultValue": "",
+                        "required": "false",
+                        "disabled": "false",
+                        "multiple": "false",
+                        "placeholder": "Pickup time",
+                        "DataObjectName": ""
+                    },
+                    "events": {},
+                    "components": {},
+                    "order": 1
+                }
+            },
+            "order": 2
+        },
+        "Spacer_20": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "miniSpacer",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "order": 5
+        },
+        "Text_21": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "title_chooser",
+            "styleSelection": "",
+            "custom": {
+                "direction": "left",
+                "text": "RETURN"
+            },
+            "events": {},
+            "order": 3
+        },
+        "Spacer_368": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "miniSpacer",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "order": 6
+        },
+        "Container_69": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "container_date_time",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_815": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "logo_infos_car",
+                    "styleSelection": "",
+                    "custom": {
+                        "srcImg": "event-calendar-symbol.png",
+                        "async": "false"
+                    },
+                    "events": {},
+                    "order": 0
+                },
+                "return_date": {
+                    "type": "SELECT",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "date_chooser",
+                    "styleSelection": "",
+                    "custom": {
+                        "name": "",
+                        "type": "DATE",
+                        "DefaultValue": "",
+                        "required": "false",
+                        "disabled": "false",
+                        "multiple": "false",
+                        "placeholder": "Return date",
+                        "DataObjectName": ""
+                    },
+                    "events": {},
+                    "components": {},
+                    "order": 0
+                },
+                "return_time": {
+                    "type": "SELECT",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "time_chooser",
+                    "styleSelection": "",
+                    "custom": {
+                        "name": "",
+                        "type": "TIME",
+                        "DefaultValue": "",
+                        "required": "false",
+                        "disabled": "false",
+                        "multiple": "false",
+                        "placeholder": "Return time",
+                        "DataObjectName": ""
+                    },
+                    "events": {},
+                    "components": {},
+                    "order": 0
+                }
+            },
+            "order": 4
+        },
+        "Spacer_43": {
+            "type": "SAUT_DE_LIGNE",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "",
+            "styleSelection": "",
+            "custom": {},
+            "events": {},
+            "order": 9
+        },
+        "Container_504": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "dynamic": "FALSE",
+            "dataObject": "",
+            "comment": "",
+            "style": "container_next",
+            "styleSelection": "",
+            "custom": {},
+            "events": {
+                "onClick": "defaultDateTime()"
+            },
+            "components": {
+                "Container_567": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "dynamic": "FALSE",
+                    "dataObject": "",
+                    "comment": "",
+                    "style": "text_icon",
+                    "styleSelection": "",
+                    "custom": {},
+                    "events": {
+                        "onClick": "defaultDateTime()"
+                    },
+                    "components": {
+                        "Text_0": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "show_offer_text",
+                            "styleSelection": "",
+                            "custom": {
+                                "direction": "left",
+                                "text": "SHOW OFFERS"
+                            },
+                            "events": {
+                                "onClick": "defaultDateTime()"
+                            },
+                            "order": 0
+                        },
+                        "Image_137": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "next_icon",
+                            "styleSelection": "",
+                            "custom": {
+                                "srcImg": "arrow-point-to-right.png",
+                                "async": "false"
+                            },
+                            "events": {},
+                            "order": 1
+                        }
+                    },
+                    "order": 3
+                }
+            },
+            "order": 2
+        }
+    },
+    "events": {
+        "onLoad": ""
+    }
+}
