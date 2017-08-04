@@ -1,34 +1,132 @@
+<<<<<<< Updated upstream
 .logo_infos_car {
 	width: 10%;
+=======
+.hr {
+	background-image: url(hr.png);
+	margin-bottom: 3%;
+	width: 80%;
+	margin-top: 5%;
+	text-align: center;
+>>>>>>> Stashed changes
 }
-.additional_info {
-	color: #ACACB0;
-	width: 55%;
-	font-size: 16px;
+.drawer_header {
+	border-bottom: 1px solid rgb(217, 94, 41);
+	background-repeat: no-repeat;
+	background-color: #DE7143;
 }
-.simple_text {
+.grid_list {
+	height: 88%;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+.itemStyle {
+	width: 50%;
+}
+.title {
 	color: #FFFFFF;
+	margin-bottom: 3%;
+	font-weight: bold;
+	font-size: 15px;
 }
-.pageStyle {
+.show_offer_text {
+	color: #FFFFFF;
+	text-align: center;
+}
+.input_field_min {
+	width: 80%;
+	background-image: url(input_bg.png);
+	color: #FFFFFF;
+	border-style: none;
+	margin-bottom: 2%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-left: 7%;
+	height: 6%;
+}
+.date_chooser {
+	border-bottom: 1px solid rgb(0, 0, 0);
+	margin-left: 8%;
+	margin-right: 4%;
+	border: none;
+	width: 42%;
+}
+.topbar {
 	background-image: url(background.png);
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
-.title_info {
-	color: #6B6B6B;
-	width: 100%;
-	font-size: 20px;
+.tab_selected {
+	border-bottom: 2px solid rgb(255, 190, 38);
+	color: #FFFFFF;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	width: 50%;
+	background-color: #DE7143;
 	text-align: center;
 }
-.Productslist-list {
-	margin-left: 2%;
-	height: 89%;
-	margin-right: 2%;
+.price_info {
+	color: #D45D2F;
+	width: 55%;
+}
+.signup_btn {
+	height: 7%;
+	color: #FFFFFF;
+	width: 86%;
+	background-color: #FFBE26;
+	border-style: none;
+	text-align: center;
+}
+.simple_text {
+	color: #FFFFFF;
+}
+.registre_form {
+	height: 58%;
+	width: 100%;
+	font-size: 100%;
+}
+.details_first_section {
+	margin-left: 5%;
+	width: 90%;
+}
+.infos_vehicule_text {
+	padding-left: 1%;
+	width: 30%;
+	text-align: left;
+}
+.grid_price_text {
+	color: #B5B5B5;
+	font-size: 16px;
+	text-align: right;
+}
+.container_next {
+	margin-left: 19%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	width: 96%;
-	background-color: #FFFFFF;
-	border-radius: 5px;
+	width: 43%;
+	background-color: #FFBE26;
+}
+.login_form {
+	height: 44%;
+	width: 100%;
+	font-size: 100%;
+}
+.back_arrow {
+	margin-left: 5%;
+	height: 5%;
+	width: 12.5%;
+	margin-top: 3%;
+}
+.categorie_info {
+	color: #000000;
+	width: 55%;
+	font-weight: bold;
+	font-size: 16px;
+}
+.grid_item_spacer {
+	height: 3px;
+	margin-bottom: 1%;
+	width: 43%;
 }
 .details_description {
 	margin-left: 5%;
@@ -43,9 +141,20 @@
 	font-weight: bold;
 	text-align: center;
 }
+.additional_info {
+	color: #ACACB0;
+	width: 55%;
+	font-size: 16px;
+}
 .Productslist-itemGrid {
 	margin-left: 2%;
 	height: 41%;
+	margin-top: 2%;
+}
+.icons-nav {
+	margin-left: 5%;
+	height: 30px;
+	width: 30px;
 	margin-top: 2%;
 }
 .container_btns {
@@ -54,16 +163,77 @@
 	margin-top: 2%;
 	text-align: center;
 }
-.details_description_text {
-	margin-left: 5%;
-	color: #6B6767;
-	width: 90%;
-	font-size: 16px;
+.reservation_date_page {
+	background-color: #B04D4D;
 }
-.login_form {
-	height: 44%;
+.Productslist-titleGrid {
+	color: #000000;
+	width: 44%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}
+.infos_vehicule {
+	margin-left: 5%;
+	width: 90%;
+	text-align: center;
+}
+.grid_item {
+	margin-left: 6%;
+	height: 198px;
+	width: 134.4px;
+	background-color: #FFFFFF;
+	margin-top: 0;
+	text-align: center;
+}
+.Productslist-list {
+	margin-left: 2%;
+	height: 89%;
+	margin-right: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 96%;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+}
+.header {
+	background-image: url(background.png);
+	background-repeat: no-repeat;
 	width: 100%;
-	font-size: 100%;
+}
+.time_chooser {
+	border-bottom: 1px solid rgb(0, 0, 0);
+	border: none;
+	width: 28%;
+}
+.container_price {
+	text-align: center;
+}
+.container-body {
+	background-color: #FFFFFF;
+}
+.input_field {
+	width: 80%;
+	background-image: url(input_bg.png);
+	color: #FFFFFF;
+	border-style: none;
+	margin-bottom: 2%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-left: 7%;
+	height: 7%;
+}
+.next_icon {
+	height: 20px;
+	width: 20px;
+}
+.login_btn {
+	height: 8%;
+	color: #FFFFFF;
+	width: 86%;
+	background-color: #FFBE26;
+	border-style: none;
+	text-align: center;
 }
 .grid_item_image {
 	width: 35%;
@@ -77,6 +247,7 @@
 	margin-right: 0;
 	height: 129px;
 }
+<<<<<<< Updated upstream
 .myReservation_btn {
 	color: #D45D2F;
 	border: 1px solid rgb(255, 190, 38);
@@ -85,31 +256,29 @@
 	width: 47%;
 	font-weight: bold;
 	text-align: center;
-}
-.categorie_info {
-	color: #000000;
-	width: 55%;
-	font-weight: bold;
-	font-size: 16px;
-}
-.hr {
-	background-image: url(hr.png);
-	margin-bottom: 3%;
-	width: 80%;
-	margin-top: 5%;
-	text-align: center;
-}
-.miniSpacer {
-	height: 5%;
-}
-.Productslist-imageGrid {
-	height: 30%;
-	width: 44%;
-}
+=======
 .logo {
 	height: 10.63%;
 	margin-bottom: 5%;
 	margin-top: 13%;
+>>>>>>> Stashed changes
+}
+.details_designation {
+	color: #000000;
+	margin-bottom: 1%;
+	width: 100%;
+	font-weight: bold;
+	text-align: left;
+}
+.reservation_btn {
+	margin-left: 5%;
+	color: #FFFFFF;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 50%;
+	background-color: #FFBF25;
+	font-size: 18px;
+	text-align: center;
 }
 .menu_header {
 	height: 5%;
@@ -117,6 +286,7 @@
 	width: 12.5%;
 	margin-top: 3%;
 }
+<<<<<<< Updated upstream
 .title_header {
 	color: #FFFFFF;
 	width: 65%;
@@ -176,68 +346,50 @@
 .details_first_section {
 	margin-left: 5%;
 	width: 90%;
+=======
+.slide_show {
+	height: 45%;
+>>>>>>> Stashed changes
 }
-.header {
-	background-image: url(background.png);
-	background-repeat: no-repeat;
+.details_infos_spacer {
+	height: 4px;
 	width: 100%;
 }
-.grid_list {
-	height: 88%;
-	width: 100%;
-	background-color: #FFFFFF;
+.tab_header {
+	padding-top: 0px;
 }
-.Productslist-titleGrid {
-	color: #000000;
+.Productslist-imageGrid {
+	height: 30%;
 	width: 44%;
-	font-weight: bold;
-	font-size: 14px;
-	text-align: center;
 }
-.grid_price_text {
-	color: #B5B5B5;
-	font-size: 16px;
-	text-align: right;
-}
-.login_btn {
-	height: 8%;
+.title_header {
 	color: #FFFFFF;
-	width: 86%;
-	background-color: #FFBE26;
-	border-style: none;
+	width: 65%;
+	margin-top: 1.5%;
+	font-size: 27px;
 	text-align: center;
 }
+<<<<<<< Updated upstream
 .title {
-	color: #FFFFFF;
-	margin-bottom: 3%;
-	font-weight: bold;
-	font-size: 15px;
+=======
+.Productslist-priceGrid {
+	color: #D45D2F;
+	font-size: 16px;
+	text-align: left;
 }
-.grid_item {
-	margin-left: 6%;
-	height: 198px;
-	width: 134.4px;
-	background-color: #FFFFFF;
-	margin-top: 0;
+.link {
+>>>>>>> Stashed changes
+	color: #FFFFFF;
+	font-size: 16px;
 	text-align: center;
 }
-.container_price {
-	text-align: center;
-}
-.input_field {
-	width: 80%;
-	background-image: url(input_bg.png);
-	color: #FFFFFF;
-	border-style: none;
-	margin-bottom: 2%;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	padding-left: 7%;
-	height: 7%;
-}
-.infos_vehicule {
-	margin-left: 5%;
-	width: 90%;
+.tab_unselected {
+	border-bottom: 2px solid rgb(222, 113, 67);
+	color: #BFBFBF;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	width: 50%;
+	background-color: #DE7143;
 	text-align: center;
 }
 .hr_grise {
@@ -248,36 +400,33 @@
 	margin-top: 5%;
 	text-align: center;
 }
-.link {
-	color: #FFFFFF;
-	font-size: 16px;
-	text-align: center;
+.title_chooser {
+	margin-left: 2%;
+	color: #454545;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 14px;
 }
-.details_infos_spacer {
-	height: 4px;
-	width: 100%;
+.pageStyle {
+	background-image: url(background.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
-.itemStyle {
-	width: 50%;
-}
-.drawer_menu {
-	margin-left: 80%;
-	width: 10%;
-}
-.Productslist-priceGrid {
-	color: #D45D2F;
-	font-size: 16px;
-	text-align: left;
+.text_icon {
+	margin-left: 5%;
+	width: 40%;
 }
 .item_infos {
 	margin-left: 5%;
 	width: 60%;
 }
-.details_price {
-	color: #B5B5B5;
-	font-size: 16px;
-	text-align: left;
+.title_info {
+	color: #6B6B6B;
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
 }
+<<<<<<< Updated upstream
 .offres_btn {
 	color: #000000;
 	border: 1px solid rgb(255, 190, 38);
@@ -285,51 +434,72 @@
 	padding-bottom: 2%;
 	width: 46%;
 	background-color: #F5F5F5;
+=======
+.myReservation_btn {
+	color: #D45D2F;
+	border: 1px solid rgb(255, 190, 38);
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 48%;
+>>>>>>> Stashed changes
 	font-weight: bold;
 	text-align: center;
 }
-.back_arrow {
-	margin-left: 5%;
-	height: 5%;
-	width: 12.5%;
-	margin-top: 3%;
-}
-.slide_show {
-	height: 45%;
-}
-.grid_item_spacer {
-	height: 3px;
-	margin-bottom: 1%;
-	width: 43%;
-}
-.registre_form {
-	height: 58%;
-	width: 100%;
-	font-size: 100%;
-}
-.infos_vehicule_text {
-	padding-left: 1%;
-	width: 30%;
-	text-align: left;
-}
-.container-body {
-	background-color: #FFFFFF;
-}
-.reservation_btn {
-	margin-left: 5%;
-	color: #FFFFFF;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	width: 50%;
-	background-color: #FFBF25;
-	font-size: 18px;
-	text-align: center;
-}
-.price_info {
-	color: #D45D2F;
-	width: 55%;
+.drawer_menu {
+	margin-left: 80%;
+	width: 10%;
 }
 .Productslist-spGrid {
 	height: 3px;
 	width: 44%;
 }
+<<<<<<< Updated upstream
+=======
+.container_date_time {
+	margin-left: 2%;
+}
+.offres_btn {
+	color: #000000;
+	border: 1px solid rgb(255, 190, 38);
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 48%;
+	background-color: #F5F5F5;
+	font-weight: bold;
+	text-align: center;
+}
+.logo_infos_car {
+	height: 34px;
+	background-image: url(arrow-point-to-right.png);
+	width: 10%;
+	margin-left: 2%;
+}
+.showoffers_btn {
+	background-color: #FFBE26;
+}
+.grid_pair_items {
+	padding-top: 1%;
+	padding-bottom: 1%;
+	width: 100%;
+}
+.main_body {
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-top: 1%;
+}
+.details_price {
+	color: #B5B5B5;
+	font-size: 16px;
+	text-align: left;
+}
+.details_description_text {
+	margin-left: 5%;
+	color: #6B6767;
+	width: 90%;
+	font-size: 16px;
+}
+.miniSpacer {
+	height: 5%;
+}
+>>>>>>> Stashed changes

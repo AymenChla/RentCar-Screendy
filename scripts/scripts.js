@@ -1,7 +1,141 @@
+<<<<<<< Updated upstream
+=======
+function defaultDateTime() {
+
+    //0 $('reservation_date_form.Select_213').remove();
+    $('reservation_date_drawer.pickup_date').val('value', '22/8/2017');
+}
+
+function validationResevartionDate() {
+    var pickup_date = $('reservation_date_drawer.pickup_date').val('value');
+    var pickup_time = $('reservation_date_drawer.pickup_time').val('value');
+    var return_date = $('reservation_date_drawer.return_date').val('value');
+    var return_time = $('reservation_date_drawer.return_time').val('value');
+
+    //convert to format yyyy-mm-dd then to millisecond
+    var tab_pickup_date = pickup_date.split("/");
+    if (tab_pickup_date[0] < 10) {
+        tab_pickup_date[0] = '0' + tab_pickup_date[0];
+    }
+    if (tab_pickup_date[1] < 10) {
+        tab_pickup_date[1] = '0' + tab_pickup_date[1];
+    }
+    pickup_date = Date.parse(tab_pickup_date[2] + "-" + tab_pickup_date[1] + "-" + tab_pickup_date[0]);
+    var tab_return_date = return_date.split("/");
+    if (tab_return_date[0] < 10) {
+        tab_return_date[0] = '0' + tab_return_date[0];
+    }
+    if (tab_return_date[1] < 10) {
+        tab_return_date[1] = '0' + tab_return_date[1];
+    }
+    return_date = Date.parse(tab_return_date[2] + "-" + tab_return_date[1] + "-" + tab_return_date[0]);
+
+    //get current date in millisecond format
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+    today = yyyy + "-" + mm + "-" + dd;
+    today = Date.parse(today);
+
+    var valide = true;
+
+    //js.alert('\n' + today + ' pick: ' + pickup_date);
+    if (isNaN(pickup_date)) {
+        js.alert("please select pickup date");
+        valide = false;
+    } else if (isNaN(return_date)) {
+        js.alert("please select return date");
+        valide = false;
+    } else {
+        if (pickup_date < today) {
+            js.alert('pickup date must be up or equal to current date');
+            valide = false;
+        }
+        if (return_date < pickup_date) {
+            js.alert("return date must be up or equal to pickup date");
+            valide = false;
+        }
+    }
+
+
+    if (valide)
+        showOffers(pickup_date, return_date);
+
+}
+
+function showOffers(pickup_date, return_date) {
+
+
+
+    var url_getAllVehicules = "https://reservationvehicules-91687.firebaseio.com/vehicules.json";
+
+    var vehicules = JSON.parse($.get(url_getAllVehicules));
+
+    //js.alert(JSON.stringify(obj));
+
+    var url_getReservationsByVehicule_id;
+    var reservations;
+    var libre;
+
+    //boucle pour chaque vehicule
+    for (var id_vehicule in vehicules) {
+
+        //recuperer les reservations d'un vehicule
+        url_getReservationsByVehicule_id = 'https://reservationvehicules-91687.firebaseio.com/reservations.json?orderBy=%22id_vehicule%22&equalTo=' + id_vehicule;
+
+        reservations = JSON.parse($.get(url_getReservationsByVehicule_id));
+
+        libre = true;
+        for (var i in reservations) {
+
+            var reservation_pickup_date = Date.parse(reservations[i].pickup_date);
+            var reservation_return_date = Date.parse(reservations[i].return_date);
+
+
+            if ((reservation_pickup_date < pickup_date && pickup_date < reservation_return_date) ||
+                (reservation_pickup_date < return_date && return_date < reservation_return_date)) {
+                libre = false;
+
+                //js.alert('id_vehi:' + id_vehicule + ' id_res: ' + i + ' reservation_pickup: ' + reservation_pickup_date + ' reservation_return: ' + reservation_return_date + ' ,pickup: ' + pickup_date + ' return: ' + return_date);
+                break;
+            }
+        }
+
+        if (libre) {
+            js.alert(' libre');
+        } else js.alert('non libre');
+
+        //$.alert(JSON.stringify(reservations));
+    }
+}
+
+
+
+>>>>>>> Stashed changes
 function showMenu() {
     js.navigateToPage('menu', 'slideUp', ' ');
 }
 
+<<<<<<< Updated upstream
+=======
+function tessst() {
+    js.navigateToPage('reservation_date_form');
+}
+
+function getCurrentDate() {
+    var date = new Date();
+    js.alert(date);
+}
+
+>>>>>>> Stashed changes
 function listItem() {
     var url = "https://reservationvehicules-91687.firebaseio.com/vehicules.json";
     var obj = JSON.parse($.get(url));
