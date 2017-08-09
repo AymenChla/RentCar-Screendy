@@ -127,9 +127,32 @@ function validationResevartionDate() {
 
 }
 
-function getImageuRl() {
-    var url = $('offers_drawer.Image_73').val('srcImage');
-    js.alert(url);
+function getDistance(lat1, lon1, lat2, lon2) {
+    var R = 6371; // Radius of the earth in km
+    var dLat = deg2rad(lat2 - lat1); // deg2rad below
+    var dLon = deg2rad(lon2 - lon1);
+    var a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c; // Distance in km
+    return d;
+}
+
+function deg2rad(deg) {
+    return deg * (Math.PI / 180)
+}
+
+function geoSorting(offers) {
+
+    var myLat = $.call('api.location.getLatitude()', {});
+    var myLon = $.call('api.location.getLongitude()', {});
+    offers.data.sort(function(a, b) {
+        return getDistance(myLat, myLon, a.latitude, a.longitude) - getDistance(myLat, myLon, b.latitude, b.longitude);
+    });
+
+    return offers;
 }
 
 function showOffers(pickup_date, return_date) {
@@ -196,7 +219,9 @@ function showOffers(pickup_date, return_date) {
                 nbPortes: vehicules[t].nbPortes,
                 prixTotal: Math.round(prix * nbjour * 100) / 100,
                 code_acriss: vehicules[t].code_acriss,
-                ancien_prix: vehicules[t].prix
+                ancien_prix: vehicules[t].prix,
+                latitude: vehicules[t].latitude,
+                longitude: vehicules[t].longitude
             };
 
             //$('offers_drawer.myList').addItem(JSON.stringify(finalData));
@@ -211,6 +236,10 @@ function showOffers(pickup_date, return_date) {
     //js.navigateToPage("offers_drawer");
     //js.saveData('offers', offers);
 
+    //sort offers basing on geolocalisation
+    js.alert("before\n:" + JSON.stringify(offers.data));
+    offers = geoSorting(offers);
+    js.alert("sorted\n:" + JSON.stringify(offers.data));
     js.navigateToPage('offers');
 
 
@@ -236,7 +265,9 @@ function loadOffers() {
             consommation: offers.data[i].consommation,
             nbPortes: offers.data[i].nbPortes,
             categorie: offers.data[i].categorie,
-            ancien_prix: offers.data[i].ancien_prix
+            ancien_prix: offers.data[i].ancien_prix,
+            latitude: offers.data[i].latitude,
+            longitude: offers.data[i].longitude
         };
         $('offers.myList').addItem(JSON.stringify(car_info));
     }
