@@ -1,7 +1,34 @@
+function initReservationDate() {
+
+}
+
+function removePopup() {
+    js.navigateToPage('offer_details_drawer');
+}
+
+function myLocation() {
+
+    var long = $.call('api.location.getLatitude()', {});
+    $.alert('voila: ' + long + ' !');
+
+}
+
+function showMore() {
+    js.navigateToPage('popup', 'popup', '');
+}
+
 function defaultDateTime() {
 
     //0 $('reservation_date_form.Select_213').remove();
     $('reservation_date_drawer.pickup_date').val('value', '22/8/2017');
+}
+
+function click_tab_reservations() {
+
+    $('reservation_date_drawer.tab_reservations').css('color', '#ffffff');
+    //js.setProperty('reservation_date_drawer.tab_reservations', 'style', 'tab_selected');
+
+
 }
 
 function validationResevartionDate() {
@@ -93,6 +120,7 @@ function validationResevartionDate() {
 
     if (valide) {
         //js.hideLoader();
+        $.showLoader();
         showOffers(pickup_ms, return_ms);
     }
 
@@ -153,11 +181,12 @@ function showOffers(pickup_date, return_date) {
 
         if (libre) {
 
+            var prix = (vehicules[t].prix - vehicules[t].prix * vehicules[t].solde / 100);
 
             finalData = {
                 marque: vehicules[t].marque,
                 model: vehicules[t].model,
-                prix: vehicules[t].prix,
+                prix: prix,
                 image: vehicules[t].image,
                 description: vehicules[t].description,
                 categorie: vehicules[t].categorie,
@@ -165,8 +194,9 @@ function showOffers(pickup_date, return_date) {
                 nbPassagers: vehicules[t].nbPassagers,
                 consommation: vehicules[t].consommation,
                 nbPortes: vehicules[t].nbPortes,
-                prixTotal: Math.round(vehicules[t].prix * nbjour * 100) / 100,
-                code_acriss: vehicules[t].code_acriss
+                prixTotal: Math.round(prix * nbjour * 100) / 100,
+                code_acriss: vehicules[t].code_acriss,
+                ancien_prix: vehicules[t].prix
             };
 
             //$('offers_drawer.myList').addItem(JSON.stringify(finalData));
@@ -181,17 +211,18 @@ function showOffers(pickup_date, return_date) {
     //js.navigateToPage("offers_drawer");
     //js.saveData('offers', offers);
 
-    js.navigateToPage('offers_drawer');
+    js.navigateToPage('offers');
 
 
 }
 
 function loadOffers() {
 
+    $.hideLoader();
     var car_info = {};
     //var offers = js.getData('offers');
     //js.alert(JSON.stringify(offers));
-    $('offers_drawer.myList').clear();
+    $('offers.myList').clear();
     for (var i in offers.data) {
         car_info = {
             marque: offers.data[i].marque,
@@ -199,9 +230,15 @@ function loadOffers() {
             image: offers.data[i].image,
             prix: offers.data[i].prix,
             prixTotal: offers.data[i].prixTotal,
-            code_acriss: offers.data[i].code_acriss
+            code_acriss: offers.data[i].code_acriss,
+            nbValises: offers.data[i].nbValises,
+            nbPassagers: offers.data[i].nbPassagers,
+            consommation: offers.data[i].consommation,
+            nbPortes: offers.data[i].nbPortes,
+            categorie: offers.data[i].categorie,
+            ancien_prix: offers.data[i].ancien_prix
         };
-        $('offers_drawer.myList').addItem(JSON.stringify(car_info));
+        $('offers.myList').addItem(JSON.stringify(car_info));
     }
 
 
@@ -374,6 +411,7 @@ function onSignInSuccess(data) {
         if (found == true) {
             js.saveData("idClient", index);
             js.navigateToPage('reservation_date_drawer');
+            //$('reservation_date_drawer').fadeIn(100, -1);
         } else {
             $.alert("Email or Password incorrect !");
         }

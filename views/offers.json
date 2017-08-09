@@ -12,53 +12,39 @@
         "title": ""
     },
     "components": {
-        "Container_51": {
+        "Container_443": {
             "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
             "comment": "",
             "order": "0",
             "dataObject": "",
-            "style": "tab_header",
+            "style": "header_back",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},
             "events": {},
             "components": {
-                "Internal_link_0": {
-                    "type": "LIEN_INTERNE",
+                "Image_button_189": {
+                    "type": "LIEN_PHOTO_ADAPTATIVE",
                     "align": "ALIGN_LEFT",
                     "comment": "",
                     "order": "0",
                     "dataObject": "",
-                    "style": "tab_selected",
+                    "style": "menu_back",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "title": "OFFERS",
-                        "internLink": "-1",
+                        "srcImg": "left-arrow.png",
+                        "srcImgSelection": "",
+                        "async": "false",
+                        "linkType": "LIEN_INTERNE",
+                        "internLink": "-1552240793",
+                        "targetLink": "HTTP",
+                        "externLink": "",
+                        "target": "blank",
                         "parameters": "",
-                        "Target": "blank",
                         "frame": "",
-                        "subStringToUnderline": ""
-                    },
-                    "events": {}
-                },
-                "Internal_link_289": {
-                    "type": "LIEN_INTERNE",
-                    "align": "ALIGN_LEFT",
-                    "comment": "",
-                    "order": "1",
-                    "dataObject": "",
-                    "style": "tab_unselected",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "title": "RESERVATIONS",
-                        "internLink": "-1",
-                        "parameters": "",
-                        "Target": "blank",
-                        "frame": "",
-                        "subStringToUnderline": ""
+                        "transition": "UIViewAnimationTransitionFlipFromRight"
                     },
                     "events": {}
                 }
@@ -92,8 +78,8 @@
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "internalLink": "-1",
-                        "parameters": "",
+                        "internalLink": "-1583880165",
+                        "parameters": "image=$image;&marque=$marque;&prix=$prix;&description=$description;&model=$model;&nbPortes=$nbPortes;&nbPassagers=$nbPassagers;&nbValises=$nbValises;&consommation=$consommation;&code_acriss=$code_acriss;&prixTotal=$prixTotal;&categorie=$categorie;",
                         "target": "Blank",
                         "root": ""
                     },
@@ -151,7 +137,7 @@
                                             "dynamic": "false",
                                             "custom": {
                                                 "direction": "left",
-                                                "text": "MAD $prix;"
+                                                "text": "Total $prixTotal; MAD"
                                             },
                                             "events": {}
                                         },
@@ -166,9 +152,113 @@
                                             "dynamic": "false",
                                             "custom": {
                                                 "direction": "left",
-                                                "text": "Total MAD $prixTotal;"
+                                                "text": "$prix; MAD / day"
                                             },
                                             "events": {}
+                                        },
+                                        "Text_39": {
+                                            "type": "TEXTE",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "2",
+                                            "dataObject": "",
+                                            "style": "ancien_prix",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "direction": "left",
+                                                "text": "$ancien_prix;"
+                                            },
+                                            "events": {}
+                                        },
+                                        "Container_61": {
+                                            "type": "COMPOSANT",
+                                            "align": "ALIGN_RIGHT",
+                                            "comment": "",
+                                            "order": "3",
+                                            "dataObject": "",
+                                            "style": "stars",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {},
+                                            "events": {},
+                                            "components": {
+                                                "Image_114": {
+                                                    "type": "PHOTO_ADAPTATIVE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "0",
+                                                    "dataObject": "",
+                                                    "style": "",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "srcImg": "star_yellow.png",
+                                                        "async": "false"
+                                                    },
+                                                    "events": {}
+                                                },
+                                                "Image_172": {
+                                                    "type": "PHOTO_ADAPTATIVE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "1",
+                                                    "dataObject": "",
+                                                    "style": "",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "srcImg": "star_yellow.png",
+                                                        "async": "false"
+                                                    },
+                                                    "events": {}
+                                                },
+                                                "Image_3": {
+                                                    "type": "PHOTO_ADAPTATIVE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "2",
+                                                    "dataObject": "",
+                                                    "style": "",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "srcImg": "star_yellow.png",
+                                                        "async": "false"
+                                                    },
+                                                    "events": {}
+                                                },
+                                                "Image_424": {
+                                                    "type": "PHOTO_ADAPTATIVE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "3",
+                                                    "dataObject": "",
+                                                    "style": "",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "srcImg": "star_yellow.png",
+                                                        "async": "false"
+                                                    },
+                                                    "events": {}
+                                                },
+                                                "Image_843": {
+                                                    "type": "PHOTO_ADAPTATIVE",
+                                                    "align": "ALIGN_LEFT",
+                                                    "comment": "",
+                                                    "order": "4",
+                                                    "dataObject": "",
+                                                    "style": "",
+                                                    "styleSelection": "",
+                                                    "dynamic": "false",
+                                                    "custom": {
+                                                        "srcImg": "start_grey.png",
+                                                        "async": "false"
+                                                    },
+                                                    "events": {}
+                                                }
+                                            }
                                         }
                                     }
                                 },
@@ -239,7 +329,7 @@
                                     "dynamic": "false",
                                     "custom": {
                                         "direction": "left",
-                                        "text": "Car / Estate"
+                                        "text": "$categorie;"
                                     },
                                     "events": {}
                                 },
@@ -281,6 +371,6 @@
         }
     },
     "events": {
-        "onLoad": ""
+        "onLoad": "loadOffers()"
     }
 }

@@ -24,7 +24,7 @@
             "custom": {},
             "events": {},
             "components": {
-                "Internal_link_141": {
+                "tab_offers": {
                     "type": "LIEN_INTERNE",
                     "align": "ALIGN_LEFT",
                     "comment": "",
@@ -43,7 +43,7 @@
                     },
                     "events": {}
                 },
-                "Internal_link_675": {
+                "tab_reservations": {
                     "type": "LIEN_INTERNE",
                     "align": "ALIGN_LEFT",
                     "comment": "",
@@ -60,7 +60,9 @@
                         "frame": "",
                         "subStringToUnderline": ""
                     },
-                    "events": {}
+                    "events": {
+                        "onClick": ""
+                    }
                 }
             }
         },

@@ -1,0 +1,610 @@
+{
+    "properties": {
+        "id": "-1583880165",
+        "name": "offer_details",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "cache": "true",
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
+        "title": ""
+    },
+    "components": {
+        "Container_14": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "0",
+            "dataObject": "",
+            "style": "header_back",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_button_288": {
+                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "menu_back",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "left-arrow.png",
+                        "srcImgSelection": "",
+                        "async": "false",
+                        "linkType": "LIEN_INTERNE",
+                        "internLink": "592432254",
+                        "targetLink": "HTTP",
+                        "externLink": "",
+                        "target": "blank",
+                        "parameters": "",
+                        "frame": "",
+                        "transition": "UIViewAnimationTransitionFlipFromLeft"
+                    },
+                    "events": {}
+                }
+            }
+        },
+        "Form_323": {
+            "type": "FORM",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "name": "form",
+                "actionType": "url",
+                "action": "http://screendydev.cloudapp.net/screendy/cloudCode/form/action.jsp",
+                "ParamsSeparator": "",
+                "FieldsSeparator": "",
+                "ActionSeparator": "",
+                "enctype": "text/plain",
+                "Target": "blank",
+                "method": "post",
+                "authType": "none",
+                "headers": "",
+                "username": "",
+                "password": "",
+                "parametersMarkup": "Parameters",
+                "progressTitle": "Sending data",
+                "parametersFormat": "KeyValue",
+                "progressMessage": "Uploading data, please wait ..."
+            },
+            "events": {},
+            "components": {
+                "Container_5": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "title_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Text_227": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "details_marque",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(marque) request.getParameter(model)"
+                            },
+                            "events": {}
+                        },
+                        "Text_212": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_RIGHT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "code_acriss_details",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(code_acriss)"
+                            },
+                            "events": {}
+                        },
+                        "Text_167": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "categorie_details",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(categorie)"
+                            },
+                            "events": {}
+                        }
+                    }
+                },
+                "Image_30": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "image_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "request.getParameter(image)",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Container_623": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "logo_infos_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_593": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "icons-nav",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "seat-belt.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_75": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(nbPassagers)"
+                            },
+                            "events": {}
+                        },
+                        "Image_295": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "icons-nav",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "car_doors.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_37": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(nbPortes)"
+                            },
+                            "events": {}
+                        },
+                        "Image_141": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "4",
+                            "dataObject": "",
+                            "style": "icons-nav",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "suitcase.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_2": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(nbValises)"
+                            },
+                            "events": {}
+                        },
+                        "Image_161": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "6",
+                            "dataObject": "",
+                            "style": "icons-nav",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "snowflake.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_662": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "7",
+                            "dataObject": "",
+                            "style": "more",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "MORE..."
+                            },
+                            "events": {
+                                "onClick": "showMore()"
+                            }
+                        }
+                    }
+                },
+                "Image_89": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "hr_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "line_grise.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Container_25": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "4",
+                    "dataObject": "",
+                    "style": "price_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Container_88": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "details_part2",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_164_159": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "checked_icon",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "success.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Text_199": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "details_free_services",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "Incl. 250 free Kilometres"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_57": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "checked_icon",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "success.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Text_639": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "3",
+                                    "dataObject": "",
+                                    "style": "details_free_services",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "Free Cancellation"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_323": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "4",
+                                    "dataObject": "",
+                                    "style": "checked_icon",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "success.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Text_528": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "5",
+                                    "dataObject": "",
+                                    "style": "details_free_services",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "Free advice by phone"
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Container_0": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "details_part1",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Text_38": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "offer_total_details",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "Total request.getParameter(prixTotal) MAD"
+                                    },
+                                    "events": {}
+                                },
+                                "Text_178": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "offer_details_price",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "request.getParameter(prix) MAD / day"
+                                    },
+                                    "events": {}
+                                },
+                                "Container_306": {
+                                    "type": "COMPOSANT",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {},
+                                    "events": {},
+                                    "components": {
+                                        "Image_43": {
+                                            "type": "PHOTO_ADAPTATIVE",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "0",
+                                            "dataObject": "",
+                                            "style": "",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "srcImg": "star_yellow.png",
+                                                "async": "false"
+                                            },
+                                            "events": {}
+                                        },
+                                        "Image_6": {
+                                            "type": "PHOTO_ADAPTATIVE",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "1",
+                                            "dataObject": "",
+                                            "style": "",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "srcImg": "star_yellow.png",
+                                                "async": "false"
+                                            },
+                                            "events": {}
+                                        },
+                                        "Image_304": {
+                                            "type": "PHOTO_ADAPTATIVE",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "2",
+                                            "dataObject": "",
+                                            "style": "",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "srcImg": "star_yellow.png",
+                                                "async": "false"
+                                            },
+                                            "events": {}
+                                        },
+                                        "Image_593_539": {
+                                            "type": "PHOTO_ADAPTATIVE",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "3",
+                                            "dataObject": "",
+                                            "style": "",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "srcImg": "star_yellow.png",
+                                                "async": "false"
+                                            },
+                                            "events": {}
+                                        },
+                                        "Image_58": {
+                                            "type": "PHOTO_ADAPTATIVE",
+                                            "align": "ALIGN_LEFT",
+                                            "comment": "",
+                                            "order": "4",
+                                            "dataObject": "",
+                                            "style": "",
+                                            "styleSelection": "",
+                                            "dynamic": "false",
+                                            "custom": {
+                                                "srcImg": "start_grey.png",
+                                                "async": "false"
+                                            },
+                                            "events": {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "Container_58": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "5",
+                    "dataObject": "",
+                    "style": "container_next",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Submit_624": {
+                            "type": "SUBMIT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "show_offers_btn",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "name": "",
+                                "value": "RESERVE NOW",
+                                "parameters": ""
+                            },
+                            "events": {
+                                "onClick": "myLocation()"
+                            }
+                        },
+                        "Image_164": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "next_icon",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "arrow-point-to-right.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "events": {}
+}

@@ -120,7 +120,7 @@
                         "parameters": ""
                     },
                     "events": {
-                        "onClick": "signIn()"
+                        "onClick": "forTest()"
                     }
                 },
                 "Spacer_86": {
@@ -146,9 +146,9 @@
                     "dynamic": "false",
                     "custom": {
                         "title": "Forgot Password?",
-                        "internLink": "592432254",
+                        "internLink": "-803911705",
                         "parameters": "",
-                        "Target": "blank",
+                        "Target": "popup",
                         "frame": "",
                         "subStringToUnderline": ""
                     },
