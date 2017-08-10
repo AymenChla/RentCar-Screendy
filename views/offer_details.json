@@ -583,7 +583,7 @@
                                 "parameters": ""
                             },
                             "events": {
-                                "onClick": "myLocation()"
+                                "onClick": "reserveVehicule(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
                             }
                         },
                         "Image_164": {

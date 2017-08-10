@@ -1,7 +1,7 @@
 {
     "properties": {
-        "id": "592432254",
-        "name": "offers",
+        "id": "1051154637",
+        "name": "reservations",
         "type": "CUSTOM",
         "style": "",
         "parameters": "",
@@ -12,39 +12,53 @@
         "title": ""
     },
     "components": {
-        "Container_443": {
+        "Container_3": {
             "type": "COMPOSANT",
             "align": "ALIGN_LEFT",
             "comment": "",
             "order": "0",
             "dataObject": "",
-            "style": "header_back",
+            "style": "tab_header",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},
             "events": {},
             "components": {
-                "Image_button_189": {
-                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                "Internal_link_184": {
+                    "type": "LIEN_INTERNE",
                     "align": "ALIGN_LEFT",
                     "comment": "",
                     "order": "0",
                     "dataObject": "",
-                    "style": "menu_back",
+                    "style": "tab_unselected",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "srcImg": "left-arrow.png",
-                        "srcImgSelection": "",
-                        "async": "false",
-                        "linkType": "LIEN_INTERNE",
+                        "title": "OFFERS",
                         "internLink": "-1552240793",
-                        "targetLink": "HTTP",
-                        "externLink": "",
-                        "target": "blank",
                         "parameters": "",
+                        "Target": "blank",
                         "frame": "",
-                        "transition": "UIViewAnimationTransitionFlipFromRight"
+                        "subStringToUnderline": ""
+                    },
+                    "events": {}
+                },
+                "Internal_link_6": {
+                    "type": "LIEN_INTERNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "tab_selected",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "title": "RESERVATIONS",
+                        "internLink": "",
+                        "parameters": "",
+                        "Target": "blank",
+                        "frame": "",
+                        "subStringToUnderline": ""
                     },
                     "events": {}
                 }
@@ -78,8 +92,8 @@
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "internalLink": "-1583880165",
-                        "parameters": "image=$image;&marque=$marque;&prix=$prix;&description=$description;&model=$model;&nbPortes=$nbPortes;&nbPassagers=$nbPassagers;&nbValises=$nbValises;&consommation=$consommation;&code_acriss=$code_acriss;&prixTotal=$prixTotal;&categorie=$categorie;&id_vehicule=$id_vehicule;",
+                        "internalLink": "-349600021",
+                        "parameters": "image=$image;&marque=$marque;&model=$model;&code_acriss=$code_acriss;&categorie=$categorie;&code_reservation=$code_reservation;&pickup_date=$pickup_date;&pickup_time=$pickup_time;&return_date=$return_date;&return_time=$return_time;",
                         "target": "Blank",
                         "root": ""
                     },
@@ -120,168 +134,79 @@
                                     "comment": "",
                                     "order": "1",
                                     "dataObject": "",
-                                    "style": "offer_price_car",
+                                    "style": "reservations_offer_price_car",
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {},
                                     "events": {},
                                     "components": {
-                                        "Text_16": {
+                                        "Text_106": {
                                             "type": "TEXTE",
-                                            "align": "ALIGN_CENTER",
+                                            "align": "ALIGN_LEFT",
                                             "comment": "",
                                             "order": "0",
                                             "dataObject": "",
-                                            "style": "offer_price_day",
+                                            "style": "reservations_marque_modele",
                                             "styleSelection": "",
                                             "dynamic": "false",
                                             "custom": {
                                                 "direction": "left",
-                                                "text": "Total $prixTotal; MAD"
+                                                "text": "$marque; $model;"
                                             },
                                             "events": {}
                                         },
-                                        "Text_377": {
+                                        "Text_2": {
                                             "type": "TEXTE",
                                             "align": "ALIGN_LEFT",
                                             "comment": "",
                                             "order": "1",
                                             "dataObject": "",
-                                            "style": "offer_total_price",
+                                            "style": "reservations_code_acriss",
                                             "styleSelection": "",
                                             "dynamic": "false",
                                             "custom": {
                                                 "direction": "left",
-                                                "text": "$prix; MAD / day"
+                                                "text": "$code_acriss;"
                                             },
                                             "events": {}
                                         },
-                                        "Text_39": {
+                                        "Text_284": {
                                             "type": "TEXTE",
                                             "align": "ALIGN_LEFT",
                                             "comment": "",
                                             "order": "2",
                                             "dataObject": "",
-                                            "style": "ancien_prix",
+                                            "style": "offer_car_categorie",
                                             "styleSelection": "",
                                             "dynamic": "false",
                                             "custom": {
                                                 "direction": "left",
-                                                "text": "$ancien_prix;"
+                                                "text": "$categorie;"
                                             },
                                             "events": {}
                                         },
-                                        "Container_61": {
-                                            "type": "COMPOSANT",
-                                            "align": "ALIGN_RIGHT",
+                                        "Text_196": {
+                                            "type": "TEXTE",
+                                            "align": "ALIGN_LEFT",
                                             "comment": "",
                                             "order": "3",
                                             "dataObject": "",
-                                            "style": "stars",
+                                            "style": "reservations_code_reservation",
                                             "styleSelection": "",
                                             "dynamic": "false",
-                                            "custom": {},
-                                            "events": {},
-                                            "components": {
-                                                "Image_114": {
-                                                    "type": "PHOTO_ADAPTATIVE",
-                                                    "align": "ALIGN_LEFT",
-                                                    "comment": "",
-                                                    "order": "0",
-                                                    "dataObject": "",
-                                                    "style": "",
-                                                    "styleSelection": "",
-                                                    "dynamic": "false",
-                                                    "custom": {
-                                                        "srcImg": "star_yellow.png",
-                                                        "async": "false"
-                                                    },
-                                                    "events": {}
-                                                },
-                                                "Image_172": {
-                                                    "type": "PHOTO_ADAPTATIVE",
-                                                    "align": "ALIGN_LEFT",
-                                                    "comment": "",
-                                                    "order": "1",
-                                                    "dataObject": "",
-                                                    "style": "",
-                                                    "styleSelection": "",
-                                                    "dynamic": "false",
-                                                    "custom": {
-                                                        "srcImg": "star_yellow.png",
-                                                        "async": "false"
-                                                    },
-                                                    "events": {}
-                                                },
-                                                "Image_3": {
-                                                    "type": "PHOTO_ADAPTATIVE",
-                                                    "align": "ALIGN_LEFT",
-                                                    "comment": "",
-                                                    "order": "2",
-                                                    "dataObject": "",
-                                                    "style": "",
-                                                    "styleSelection": "",
-                                                    "dynamic": "false",
-                                                    "custom": {
-                                                        "srcImg": "star_yellow.png",
-                                                        "async": "false"
-                                                    },
-                                                    "events": {}
-                                                },
-                                                "Image_424": {
-                                                    "type": "PHOTO_ADAPTATIVE",
-                                                    "align": "ALIGN_LEFT",
-                                                    "comment": "",
-                                                    "order": "3",
-                                                    "dataObject": "",
-                                                    "style": "",
-                                                    "styleSelection": "",
-                                                    "dynamic": "false",
-                                                    "custom": {
-                                                        "srcImg": "star_yellow.png",
-                                                        "async": "false"
-                                                    },
-                                                    "events": {}
-                                                },
-                                                "Image_843": {
-                                                    "type": "PHOTO_ADAPTATIVE",
-                                                    "align": "ALIGN_LEFT",
-                                                    "comment": "",
-                                                    "order": "4",
-                                                    "dataObject": "",
-                                                    "style": "",
-                                                    "styleSelection": "",
-                                                    "dynamic": "false",
-                                                    "custom": {
-                                                        "srcImg": "start_grey.png",
-                                                        "async": "false"
-                                                    },
-                                                    "events": {}
-                                                }
-                                            }
+                                            "custom": {
+                                                "direction": "left",
+                                                "text": "Code:  $code_reservation;"
+                                            },
+                                            "events": {}
                                         }
                                     }
-                                },
-                                "Text_106": {
-                                    "type": "TEXTE",
-                                    "align": "ALIGN_LEFT",
-                                    "comment": "",
-                                    "order": "2",
-                                    "dataObject": "",
-                                    "style": "marque_modele",
-                                    "styleSelection": "",
-                                    "dynamic": "false",
-                                    "custom": {
-                                        "direction": "left",
-                                        "text": "$marque; $model;"
-                                    },
-                                    "events": {}
                                 },
                                 "Spacer_695": {
                                     "type": "SAUT_DE_LIGNE",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "3",
+                                    "order": "2",
                                     "dataObject": "",
                                     "style": "grid_item_spacer",
                                     "styleSelection": "",
@@ -303,41 +228,11 @@
                             "custom": {},
                             "events": {},
                             "components": {
-                                "Text_2": {
-                                    "type": "TEXTE",
-                                    "align": "ALIGN_LEFT",
-                                    "comment": "",
-                                    "order": "0",
-                                    "dataObject": "",
-                                    "style": "code_acriss",
-                                    "styleSelection": "",
-                                    "dynamic": "false",
-                                    "custom": {
-                                        "direction": "left",
-                                        "text": "$code_acriss;"
-                                    },
-                                    "events": {}
-                                },
-                                "Text_284": {
-                                    "type": "TEXTE",
-                                    "align": "ALIGN_LEFT",
-                                    "comment": "",
-                                    "order": "1",
-                                    "dataObject": "",
-                                    "style": "offer_car_categorie",
-                                    "styleSelection": "",
-                                    "dynamic": "false",
-                                    "custom": {
-                                        "direction": "left",
-                                        "text": "$categorie;"
-                                    },
-                                    "events": {}
-                                },
                                 "Image_254": {
                                     "type": "PHOTO_ADAPTATIVE",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "2",
+                                    "order": "0",
                                     "dataObject": "",
                                     "style": "checked_icon",
                                     "styleSelection": "",
@@ -352,14 +247,44 @@
                                     "type": "TEXTE",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "3",
+                                    "order": "1",
                                     "dataObject": "",
-                                    "style": "offre_free_service",
+                                    "style": "reservations_location",
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
                                         "direction": "left",
-                                        "text": "Incl. 250 free Kilometres"
+                                        "text": "Location: $location;"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_212": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "checked_icon",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "success.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Text_116": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "3",
+                                    "dataObject": "",
+                                    "style": "reservations_location",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "Pickup date/time: $pickup_date; - $pickup_time;"
                                     },
                                     "events": {}
                                 }

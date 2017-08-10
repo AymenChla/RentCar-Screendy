@@ -1,0 +1,315 @@
+{
+    "properties": {
+        "id": "-1751626652",
+        "name": "reservations_drawer",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "cache": "true",
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
+        "title": ""
+    },
+    "components": {
+        "Drawer_6": {
+            "type": "Drawer",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "0",
+            "dataObject": "",
+            "style": "",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "initialPage": "1051154637",
+                "orientation": "left"
+            },
+            "events": {},
+            "components": {
+                "drawerContainer_81": {
+                    "type": "drawerContainer",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_364": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "menu_image",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "road_1.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Container_587": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_button_41": {
+                                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "icons-nav",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "rent-a-car_(1).png",
+                                        "srcImgSelection": "",
+                                        "async": "false",
+                                        "linkType": "LIEN_INTERNE",
+                                        "internLink": "-1",
+                                        "targetLink": "HTTP",
+                                        "externLink": "",
+                                        "target": "blank",
+                                        "parameters": "",
+                                        "frame": "",
+                                        "transition": "UIViewAnimationTransitionNone"
+                                    },
+                                    "events": {}
+                                },
+                                "Internal_link_67": {
+                                    "type": "LIEN_INTERNE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "current_page_menu_link",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "title": "Offers",
+                                        "internLink": "-1",
+                                        "parameters": "",
+                                        "Target": "blank",
+                                        "frame": "",
+                                        "subStringToUnderline": ""
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Container_289": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_button_107": {
+                                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "icons-nav",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "reserved_icon.png",
+                                        "srcImgSelection": "",
+                                        "async": "false",
+                                        "linkType": "LIEN_INTERNE",
+                                        "internLink": "-1",
+                                        "targetLink": "HTTP",
+                                        "externLink": "",
+                                        "target": "blank",
+                                        "parameters": "",
+                                        "frame": "",
+                                        "transition": "UIViewAnimationTransitionNone"
+                                    },
+                                    "events": {}
+                                },
+                                "External_link_586": {
+                                    "type": "LIEN_EXTERNE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "menu_link",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "title": "Reservations",
+                                        "externLink": "",
+                                        "parameters": ""
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Container_4": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_button_555": {
+                                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "icons-nav",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "settings.png",
+                                        "srcImgSelection": "",
+                                        "async": "false",
+                                        "linkType": "LIEN_INTERNE",
+                                        "internLink": "-1",
+                                        "targetLink": "HTTP",
+                                        "externLink": "",
+                                        "target": "blank",
+                                        "parameters": "",
+                                        "frame": "",
+                                        "transition": "UIViewAnimationTransitionNone"
+                                    },
+                                    "events": {}
+                                },
+                                "Internal_link_117": {
+                                    "type": "LIEN_INTERNE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "menu_link",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "title": "Settings",
+                                        "internLink": "-1",
+                                        "parameters": "",
+                                        "Target": "blank",
+                                        "frame": "",
+                                        "subStringToUnderline": ""
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Container_605": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "4",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_button_310": {
+                                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "icons-nav",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "sign-out-option.png",
+                                        "srcImgSelection": "",
+                                        "async": "false",
+                                        "linkType": "LIEN_INTERNE",
+                                        "internLink": "-1",
+                                        "targetLink": "HTTP",
+                                        "externLink": "",
+                                        "target": "blank",
+                                        "parameters": "",
+                                        "frame": "",
+                                        "transition": "UIViewAnimationTransitionNone"
+                                    },
+                                    "events": {}
+                                },
+                                "External_link_430": {
+                                    "type": "LIEN_EXTERNE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "menu_link",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "title": "Sign Out",
+                                        "externLink": "",
+                                        "parameters": ""
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        }
+                    }
+                },
+                "DrawerHeader_202": {
+                    "type": "DrawerHeader",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "drawer_header",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "DrawerIcon_170": {
+                            "type": "DrawerIcon",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "icon": ""
+                            },
+                            "events": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "events": {
+        "onLoad": "showReservations()"
+    }
+}

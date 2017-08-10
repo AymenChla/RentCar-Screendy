@@ -69,17 +69,17 @@
 	font-size: 20px;
 	text-align: right;
 }
-.container_btns {
-	margin-left: 2%;
-	margin-bottom: 2%;
-	margin-top: 2%;
-	text-align: center;
-}
 .icons-nav {
 	margin-left: 5%;
 	height: 30px;
 	width: 30px;
 	margin-top: 2%;
+}
+.container_btns {
+	margin-left: 2%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	text-align: center;
 }
 .Productslist-priceGrid {
 	color: #D45D2F;
@@ -225,10 +225,10 @@
 	margin-top: 1%;
 }
 .container_date_time {
-	margin-left: 2%;
+	margin-left: 8%;
 }
 .title_details {
-	height: 14%;
+	height: 19%;
 }
 .Productslist-titleGrid {
 	color: #000000;
@@ -262,13 +262,13 @@
 	font-size: 16px;
 	text-align: right;
 }
-.categorie_details {
-	font-family: Tahoma;
-	width: 50%;
-}
 .stars {
 	margin-left: 25%;
 	margin-top: 2%;
+}
+.categorie_details {
+	font-family: Tahoma;
+	width: 50%;
 }
 .input_field_min {
 	width: 80%;
@@ -352,6 +352,16 @@
 	border-style: none;
 	text-align: center;
 }
+.reservations_code_acriss {
+	margin-left: 2%;
+	margin-right: 1%;
+	color: #FFFFFF;
+	padding-left: 1%;
+	font-family: Tahoma;
+	background-color: #000000;
+	font-size: 14px;
+	padding-right: 1%;
+}
 .header {
 	background-image: url(background.png);
 	background-repeat: no-repeat;
@@ -367,8 +377,12 @@
 .checked_icon {
 	margin-top: 1%;
 }
-.title_chooser {
+.reservations_offer_price_car {
 	margin-left: 2%;
+	width: 55%;
+}
+.title_chooser {
+	margin-left: 8%;
 	color: #454545;
 	text-decoration: none;
 	font-weight: 700;
@@ -402,6 +416,14 @@
 	margin-top: 3%;
 	font-size: 16px;
 }
+.reservations_marque_modele {
+	margin-left: 2%;
+	color: #000000;
+	font-family: Arial;
+	width: 53%;
+	font-weight: 700;
+	font-size: 20px;
+}
 .infos_vehicule {
 	margin-left: 5%;
 	width: 90%;
@@ -412,7 +434,8 @@
 	background-color: #DE7143;
 }
 .price_details {
-	height: 30%;
+	height: 25%;
+	margin-left: 2%;
 }
 .details_description {
 	margin-left: 5%;
@@ -420,9 +443,11 @@
 	font-size: 23px;
 }
 .time_chooser {
-	border-bottom: 1px solid rgb(0, 0, 0);
+	border-bottom: 1px solid #DE7143;
 	border: none;
-	width: 28%;
+	margin-left: 4%;
+	width: 15%;
+	color: #ffbe26;
 }
 .container-body {
 	background-color: #FFFFFF;
@@ -515,6 +540,19 @@
 .slide_show {
 	height: 45%;
 }
+.reservation_details_code_reservation {
+	margin-left: 2%;
+	font-family: Tahoma;
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+}
+.reservations_code_reservation {
+	margin-left: 2%;
+	font-family: Tahoma;
+	font-size: 14px;
+	text-align: center;
+}
 .logo {
 	height: 10.63%;
 	margin-bottom: 5%;
@@ -541,6 +579,12 @@
 	color: #FFFFFF;
 	text-align: center;
 }
+.reservations_location {
+	margin-left: 1%;
+	font-family: Approxima;
+	width: 94%;
+	font-size: 14px;
+}
 .logo_menu {
 	margin-left: 5%;
 	height: 6%;
@@ -548,11 +592,12 @@
 	margin-top: 2%;
 }
 .date_chooser {
-	border-bottom: 1px solid rgb(0, 0, 0);
-	margin-left: 8%;
+	border-bottom: 1px solid #DE7143;
+	margin-left: 4%;
 	margin-right: 4%;
 	border: none;
-	width: 42%;
+	width: 25%;
+	color: #ffbe26;
 }
 .offer_car_categorie {
 	margin-right: 4%;
@@ -627,4 +672,19 @@
 .details_infos_spacer {
 	height: 4px;
 	width: 100%;
+}
+.container_code_reservation {
+	width: 40%;
+	margin-top: 3%;
+}
+.compte_a_rebours {
+	font-size: 22px;
+	width: 50%;
+	margin-left: 25%;
+	text-align: center;
+}
+.reservation_details_dates {
+	height: 25%;
+	margin-left: 8%;
+	width: 87%;
 }

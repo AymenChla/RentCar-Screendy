@@ -1,0 +1,352 @@
+{
+    "properties": {
+        "id": "-349600021",
+        "name": "reservation_details",
+        "type": "CUSTOM",
+        "style": "",
+        "parameters": "",
+        "cache": "true",
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
+        "title": ""
+    },
+    "components": {
+        "Container_38": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "0",
+            "dataObject": "",
+            "style": "header_back",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_button_206": {
+                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "menu_back",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "left-arrow.png",
+                        "srcImgSelection": "",
+                        "async": "false",
+                        "linkType": "LIEN_INTERNE",
+                        "internLink": "-1",
+                        "targetLink": "HTTP",
+                        "externLink": "",
+                        "target": "blank",
+                        "parameters": "",
+                        "frame": "",
+                        "transition": "UIViewAnimationTransitionNone"
+                    },
+                    "events": {}
+                }
+            }
+        },
+        "Container_38_353": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "title_details",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Text_320": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "details_marque",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(marque) request.getParameter(model)"
+                    },
+                    "events": {}
+                },
+                "Text_98": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "code_acriss_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(code_acriss)"
+                    },
+                    "events": {}
+                },
+                "Text_296": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "categorie_details",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(categorie)"
+                    },
+                    "events": {}
+                },
+                "Text_61": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "reservation_details_code_reservation",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Code Reservation: request.getParameter(code_reservation)"
+                    },
+                    "events": {}
+                }
+            }
+        },
+        "Image_22": {
+            "type": "PHOTO_ADAPTATIVE",
+            "align": "ALIGN_CENTER",
+            "comment": "",
+            "order": "2",
+            "dataObject": "",
+            "style": "image_details",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "srcImg": "request.getParameter(image)",
+                "async": "false"
+            },
+            "events": {}
+        },
+        "Container_311": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "3",
+            "dataObject": "",
+            "style": "logo_infos_details",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Text_15": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_CENTER",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "compte_a_rebours",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "00:10:58"
+                    },
+                    "events": {}
+                }
+            }
+        },
+        "Container_193": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "4",
+            "dataObject": "",
+            "style": "reservation_details_dates",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Image_448": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "logo_infos_car",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "event-calendar-symbol.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_222": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "date_chooser",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(pickup_date)"
+                    },
+                    "events": {}
+                },
+                "Image_249": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "logo_infos_car",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "clock.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_159": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "time_chooser",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(pickup_time)"
+                    },
+                    "events": {}
+                },
+                "Image_47": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "4",
+                    "dataObject": "",
+                    "style": "logo_infos_car",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "event-calendar-symbol.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_37": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "5",
+                    "dataObject": "",
+                    "style": "date_chooser",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(return_date)"
+                    },
+                    "events": {}
+                },
+                "Image_267": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "6",
+                    "dataObject": "",
+                    "style": "logo_infos_car",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "clock.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_34": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "7",
+                    "dataObject": "",
+                    "style": "time_chooser",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "request.getParameter(return_time)"
+                    },
+                    "events": {}
+                }
+            }
+        },
+        "Container_272": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "5",
+            "dataObject": "",
+            "style": "container_next",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Submit_30": {
+                    "type": "SUBMIT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "show_offers_btn",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "name": "",
+                        "value": "SHOW MAP",
+                        "parameters": ""
+                    },
+                    "events": {}
+                },
+                "Image_39": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "next_icon",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "arrow-point-to-right.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                }
+            }
+        }
+    },
+    "events": {}
+}

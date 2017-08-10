@@ -35,7 +35,7 @@
                     "dynamic": "false",
                     "custom": {
                         "title": "OFFERS",
-                        "internLink": "-1",
+                        "internLink": "",
                         "parameters": "",
                         "Target": "blank",
                         "frame": "",
@@ -54,7 +54,7 @@
                     "dynamic": "false",
                     "custom": {
                         "title": "RESERVATIONS",
-                        "internLink": "-1",
+                        "internLink": "-1751626652",
                         "parameters": "",
                         "Target": "blank",
                         "frame": "",
@@ -196,6 +196,21 @@
                                     "events": {},
                                     "components": {}
                                 },
+                                "Image_206": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "dynamic": "FALSE",
+                                    "dataObject": "",
+                                    "comment": "",
+                                    "style": "logo_infos_car",
+                                    "styleSelection": "",
+                                    "custom": {
+                                        "srcImg": "clock.png",
+                                        "async": "false"
+                                    },
+                                    "events": {},
+                                    "order": 2
+                                },
                                 "pickup_time": {
                                     "type": "SELECT",
                                     "align": "ALIGN_LEFT",
@@ -307,6 +322,21 @@
                                     },
                                     "events": {},
                                     "components": {}
+                                },
+                                "Image_157": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "dynamic": "FALSE",
+                                    "dataObject": "",
+                                    "comment": "",
+                                    "style": "logo_infos_car",
+                                    "styleSelection": "",
+                                    "custom": {
+                                        "srcImg": "clock.png",
+                                        "async": "false"
+                                    },
+                                    "events": {},
+                                    "order": 2
                                 },
                                 "return_time": {
                                     "type": "SELECT",
