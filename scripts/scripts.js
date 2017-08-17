@@ -1,5 +1,16 @@
+function cancelReservation(id_reservation) {
+    var param = '{"' + id + '":{id_client :' + id_client + ',id_vehicule :' + id_vehicule + ',code_reservation :' + generateCodeReservation() + ',nbJours :' + nbJours + ',payer :' + false + ',pickup_date : "' + pickup_date + '",pickup_time :"' + pickup_time +
+        '",prix :' + prix + ',return_date :"' + return_date + '",return_time :"' + return_time + '",reservation_moment :' + Date.now() + '}}';
+    var $urlfav2 = "https://reservationvehicules-91687.firebaseio.com/reservations/" + id_reservation + "/.json";
+    var urljson2 = '{"url":"' + $urlfav2 + '","method":"DELETE","parameters":' + param + ',"headers":"contenttype=application/json","parametersFormat":"JSON",' + '"parametersMarkup":"Body"}';
+    var datafav = $.post(urljson2);
+    js.navigateToPage('reservations_drawer');
+}
+
+
 function showReservations() {
 
+    js.showLoader();
     //clear list objet
     $('reservations_drawer.myList').clear();
 
@@ -12,11 +23,12 @@ function showReservations() {
     var finalData = {};
     var vehicule_info;
     for (var i in userReservations) {
-        url_getvehiculeInfo = 'https://reservationvehicules-91687.firebaseio.com/vehicules/' + userReservations[i].id_vehicule + '/.json?print=pretty';
+        url_getvehiculeInfo = 'https://reservationvehicules-91687.firebaseio.com/vehicules/' + userReservations[i].id_vehicule + '/.json';
         vehicule_info = JSON.parse($.get(url_getvehiculeInfo));
 
         //js.alert(JSON.stringify(vehicule_info));
         finalData = {
+            id_reservation: i,
             image: vehicule_info.image,
             code_acriss: vehicule_info.code_acriss,
             marque: vehicule_info.marque,
@@ -26,13 +38,15 @@ function showReservations() {
             pickup_time: userReservations[i].pickup_time,
             return_date: userReservations[i].return_date,
             return_time: userReservations[i].return_time,
-            code_reservation: userReservations[i].code_reservation
+            code_reservation: userReservations[i].code_reservation,
+            reservation_moment: userReservations[i].reservation_moment
         };
 
         $('reservations_drawer.myList').addItem(JSON.stringify(finalData));
 
     }
 
+    js.hideLoader();
 
 }
 
@@ -50,8 +64,33 @@ function showMap() {
     js.navigateToPage('map_localisation');
 }
 
-function removePopup() {
-    js.navigateToPage('offer_details_drawer');
+
+function mod(a, b) {
+    return a < b ? a : (a - Math.floor(a / b) * b);
+}
+
+function loadReservation_details(actual) {
+    js.saveData("actual", actual);
+    $.setInterval('remainingTime()', 1000);
+}
+
+function remainingTime() {
+
+    var actual = js.getData("actual");
+    var passed = Date.now() - actual;
+
+    var nbsr = 24 * 3600 - Math.floor(passed * 0.001);
+    var nbh = Math.floor(nbsr / 3600);
+    var nbm = Math.floor(mod(nbsr, 3600) / 60);
+    var nbs = mod(mod(nbsr, 3600), 60);
+
+    if (nbh < 10) nbh = '0' + nbh;
+    if (nbm < 10) nbm = '0' + nbm;
+    if (nbs < 10) nbs = '0' + nbs;
+    var reste = nbh + ":" + nbm + ":" + nbs;
+
+    $('reservation_details_drawer.timer').val('text', reste);
+
 }
 
 function myLocation() {
@@ -62,13 +101,20 @@ function myLocation() {
 }
 
 function showMore() {
-    js.navigateToPage('popup', 'popup', '');
+    js.alert('dskl');
+    js.toast("klds");
+    //js.navigateToPage('popup', 'popup', '');
 }
 
 function defaultDateTime() {
 
+    js.alert("hds");
     //0 $('reservation_date_form.Select_213').remove();
+    $('reservation_date_drawer.pickup_date').val('placeholder', '22/8/2017');
     $('reservation_date_drawer.pickup_date').val('value', '22/8/2017');
+    $('reservation_date_drawer.pickup_date').val('text', '22/8/2017');
+    $('reservation_date_drawer.pickup_date').val('option.value', '22/8/2017');
+    $('reservation_date_drawer.pickup_date').val('option.name', '22/8/2017');
 }
 
 function click_tab_reservations() {
@@ -296,8 +342,7 @@ function showOffers(pickup_date, return_date) {
 
     //sort offers basing on geolocalisation
     offers = geoSorting(offers);
-    js.navigateToPage('offers');
-
+    js.navigateToPage('offers_drawer');
 
 }
 
@@ -318,7 +363,7 @@ function reserveVehicule(id_vehicule, prix) {
     var param = '{"' + id + '":{id_client :' + id_client + ',id_vehicule :' + id_vehicule + ',code_reservation :' + generateCodeReservation() + ',nbJours :' + nbJours + ',payer :' + false + ',pickup_date : "' + pickup_date + '",pickup_time :"' + pickup_time +
         '",prix :' + prix + ',return_date :"' + return_date + '",return_time :"' + return_time + '",reservation_moment :' + Date.now() + '}}';
 
-    js.alert(param);
+    //js.alert(param);
     var urljson = '{"url":"' + url + '","method":"PATCH","parameters":' + param + ',"headers":"contenttype=application/json","parametersFormat":"JSON",' + '"parametersMarkup":"Body"}';
     // Calling the function POST
     var data = $.post(urljson);
@@ -337,7 +382,7 @@ function reserveVehicule(id_vehicule, prix) {
     }
 
 
-
+    js.navigateToPage('reservations_drawer');
 
 }
 
@@ -347,7 +392,7 @@ function loadOffers() {
     var car_info = {};
     //var offers = js.getData('offers');
     //js.alert(JSON.stringify(offers));
-    $('offers.myList').clear();
+    $('offers_drawer.myList').clear();
     for (var i in offers.data) {
         car_info = {
             id_vehicule: offers.data[i].id_vehicule,
@@ -366,7 +411,7 @@ function loadOffers() {
             latitude: offers.data[i].latitude,
             longitude: offers.data[i].longitude
         };
-        $('offers.myList').addItem(JSON.stringify(car_info));
+        $('offers_drawer.myList').addItem(JSON.stringify(car_info));
     }
 
 
@@ -505,6 +550,7 @@ function signUp() {
 
 function forTest() {
     js.navigateToPage('reservation_date_drawer');
+    js.saveData('idClient', 1);
 }
 
 function signIn() {

@@ -1,7 +1,7 @@
 {
     "properties": {
-        "id": "-1552240793",
-        "name": "reservation_date_drawer",
+        "id": "185632122",
+        "name": "more_drawer",
         "type": "CUSTOM",
         "style": "pageStyle",
         "parameters": "",
@@ -22,7 +22,7 @@
             "styleSelection": "",
             "dynamic": "false",
             "custom": {
-                "initialPage": "133139147",
+                "initialPage": "-82154955",
                 "orientation": "right"
             },
             "events": {},
@@ -254,8 +254,8 @@
                     "custom": {},
                     "events": {},
                     "components": {
-                        "Text_52": {
-                            "type": "TEXTE",
+                        "Image_button_274": {
+                            "type": "LIEN_PHOTO_ADAPTATIVE",
                             "align": "ALIGN_LEFT",
                             "comment": "",
                             "order": "0",
@@ -264,8 +264,17 @@
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "direction": "left",
-                                "text": ""
+                                "srcImg": "angle-left@2x.png",
+                                "srcImgSelection": "",
+                                "async": "false",
+                                "linkType": "LIEN_INTERNE",
+                                "internLink": "1399712660",
+                                "targetLink": "HTTP",
+                                "externLink": "",
+                                "target": "blank",
+                                "parameters": "",
+                                "frame": "",
+                                "transition": "UIViewAnimationTransitionNone"
                             },
                             "events": {}
                         },
@@ -304,6 +313,6 @@
         }
     },
     "events": {
-        "onLoad": ""
+        "onLoad": "loadOffers()"
     }
 }

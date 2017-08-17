@@ -3,60 +3,22 @@
         "id": "-1583880165",
         "name": "offer_details",
         "type": "CUSTOM",
-        "style": "",
+        "style": "pageStyle",
         "parameters": "",
-        "cache": "true",
+        "cache": "false",
         "cacheDelay": "0",
         "chargement": "false",
         "preloading": "false",
         "title": ""
     },
     "components": {
-        "Container_14": {
-            "type": "COMPOSANT",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "0",
-            "dataObject": "",
-            "style": "header_back",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {},
-            "components": {
-                "Image_button_288": {
-                    "type": "LIEN_PHOTO_ADAPTATIVE",
-                    "align": "ALIGN_LEFT",
-                    "comment": "",
-                    "order": "0",
-                    "dataObject": "",
-                    "style": "menu_back",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "srcImg": "left-arrow.png",
-                        "srcImgSelection": "",
-                        "async": "false",
-                        "linkType": "LIEN_INTERNE",
-                        "internLink": "592432254",
-                        "targetLink": "HTTP",
-                        "externLink": "",
-                        "target": "blank",
-                        "parameters": "",
-                        "frame": "",
-                        "transition": "UIViewAnimationTransitionFlipFromLeft"
-                    },
-                    "events": {}
-                }
-            }
-        },
         "Form_323": {
             "type": "FORM",
             "align": "ALIGN_LEFT",
             "comment": "",
-            "order": "1",
+            "order": "0",
             "dataObject": "",
-            "style": "",
+            "style": "myList",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {
@@ -271,8 +233,8 @@
                             },
                             "events": {}
                         },
-                        "Text_662": {
-                            "type": "TEXTE",
+                        "Internal_link_353": {
+                            "type": "LIEN_INTERNE",
                             "align": "ALIGN_LEFT",
                             "comment": "",
                             "order": "7",
@@ -281,12 +243,14 @@
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "direction": "left",
-                                "text": "MORE..."
+                                "title": "MORE...",
+                                "internLink": "185632122",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
                             },
-                            "events": {
-                                "onClick": "showMore()"
-                            }
+                            "events": {}
                         }
                     }
                 },
@@ -555,53 +519,53 @@
                             }
                         }
                     }
-                },
-                "Container_58": {
-                    "type": "COMPOSANT",
+                }
+            }
+        },
+        "Container_58": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "container_next",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "Submit_624": {
+                    "type": "SUBMIT",
                     "align": "ALIGN_LEFT",
                     "comment": "",
-                    "order": "5",
+                    "order": "0",
                     "dataObject": "",
-                    "style": "container_next",
+                    "style": "show_offers_btn",
                     "styleSelection": "",
                     "dynamic": "false",
-                    "custom": {},
-                    "events": {},
-                    "components": {
-                        "Submit_624": {
-                            "type": "SUBMIT",
-                            "align": "ALIGN_LEFT",
-                            "comment": "",
-                            "order": "0",
-                            "dataObject": "",
-                            "style": "show_offers_btn",
-                            "styleSelection": "",
-                            "dynamic": "false",
-                            "custom": {
-                                "name": "",
-                                "value": "RESERVE NOW",
-                                "parameters": ""
-                            },
-                            "events": {
-                                "onClick": "reserveVehicule(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
-                            }
-                        },
-                        "Image_164": {
-                            "type": "PHOTO_ADAPTATIVE",
-                            "align": "ALIGN_LEFT",
-                            "comment": "",
-                            "order": "1",
-                            "dataObject": "",
-                            "style": "next_icon",
-                            "styleSelection": "",
-                            "dynamic": "false",
-                            "custom": {
-                                "srcImg": "arrow-point-to-right.png",
-                                "async": "false"
-                            },
-                            "events": {}
-                        }
+                    "custom": {
+                        "name": "",
+                        "value": "RESERVE NOW",
+                        "parameters": ""
+                    },
+                    "events": {
+                        "onClick": "reserveVehicule(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
                     }
+                },
+                "Image_164": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "mapfriends-icons-left",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "arrow-point-to-right.png",
+                        "async": "false"
+                    },
+                    "events": {}
                 }
             }
         }

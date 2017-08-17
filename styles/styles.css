@@ -3,6 +3,15 @@
 	height: 41%;
 	margin-top: 2%;
 }
+.compte_a_rebours {
+	margin-left: 25%;
+	width: 50%;
+	font-size: 22px;
+	text-align: center;
+}
+.whitebg {
+	background-color: #FFFFFF;
+}
 .menu_header {
 	height: 5%;
 	margin-right: 5%;
@@ -17,30 +26,34 @@
 	height: 10%;
 	color: #FFFFFF;
 	width: 100%;
-	background-color: #FFBE26;
 }
 .popup_ok {
-	margin-left: 90%;
 	color: #DE7143;
+	width: 100%;
 	font-size: 17px;
+	text-align: right;
 }
 .tab_unselected {
-	border-bottom: 2px solid rgb(222, 113, 67);
+	border-bottom: 2px solid rgb(173, 173, 173);
 	color: #BFBFBF;
 	padding-top: 3%;
 	padding-bottom: 3%;
 	width: 50%;
-	background-color: #DE7143;
+	background-color: #FFFFFF;
 	text-align: center;
 }
 .tab_selected {
-	border-bottom: 2px solid rgb(255, 190, 38);
-	color: #FFFFFF;
+	border-bottom: 2px solid rgb(222, 113, 67);
+	color: #D45D2F;
 	padding-top: 3%;
 	padding-bottom: 3%;
 	width: 50%;
-	background-color: #DE7143;
+	background-color: #FFFFFF;
+	font-weight: bold;
 	text-align: center;
+}
+.reservation_date_form {
+	background-color: #FFFFFF;
 }
 .container_price {
 	text-align: center;
@@ -49,14 +62,24 @@
 	width: 55%;
 	margin-top: 5%;
 }
+.container_code_reservation {
+	width: 40%;
+	margin-top: 3%;
+}
 .offer_price_total_details {
 	color: #DEBF26;
 	width: 55%;
 	font-size: 26px;
 	text-align: right;
 }
+.mapfriends-topbar {
+	height: 10%;
+	width: 100%;
+}
 .popup_title {
+	margin-left: 5%;
 	color: #DE7143;
+	width: 95%;
 	font-size: 20px;
 }
 .simple_text {
@@ -74,6 +97,9 @@
 	height: 30px;
 	width: 30px;
 	margin-top: 2%;
+}
+.form_reservation_details {
+	background-color: #FFFFFF;
 }
 .container_btns {
 	margin-left: 2%;
@@ -153,6 +179,7 @@
 }
 .logo_infos_details {
 	height: 10%;
+	background-color: #FFFFFF;
 }
 .Productslist-list {
 	margin-left: 2%;
@@ -224,11 +251,27 @@
 	background-color: #FFFFFF;
 	margin-top: 1%;
 }
+.myList {
+	background-color: #FFFFFF;
+}
 .container_date_time {
 	margin-left: 8%;
 }
 .title_details {
 	height: 19%;
+	background-color: #FFFFFF;
+}
+.mapfriends-icons-left {
+	width: 13px;
+	margin-left: 4%;
+	border-style: none;
+	padding-right: 0;
+	margin-bottom: 3%;
+	padding-top: 0;
+	margin-top: 3%;
+	padding-bottom: 0;
+	padding-left: 0;
+	height: 21px;
 }
 .Productslist-titleGrid {
 	color: #000000;
@@ -253,7 +296,9 @@
 	width: 80%;
 }
 .tab_header {
+	height: 10%;
 	padding-top: 0px;
+	background-color: #FFFFFF;
 }
 .offer_total_price {
 	color: #C9C9C9;
@@ -269,6 +314,14 @@
 .categorie_details {
 	font-family: Tahoma;
 	width: 50%;
+}
+.reservation_details_code_reservation {
+	margin-left: 2%;
+	font-family: Tahoma;
+	width: 100%;
+	background-color: #FFFFFF;
+	font-size: 14px;
+	text-align: center;
 }
 .input_field_min {
 	width: 80%;
@@ -307,7 +360,7 @@
 	margin-left: 2%;
 	height: 34px;
 	background-image: url(arrow-point-to-right.png);
-	width: 10%;
+	width: 34px;
 }
 .offres_btn {
 	color: #000000;
@@ -334,6 +387,15 @@
 	font-weight: bold;
 	font-size: 16px;
 }
+.reservation_details_date_chooser {
+	border-bottom: 1px solid rgb(222, 113, 67);
+	margin-left: 4%;
+	margin-right: 4%;
+	color: #000000;
+	border: none;
+	width: 35%;
+	background-color: #FFFFFF;
+}
 .details_price {
 	color: #B5B5B5;
 	font-size: 16px;
@@ -352,15 +414,23 @@
 	border-style: none;
 	text-align: center;
 }
-.reservations_code_acriss {
-	margin-left: 2%;
-	margin-right: 1%;
+.mapfriends-title-topbar {
 	color: #FFFFFF;
-	padding-left: 1%;
-	font-family: Tahoma;
+	width: 80%;
+	margin-top: 1.5%;
+	font-size: 19px;
+	text-align: center;
+}
+.reservations_code_acriss {
+	text-align: left;
+	margin-left: 2%;
 	background-color: #000000;
-	font-size: 14px;
+	color: #FFFFFF;
 	padding-right: 1%;
+	font-size: 14px;
+	font-family: Tahoma;
+	padding-left: 1%;
+	margin-right: 1%;
 }
 .header {
 	background-image: url(background.png);
@@ -377,15 +447,26 @@
 .checked_icon {
 	margin-top: 1%;
 }
+.reservation_details_title_chooser {
+	color: #454545;
+	width: 20%;
+}
 .reservations_offer_price_car {
 	margin-left: 2%;
 	width: 55%;
+	text-align: left;
 }
 .title_chooser {
 	margin-left: 8%;
 	color: #454545;
 	text-decoration: none;
 	font-weight: 700;
+	font-size: 14px;
+}
+.more_li {
+	margin-left: 1%;
+	font-family: Approxima;
+	width: 90%;
 	font-size: 14px;
 }
 .hr_details {
@@ -423,6 +504,7 @@
 	width: 53%;
 	font-weight: 700;
 	font-size: 20px;
+	text-align: left;
 }
 .infos_vehicule {
 	margin-left: 5%;
@@ -434,8 +516,8 @@
 	background-color: #DE7143;
 }
 .price_details {
-	height: 25%;
 	margin-left: 2%;
+	height: 25%;
 }
 .details_description {
 	margin-left: 5%;
@@ -443,13 +525,19 @@
 	font-size: 23px;
 }
 .time_chooser {
-	border-bottom: 1px solid #DE7143;
-	border: none;
+	border-bottom: 1px solid rgb(222, 113, 67);
 	margin-left: 4%;
+	color: #000000;
+	border: none;
 	width: 15%;
-	color: #ffbe26;
 }
 .container-body {
+	background-color: #FFFFFF;
+}
+.reservation_details_dates {
+	margin-left: 12%;
+	height: 25%;
+	width: 75%;
 	background-color: #FFFFFF;
 }
 .drawer_menu {
@@ -458,6 +546,15 @@
 }
 .image_details {
 	height: 26%;
+}
+.more_container {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+}
+.dot {
+	margin-left: 5%;
+	margin-top: 1%;
 }
 .itemStyle {
 	width: 50%;
@@ -503,6 +600,9 @@
 	margin-bottom: 1%;
 	width: 96%;
 }
+.drawer_btn {
+	margin-left: 82%;
+}
 .grid_item {
 	margin-left: 6%;
 	height: 198px;
@@ -540,23 +640,28 @@
 .slide_show {
 	height: 45%;
 }
-.reservation_details_code_reservation {
-	margin-left: 2%;
-	font-family: Tahoma;
-	font-size: 14px;
-	width: 100%;
-	text-align: center;
-}
 .reservations_code_reservation {
 	margin-left: 2%;
 	font-family: Tahoma;
 	font-size: 14px;
-	text-align: center;
+	text-align: left;
 }
 .logo {
 	height: 10.63%;
 	margin-bottom: 5%;
 	margin-top: 13%;
+}
+.mapfriends-icons-help {
+	width: 21px;
+	border-style: none;
+	padding-right: 0;
+	margin-bottom: 3%;
+	padding-top: 0;
+	margin-top: 3%;
+	padding-bottom: 0;
+	padding-left: 0;
+	margin-right: 3%;
+	height: 21px;
 }
 .Productslist-imageGrid {
 	height: 30%;
@@ -567,7 +672,6 @@
 	color: #FFFFFF;
 	border: 0px none rgb(255, 190, 38);
 	width: 89%;
-	background-color: #FFBE26;
 	text-align: right;
 }
 .details_part2 {
@@ -592,17 +696,12 @@
 	margin-top: 2%;
 }
 .date_chooser {
-	border-bottom: 1px solid #DE7143;
+	border-bottom: 1px solid rgb(222, 113, 67);
 	margin-left: 4%;
 	margin-right: 4%;
+	color: #000000;
 	border: none;
 	width: 25%;
-	color: #ffbe26;
-}
-.offer_car_categorie {
-	margin-right: 4%;
-	font-family: Tahoma;
-	font-size: 14px;
 }
 .details_marque {
 	font-family: Arial;
@@ -610,6 +709,12 @@
 	font-weight: 700;
 	font-size: 20px;
 	text-align: center;
+}
+.offer_car_categorie {
+	margin-right: 4%;
+	font-family: Tahoma;
+	font-size: 14px;
+	text-align: left;
 }
 .topbar {
 	background-image: url(background.png);
@@ -623,6 +728,12 @@
 	margin-bottom: 1%;
 	font-weight: bold;
 	text-align: center;
+}
+.mini_logo_infos_car {
+	margin-left: 2%;
+	height: 25px;
+	background-image: url(arrow-point-to-right.png);
+	width: 25px;
 }
 .offer_total_details {
 	font-style: normal;
@@ -651,8 +762,6 @@
 }
 .drawer_header {
 	border-bottom: 1px solid rgb(217, 94, 41);
-	background-repeat: no-repeat;
-	background-color: #DE7143;
 }
 .marque_modele {
 	color: #000000;
@@ -672,19 +781,4 @@
 .details_infos_spacer {
 	height: 4px;
 	width: 100%;
-}
-.container_code_reservation {
-	width: 40%;
-	margin-top: 3%;
-}
-.compte_a_rebours {
-	font-size: 22px;
-	width: 50%;
-	margin-left: 25%;
-	text-align: center;
-}
-.reservation_details_dates {
-	height: 25%;
-	margin-left: 8%;
-	width: 87%;
 }

@@ -5,7 +5,7 @@
         "type": "CUSTOM",
         "style": "",
         "parameters": "",
-        "cache": "true",
+        "cache": "false",
         "cacheDelay": "0",
         "chargement": "false",
         "preloading": "false",
@@ -70,7 +70,7 @@
             "comment": "",
             "order": "1",
             "dataObject": "",
-            "style": "",
+            "style": "myList",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {
@@ -92,8 +92,8 @@
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "internalLink": "-349600021",
-                        "parameters": "image=$image;&marque=$marque;&model=$model;&code_acriss=$code_acriss;&categorie=$categorie;&code_reservation=$code_reservation;&pickup_date=$pickup_date;&pickup_time=$pickup_time;&return_date=$return_date;&return_time=$return_time;",
+                        "internalLink": "2134592259",
+                        "parameters": "image=$image;&marque=$marque;&model=$model;&code_acriss=$code_acriss;&categorie=$categorie;&code_reservation=$code_reservation;&pickup_date=$pickup_date;&pickup_time=$pickup_time;&return_date=$return_date;&return_time=$return_time;&id_reservation=$id_reservation;&reservation_moment=$reservation_moment;",
                         "target": "Blank",
                         "root": ""
                     },
@@ -296,6 +296,6 @@
         }
     },
     "events": {
-        "onLoad": "loadOffers()"
+        "onLoad": ""
     }
 }

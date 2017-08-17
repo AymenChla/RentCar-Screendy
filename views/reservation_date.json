@@ -3,7 +3,7 @@
         "id": "133139147",
         "name": "reservation_date",
         "type": "CUSTOM",
-        "style": "",
+        "style": "pageStyle",
         "parameters": "",
         "cache": "true",
         "cacheDelay": "0",
@@ -12,67 +12,13 @@
         "title": ""
     },
     "components": {
-        "Container_339": {
-            "type": "COMPOSANT",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "0",
-            "dataObject": "",
-            "style": "tab_header",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {},
-            "components": {
-                "tab_offers": {
-                    "type": "LIEN_INTERNE",
-                    "align": "ALIGN_LEFT",
-                    "comment": "",
-                    "order": "0",
-                    "dataObject": "",
-                    "style": "tab_selected",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "title": "OFFERS",
-                        "internLink": "",
-                        "parameters": "",
-                        "Target": "blank",
-                        "frame": "",
-                        "subStringToUnderline": ""
-                    },
-                    "events": {}
-                },
-                "tab_reservations": {
-                    "type": "LIEN_INTERNE",
-                    "align": "ALIGN_LEFT",
-                    "comment": "",
-                    "order": "1",
-                    "dataObject": "",
-                    "style": "tab_unselected",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "title": "RESERVATIONS",
-                        "internLink": "-1751626652",
-                        "parameters": "",
-                        "Target": "blank",
-                        "frame": "",
-                        "subStringToUnderline": ""
-                    },
-                    "events": {
-                        "onClick": ""
-                    }
-                }
-            }
-        },
         "Form_778": {
             "type": "FORM",
             "align": "ALIGN_LEFT",
             "comment": "",
-            "order": "1",
+            "order": "0",
             "dataObject": "",
-            "style": "",
+            "style": "reservation_date_form",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {
@@ -96,11 +42,65 @@
             },
             "events": {},
             "components": {
-                "Container_234": {
+                "Container_339": {
                     "type": "COMPOSANT",
                     "align": "ALIGN_LEFT",
                     "comment": "",
                     "order": "0",
+                    "dataObject": "",
+                    "style": "tab_header",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "tab_offers": {
+                            "type": "LIEN_INTERNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "tab_selected",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "title": "OFFERS",
+                                "internLink": "",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
+                            },
+                            "events": {}
+                        },
+                        "tab_reservations": {
+                            "type": "LIEN_INTERNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "tab_unselected",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "title": "RESERVATIONS",
+                                "internLink": "-1751626652",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
+                            },
+                            "events": {
+                                "onClick": ""
+                            }
+                        }
+                    }
+                },
+                "Container_234": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
                     "dataObject": "",
                     "style": "form_first_bloc",
                     "styleSelection": "",
@@ -199,23 +199,23 @@
                                 "Image_206": {
                                     "type": "PHOTO_ADAPTATIVE",
                                     "align": "ALIGN_LEFT",
-                                    "dynamic": "FALSE",
-                                    "dataObject": "",
                                     "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
                                     "style": "logo_infos_car",
                                     "styleSelection": "",
+                                    "dynamic": "false",
                                     "custom": {
                                         "srcImg": "clock.png",
                                         "async": "false"
                                     },
-                                    "events": {},
-                                    "order": 2
+                                    "events": {}
                                 },
                                 "pickup_time": {
                                     "type": "SELECT",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "2",
+                                    "order": "3",
                                     "dataObject": "",
                                     "style": "time_chooser",
                                     "styleSelection": "",
@@ -326,23 +326,23 @@
                                 "Image_157": {
                                     "type": "PHOTO_ADAPTATIVE",
                                     "align": "ALIGN_LEFT",
-                                    "dynamic": "FALSE",
-                                    "dataObject": "",
                                     "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
                                     "style": "logo_infos_car",
                                     "styleSelection": "",
+                                    "dynamic": "false",
                                     "custom": {
                                         "srcImg": "clock.png",
                                         "async": "false"
                                     },
-                                    "events": {},
-                                    "order": 2
+                                    "events": {}
                                 },
                                 "return_time": {
                                     "type": "SELECT",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "2",
+                                    "order": "3",
                                     "dataObject": "",
                                     "style": "time_chooser",
                                     "styleSelection": "",
@@ -375,62 +375,62 @@
                             "events": {}
                         }
                     }
+                }
+            }
+        },
+        "Container_58": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "container_next",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {
+                "onClick": "validationResevartionDate()"
+            },
+            "components": {
+                "Submit_91": {
+                    "type": "SUBMIT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "show_offers_btn",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "name": "",
+                        "value": "SHOW OFFERS",
+                        "parameters": ""
+                    },
+                    "events": {
+                        "onClick": "validationResevartionDate()"
+                    }
                 },
-                "Container_58": {
-                    "type": "COMPOSANT",
+                "Image_7": {
+                    "type": "PHOTO_ADAPTATIVE",
                     "align": "ALIGN_LEFT",
                     "comment": "",
                     "order": "1",
                     "dataObject": "",
-                    "style": "container_next",
+                    "style": "mapfriends-icons-left",
                     "styleSelection": "",
                     "dynamic": "false",
-                    "custom": {},
+                    "custom": {
+                        "srcImg": "arrow-point-to-right.png",
+                        "async": "false"
+                    },
                     "events": {
                         "onClick": "validationResevartionDate()"
-                    },
-                    "components": {
-                        "Submit_91": {
-                            "type": "SUBMIT",
-                            "align": "ALIGN_LEFT",
-                            "comment": "",
-                            "order": "0",
-                            "dataObject": "",
-                            "style": "show_offers_btn",
-                            "styleSelection": "",
-                            "dynamic": "false",
-                            "custom": {
-                                "name": "",
-                                "value": "SHOW OFFERS",
-                                "parameters": ""
-                            },
-                            "events": {
-                                "onClick": "validationResevartionDate()"
-                            }
-                        },
-                        "Image_7": {
-                            "type": "PHOTO_ADAPTATIVE",
-                            "align": "ALIGN_LEFT",
-                            "comment": "",
-                            "order": "1",
-                            "dataObject": "",
-                            "style": "next_icon",
-                            "styleSelection": "",
-                            "dynamic": "false",
-                            "custom": {
-                                "srcImg": "arrow-point-to-right.png",
-                                "async": "false"
-                            },
-                            "events": {
-                                "onClick": "validationResevartionDate()"
-                            }
-                        }
                     }
                 }
             }
         }
     },
     "events": {
-        "onLoad": "validationResevartionDate()"
+        "onLoad": ""
     }
 }

@@ -5,58 +5,20 @@
         "type": "CUSTOM",
         "style": "",
         "parameters": "",
-        "cache": "true",
+        "cache": "false",
         "cacheDelay": "0",
         "chargement": "false",
         "preloading": "false",
         "title": ""
     },
     "components": {
-        "Container_443": {
-            "type": "COMPOSANT",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "0",
-            "dataObject": "",
-            "style": "header_back",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {},
-            "components": {
-                "Image_button_189": {
-                    "type": "LIEN_PHOTO_ADAPTATIVE",
-                    "align": "ALIGN_LEFT",
-                    "comment": "",
-                    "order": "0",
-                    "dataObject": "",
-                    "style": "menu_back",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "srcImg": "left-arrow.png",
-                        "srcImgSelection": "",
-                        "async": "false",
-                        "linkType": "LIEN_INTERNE",
-                        "internLink": "-1552240793",
-                        "targetLink": "HTTP",
-                        "externLink": "",
-                        "target": "blank",
-                        "parameters": "",
-                        "frame": "",
-                        "transition": "UIViewAnimationTransitionFlipFromRight"
-                    },
-                    "events": {}
-                }
-            }
-        },
         "myList": {
             "type": "LISTE_OBJECT",
             "align": "ALIGN_LEFT",
             "comment": "",
-            "order": "1",
+            "order": "0",
             "dataObject": "",
-            "style": "",
+            "style": "myList",
             "styleSelection": "",
             "dynamic": "false",
             "custom": {
@@ -78,7 +40,7 @@
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "internalLink": "-1583880165",
+                        "internalLink": "1399712660",
                         "parameters": "image=$image;&marque=$marque;&prix=$prix;&description=$description;&model=$model;&nbPortes=$nbPortes;&nbPassagers=$nbPassagers;&nbValises=$nbValises;&consommation=$consommation;&code_acriss=$code_acriss;&prixTotal=$prixTotal;&categorie=$categorie;&id_vehicule=$id_vehicule;",
                         "target": "Blank",
                         "root": ""
@@ -371,6 +333,6 @@
         }
     },
     "events": {
-        "onLoad": "loadOffers()"
+        "onLoad": ""
     }
 }
