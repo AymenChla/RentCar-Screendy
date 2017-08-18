@@ -93,37 +93,6 @@ function remainingTime() {
 
 }
 
-function myLocation() {
-
-    var long = $.call('api.location.getLatitude()', {});
-    $.alert('voila: ' + long + ' !');
-
-}
-
-function showMore() {
-    js.alert('dskl');
-    js.toast("klds");
-    //js.navigateToPage('popup', 'popup', '');
-}
-
-function defaultDateTime() {
-
-    js.alert("hds");
-    //0 $('reservation_date_form.Select_213').remove();
-    $('reservation_date_drawer.pickup_date').val('placeholder', '22/8/2017');
-    $('reservation_date_drawer.pickup_date').val('value', '22/8/2017');
-    $('reservation_date_drawer.pickup_date').val('text', '22/8/2017');
-    $('reservation_date_drawer.pickup_date').val('option.value', '22/8/2017');
-    $('reservation_date_drawer.pickup_date').val('option.name', '22/8/2017');
-}
-
-function click_tab_reservations() {
-
-    $('reservation_date_drawer.tab_reservations').css('color', '#ffffff');
-    //js.setProperty('reservation_date_drawer.tab_reservations', 'style', 'tab_selected');
-
-
-}
 
 function validationResevartionDate() {
 
@@ -190,29 +159,29 @@ function validationResevartionDate() {
     //js.alert('\n' + today + ' pick: ' + pickup_date);
     if (pickup_date == "") {
         //js.hideLoader();
-        js.alert("please select pickup date");
+        js.toast("please select pickup date");
         valide = false;
     } else if (return_date == "") {
         //js.hideLoader();
-        js.alert("please select return date");
+        js.toast("please select return date");
         valide = false;
     } else if (pickup_time == "") {
         // js.hideLoader();
-        js.alert("please select pickup time");
+        js.toast("please select pickup time");
         valide = false;
     } else if (return_time == "") {
         //js.hideLoader();
-        js.alert("please select return time");
+        js.toast("please select return time");
         valide = false;
     } else {
         if (pickup_ms < current_ms) {
             //js.hideLoader();
-            js.alert('pickup date must be up or equal to current date');
+            js.toast('pickup date must be up or equal to current date');
             valide = false;
         }
         if (return_ms < pickup_ms) {
             //js.hideLoader();
-            js.alert("return date must be up or equal to pickup date");
+            js.toast("return date must be up or equal to pickup date");
             valide = false;
         }
     }
@@ -422,46 +391,7 @@ function loadOffers() {
 }
 
 
-function showMenu() {
-    js.navigateToPage('menu', 'slideUp', ' ');
-}
 
-function tessst() {
-    js.navigateToPage('reservation_date_form');
-}
-
-function getCurrentDate() {
-    var date = new Date();
-    js.alert(date);
-}
-
-function listItem() {
-    var url = "https://reservationvehicules-91687.firebaseio.com/vehicules/.json";
-    var obj = JSON.parse($.get(url));
-
-    //$.alert(JSON.stringify(obj, null, 2));
-    var finalData = {};
-
-    //$('principalpage.myList').clear();
-
-    for (var t = 0; t < obj.length; t++) {
-        finalData = {
-            marque: obj[t].marque,
-            model: obj[t].model,
-            prix: obj[t].prix,
-            image: obj[t].image,
-            description: obj[t].description,
-            categorie: obj[t].categorie,
-            nbValises: obj[t].nbValises,
-            nbPassagers: obj[t].nbPassagers,
-            consommation: obj[t].consommation,
-            nbPortes: obj[t].nbPortes,
-        };
-
-        $('principalpage.myList').addItem(JSON.stringify(finalData));
-    }
-
-}
 
 
 function AddUser(len) {
@@ -518,20 +448,20 @@ function signUp() {
     var $url = 'https://reservationvehicules-91687.firebaseio.com/clients/.json?orderBy="email"&startAt="' + email + '"&endAt="' + email + '"';
     var data = $.get($url);
     if (firstName == "" || lastName == "" || pass == "" || email == "" || passConfirm == "" || tel == "") {
-        $.alert("Please fill in all the fields");
+        $.toast("Please fill in all the fields");
     } else if (pass != passConfirm) {
-        $.alert("Password and password confirmation don't match!");
+        $.toast("Password and password confirmation don't match!");
     } else {
         var isEmail = js.isEmail(email);
         if (isEmail != "true") {
-            $.alert("This is not a valid email address !");
+            $.toast("This is not a valid email address !");
         } else {
             var obj = JSON.parse(data);
             //js.alert(JSON.stringify(obj));
 
             //tester si le resultat est vide
             if (JSON.stringify(obj) != "{}") {
-                $.alert("Email already exist, please change it!");
+                $.toast("Email already exist, please change it!");
                 return;
             }
         }
@@ -560,7 +490,7 @@ function signIn() {
     var url = 'https://reservationvehicules-91687.firebaseio.com/clients/.json?orderBy="email"&startAt="' + email + '"&endAt="' + email + '"';
 
     if (pass == "" || email == "") {
-        $.alert("Please fill in all the fields");
+        $.toast("Please fill in all the fields");
     } else {
         $.showLoader();
         $.get(url, onSignInSuccess, onSignInFailure);
@@ -587,12 +517,12 @@ function onSignInSuccess(data) {
             js.navigateToPage('reservation_date_drawer');
             //$('reservation_date_drawer').fadeIn(100, -1);
         } else {
-            $.alert("Email or Password incorrect !");
+            $.toast("Email or Password incorrect !");
         }
     }
 }
 
 function onSignInFailure(err) {
     $.hideLoader();
-    $.alert("Error: " + err);
+    $.toast("Error: " + err);
 }
