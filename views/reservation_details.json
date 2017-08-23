@@ -143,6 +143,21 @@
                     "custom": {},
                     "events": {},
                     "components": {
+                        "Image_4": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "hourglass",
+                            "styleSelection": "",
+                            "custom": {
+                                "srcImg": "hourglass-32.png",
+                                "async": "false"
+                            },
+                            "events": {},
+                            "order": 1
+                        },
                         "timer": {
                             "type": "TEXTE",
                             "align": "ALIGN_CENTER",

@@ -313,6 +313,6 @@
         }
     },
     "events": {
-        "onLoad": "loadReservation_details(request.getParameter(reservation_moment))"
+        "onLoad": "loadReservation_details(request.getParameter(reservation_moment),request.getParameter(id_reservation))"
     }
 }

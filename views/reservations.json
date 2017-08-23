@@ -238,7 +238,7 @@
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
-                                        "srcImg": "success.png",
+                                        "srcImg": "placeholder-24.png",
                                         "async": "false"
                                     },
                                     "events": {}
@@ -254,7 +254,7 @@
                                     "dynamic": "false",
                                     "custom": {
                                         "direction": "left",
-                                        "text": "Location: $location;"
+                                        "text": "Location: $adresse;"
                                     },
                                     "events": {}
                                 },
@@ -268,7 +268,7 @@
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
-                                        "srcImg": "success.png",
+                                        "srcImg": "time.png",
                                         "async": "false"
                                     },
                                     "events": {}

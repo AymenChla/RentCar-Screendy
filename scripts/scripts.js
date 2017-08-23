@@ -1,13 +1,3 @@
-function cancelReservation(id_reservation) {
-    var param = '{"' + id + '":{id_client :' + id_client + ',id_vehicule :' + id_vehicule + ',code_reservation :' + generateCodeReservation() + ',nbJours :' + nbJours + ',payer :' + false + ',pickup_date : "' + pickup_date + '",pickup_time :"' + pickup_time +
-        '",prix :' + prix + ',return_date :"' + return_date + '",return_time :"' + return_time + '",reservation_moment :' + Date.now() + '}}';
-    var $urlfav2 = "https://reservationvehicules-91687.firebaseio.com/reservations/" + id_reservation + "/.json";
-    var urljson2 = '{"url":"' + $urlfav2 + '","method":"DELETE","parameters":' + param + ',"headers":"contenttype=application/json","parametersFormat":"JSON",' + '"parametersMarkup":"Body"}';
-    var datafav = $.post(urljson2);
-    js.navigateToPage('reservations_drawer');
-}
-
-
 function showReservations() {
 
     js.showLoader();
@@ -34,12 +24,14 @@ function showReservations() {
             marque: vehicule_info.marque,
             model: vehicule_info.model,
             categorie: vehicule_info.categorie,
+            adresse: vehicule_info.adresse,
             pickup_date: userReservations[i].pickup_date,
             pickup_time: userReservations[i].pickup_time,
             return_date: userReservations[i].return_date,
             return_time: userReservations[i].return_time,
             code_reservation: userReservations[i].code_reservation,
-            reservation_moment: userReservations[i].reservation_moment
+            reservation_moment: userReservations[i].reservation_moment,
+
         };
 
         $('reservations_drawer.myList').addItem(JSON.stringify(finalData));
@@ -69,10 +61,19 @@ function mod(a, b) {
     return a < b ? a : (a - Math.floor(a / b) * b);
 }
 
-function loadReservation_details(actual) {
+function PayementDelay(moment_reservation) {
+    if ((Date.now() - (moment_reservation + 24 * 3600 * 1000)) > 0)
+        return true;
+    else return false;
+}
+
+function loadReservation_details(actual, id_reservation) {
     js.saveData("actual", actual);
+    js.saveData("id_reservation", id_reservation);
+    remainingTime();
     $.setInterval('remainingTime()', 1000);
 }
+
 
 function remainingTime() {
 
@@ -84,15 +85,27 @@ function remainingTime() {
     var nbm = Math.floor(mod(nbsr, 3600) / 60);
     var nbs = mod(mod(nbsr, 3600), 60);
 
+    if (nbh <= 0 && nbm <= 0 && nbs <= 0) {
+        cancelReservation();
+        js.toast("reservation has been canceled");
+        js.navigateToPage("reservations_drawer");
+    }
     if (nbh < 10) nbh = '0' + nbh;
     if (nbm < 10) nbm = '0' + nbm;
     if (nbs < 10) nbs = '0' + nbs;
     var reste = nbh + ":" + nbm + ":" + nbs;
 
     $('reservation_details_drawer.timer').val('text', reste);
-
 }
 
+function cancelReservation() {
+    var id_reservation = js.getData("id_reservation");
+    var requete = "https://reservationvehicules-91687.firebaseio.com/reservations/" + id_reservation + "/.json";
+    var obj = JSON.stringify(JSON.parse($.get(requete)));
+    var requeteDelete = '{"url":"' + requete + '","method":"DELETE","parameters":' + obj + ',"headers":"contenttype=application/json","parametersFormat":"JSON",' + '"parametersMarkup":"Body"}';
+    var data = $.post(requeteDelete);
+
+}
 
 function validationResevartionDate() {
 
@@ -217,6 +230,7 @@ function geoSorting(offers) {
 
     var myLat = $.call('api.location.getLatitude()', {});
     var myLon = $.call('api.location.getLongitude()', {});
+    if (myLat == "" && myLon == "") js.toast("please activate localisation");
     offers.data.sort(function(a, b) {
         return getDistance(myLat, myLon, a.latitude, a.longitude) - getDistance(myLat, myLon, b.latitude, b.longitude);
     });
@@ -252,53 +266,68 @@ function showOffers(pickup_date, return_date) {
     var finalData = {};
     //boucle pour chaque vehicule
     for (var t in vehicules) {
+        if (vehicules[t] != null) {
+            //recuperer les reservations d'un vehicule
+            url_getReservationsByVehicule_id = 'https://reservationvehicules-91687.firebaseio.com/reservations.json?orderBy="id_vehicule"&equalTo=' + t;
 
-        //recuperer les reservations d'un vehicule
-        url_getReservationsByVehicule_id = 'https://reservationvehicules-91687.firebaseio.com/reservations.json?orderBy="id_vehicule"&equalTo=' + t;
+            reservations = JSON.parse($.get(url_getReservationsByVehicule_id));
 
-        reservations = JSON.parse($.get(url_getReservationsByVehicule_id));
+            libre = true;
+            for (var i in reservations) {
 
-        libre = true;
-        for (var i in reservations) {
+                var reservation_pickup_date = Date.parse(reservations[i].pickup_date + "T" + reservations[i].pickup_time + ":00.000");
+                var reservation_return_date = Date.parse(reservations[i].return_date + "T" + reservations[i].return_time + ":00.000");
 
-            var reservation_pickup_date = Date.parse(reservations[i].pickup_date + "T" + reservations[i].pickup_time + ":00.000");
-            var reservation_return_date = Date.parse(reservations[i].return_date + "T" + reservations[i].return_time + ":00.000");
+                //voir si c deja reserver pour cette intervale
+                if ((reservation_pickup_date < pickup_date && pickup_date < reservation_return_date) ||
+                    (reservation_pickup_date < return_date && return_date < reservation_return_date)) {
+
+                    var moment_reservation = reservations[i].reservation_moment;
+                    var payer = reservations[i].payer;
+                    //si delay depasser sans payer
+                    if (PayementDelay(moment_reservation) && !payer) {
+                        js.saveData("id_reservation", i);
+                        cancelReservation();
+                        break;
+                    }
+
+                    libre = false;
+                    break;
+                }
 
 
-            if ((reservation_pickup_date < pickup_date && pickup_date < reservation_return_date) ||
-                (reservation_pickup_date < return_date && return_date < reservation_return_date)) {
-                libre = false;
-
-                //js.alert('id_vehi:' + id_vehicule + ' id_res: ' + i + ' reservation_pickup: ' + reservation_pickup_date + ' reservation_return: ' + reservation_return_date + ' ,pickup: ' + pickup_date + ' return: ' + return_date);
-                break;
             }
-        }
 
-        if (libre) {
 
-            var prix = (vehicules[t].prix - vehicules[t].prix * vehicules[t].solde / 100);
 
-            finalData = {
-                id_vehicule: t,
-                marque: vehicules[t].marque,
-                model: vehicules[t].model,
-                prix: prix,
-                image: vehicules[t].image,
-                description: vehicules[t].description,
-                categorie: vehicules[t].categorie,
-                nbValises: vehicules[t].nbValises,
-                nbPassagers: vehicules[t].nbPassagers,
-                consommation: vehicules[t].consommation,
-                nbPortes: vehicules[t].nbPortes,
-                prixTotal: Math.round(prix * nbjour * 100) / 100,
-                code_acriss: vehicules[t].code_acriss,
-                ancien_prix: vehicules[t].prix,
-                latitude: vehicules[t].latitude,
-                longitude: vehicules[t].longitude
-            };
 
-            //$('offers_drawer.myList').addItem(JSON.stringify(finalData));
-            offers.data.push(finalData);
+            if (libre) {
+
+                var prix = (vehicules[t].prix - vehicules[t].prix * vehicules[t].solde / 100);
+
+                finalData = {
+                    id_vehicule: t,
+                    marque: vehicules[t].marque,
+                    model: vehicules[t].model,
+                    prix: prix,
+                    image: vehicules[t].image,
+                    description: vehicules[t].description,
+                    categorie: vehicules[t].categorie,
+                    nbValises: vehicules[t].nbValises,
+                    nbPassagers: vehicules[t].nbPassagers,
+                    consommation: vehicules[t].consommation,
+                    nbPortes: vehicules[t].nbPortes,
+                    prixTotal: Math.round(prix * nbjour * 100) / 100,
+                    code_acriss: vehicules[t].code_acriss,
+                    ancien_prix: vehicules[t].prix,
+                    latitude: vehicules[t].latitude,
+                    longitude: vehicules[t].longitude
+                };
+
+                //$('offers_drawer.myList').addItem(JSON.stringify(finalData));
+                offers.data.push(finalData);
+
+            }
         }
 
         //$.alert(JSON.stringify(reservations));

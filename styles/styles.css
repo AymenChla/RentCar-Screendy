@@ -3,11 +3,15 @@
 	height: 41%;
 	margin-top: 2%;
 }
+.hourglass {
+	margin-left: 30%;
+	margin-left: 2%;
+	margin-top: 1%;
+}
 .compte_a_rebours {
-	margin-left: 25%;
 	width: 50%;
 	font-size: 22px;
-	text-align: center;
+	text-align: left;
 }
 .whitebg {
 	background-color: #FFFFFF;
@@ -446,6 +450,7 @@
 }
 .checked_icon {
 	margin-top: 1%;
+	margin-right: 1%;
 }
 .reservation_details_title_chooser {
 	color: #454545;
@@ -579,7 +584,6 @@
 	width: 40%;
 }
 .offre_free_service {
-	margin-left: 1%;
 	font-family: Approxima;
 	width: 50%;
 	font-size: 14px;
@@ -686,7 +690,7 @@
 .reservations_location {
 	margin-left: 1%;
 	font-family: Approxima;
-	width: 94%;
+	width: 93%;
 	font-size: 14px;
 }
 .logo_menu {
