@@ -76,7 +76,7 @@
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
-                                        "srcImg": "rent-a-car_(1).png",
+                                        "srcImg": "rent-a-car-black-64.png",
                                         "srcImgSelection": "",
                                         "async": "false",
                                         "linkType": "LIEN_INTERNE",
@@ -96,7 +96,7 @@
                                     "comment": "",
                                     "order": "1",
                                     "dataObject": "",
-                                    "style": "current_page_menu_link",
+                                    "style": "menu_link",
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
@@ -123,7 +123,7 @@
                                         "srcImgSelection": "",
                                         "async": "false",
                                         "linkType": "LIEN_INTERNE",
-                                        "internLink": "-1",
+                                        "internLink": "-1751626652",
                                         "targetLink": "HTTP",
                                         "externLink": "",
                                         "target": "blank",
@@ -144,50 +144,7 @@
                                     "dynamic": "false",
                                     "custom": {
                                         "title": "Reservations",
-                                        "internLink": "-1",
-                                        "parameters": "",
-                                        "Target": "blank",
-                                        "frame": "",
-                                        "subStringToUnderline": ""
-                                    },
-                                    "events": {}
-                                },
-                                "Image_button_110": {
-                                    "type": "LIEN_PHOTO_ADAPTATIVE",
-                                    "align": "ALIGN_LEFT",
-                                    "comment": "",
-                                    "order": "4",
-                                    "dataObject": "",
-                                    "style": "icons-nav",
-                                    "styleSelection": "",
-                                    "dynamic": "false",
-                                    "custom": {
-                                        "srcImg": "settings.png",
-                                        "srcImgSelection": "",
-                                        "async": "false",
-                                        "linkType": "LIEN_INTERNE",
-                                        "internLink": "-1",
-                                        "targetLink": "HTTP",
-                                        "externLink": "",
-                                        "target": "blank",
-                                        "parameters": "",
-                                        "frame": "",
-                                        "transition": "UIViewAnimationTransitionNone"
-                                    },
-                                    "events": {}
-                                },
-                                "Internal_link_39": {
-                                    "type": "LIEN_INTERNE",
-                                    "align": "ALIGN_LEFT",
-                                    "comment": "",
-                                    "order": "5",
-                                    "dataObject": "",
-                                    "style": "menu_link",
-                                    "styleSelection": "",
-                                    "dynamic": "false",
-                                    "custom": {
-                                        "title": "Settings",
-                                        "internLink": "-1",
+                                        "internLink": "-1751626652",
                                         "parameters": "",
                                         "Target": "blank",
                                         "frame": "",
@@ -276,7 +233,9 @@
                                 "frame": "",
                                 "transition": "UIViewAnimationTransitionNone"
                             },
-                            "events": {}
+                            "events": {
+                                "onClick": ""
+                            }
                         },
                         "Text_699": {
                             "type": "TEXTE",
@@ -313,6 +272,6 @@
         }
     },
     "events": {
-        "onLoad": "loadReservation_details(request.getParameter(reservation_moment),request.getParameter(id_reservation))"
+        "onLoad": "loadReservation_details(request.getParameter(reservation_moment),request.getParameter(id_reservation),request.getParameter(payer))"
     }
 }

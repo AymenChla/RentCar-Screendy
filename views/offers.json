@@ -305,7 +305,7 @@
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
-                                        "srcImg": "success.png",
+                                        "srcImg": "placeholder.png",
                                         "async": "false"
                                     },
                                     "events": {}
@@ -321,7 +321,7 @@
                                     "dynamic": "false",
                                     "custom": {
                                         "direction": "left",
-                                        "text": "Incl. 250 free Kilometres."
+                                        "text": "$adresse;"
                                     },
                                     "events": {}
                                 }

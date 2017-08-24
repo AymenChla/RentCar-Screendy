@@ -137,32 +137,32 @@
                     "comment": "",
                     "order": "2",
                     "dataObject": "",
-                    "style": "logo_infos_details",
+                    "style": "container_remaining_time",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {},
                     "events": {},
                     "components": {
-                        "Image_4": {
+                        "hourglass": {
                             "type": "PHOTO_ADAPTATIVE",
                             "align": "ALIGN_LEFT",
-                            "dynamic": "FALSE",
-                            "dataObject": "",
                             "comment": "",
+                            "order": "0",
+                            "dataObject": "",
                             "style": "hourglass",
                             "styleSelection": "",
+                            "dynamic": "false",
                             "custom": {
                                 "srcImg": "hourglass-32.png",
                                 "async": "false"
                             },
-                            "events": {},
-                            "order": 1
+                            "events": {}
                         },
                         "timer": {
                             "type": "TEXTE",
                             "align": "ALIGN_CENTER",
                             "comment": "",
-                            "order": "0",
+                            "order": "1",
                             "dataObject": "",
                             "style": "compte_a_rebours",
                             "styleSelection": "",
@@ -172,6 +172,47 @@
                                 "text": ""
                             },
                             "events": {}
+                        },
+                        "compteur_msg": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "small",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Before canceling"
+                            },
+                            "events": {}
+                        },
+                        "Image_button_534": {
+                            "type": "LIEN_PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "logo_infos_car",
+                            "styleSelection": "",
+                            "custom": {
+                                "srcImg": "cancel-64.png",
+                                "srcImgSelection": "",
+                                "async": "false",
+                                "linkType": "LIEN_INTERNE",
+                                "internLink": "",
+                                "targetLink": "HTTP",
+                                "externLink": "",
+                                "target": "blank",
+                                "parameters": "",
+                                "frame": "",
+                                "transition": "UIViewAnimationTransitionNone"
+                            },
+                            "events": {
+                                "onClick": "cancelAndBack()"
+                            },
+                            "order": 3
                         }
                     }
                 },
@@ -276,6 +317,105 @@
                                 "text": "request.getParameter(return_date)-request.getParameter(return_time)"
                             },
                             "events": {}
+                        },
+                        "Spacer_338": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "6",
+                            "dataObject": "",
+                            "style": "grid_item_spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        },
+                        "Image_48": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "7",
+                            "dataObject": "",
+                            "style": "checked_icon",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "placeholder-24.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_149": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "8",
+                            "dataObject": "",
+                            "style": "adresse_details",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(adresse)"
+                            },
+                            "events": {}
+                        },
+                        "Spacer_127": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "9",
+                            "dataObject": "",
+                            "style": "grid_item_spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        },
+                        "Text_126": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "dynamic": "FALSE",
+                            "dataObject": "",
+                            "comment": "",
+                            "style": "text_spacer",
+                            "styleSelection": "",
+                            "custom": {
+                                "direction": "left",
+                                "text": ""
+                            },
+                            "events": {},
+                            "order": 10
+                        },
+                        "Image_61": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "10",
+                            "dataObject": "",
+                            "style": "checked_icon",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "phone-receiver-24.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "Text_43": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "11",
+                            "dataObject": "",
+                            "style": "tel_details",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "request.getParameter(tel)"
+                            },
+                            "events": {}
                         }
                     }
                 }
@@ -308,7 +448,7 @@
                         "parameters": ""
                     },
                     "events": {
-                        "onClick": "cancelReservation(request.getParameter(id_reservation))"
+                        "onClick": ""
                     }
                 },
                 "Image_39": {

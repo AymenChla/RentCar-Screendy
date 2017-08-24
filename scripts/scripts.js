@@ -16,6 +16,7 @@ function showReservations() {
         url_getvehiculeInfo = 'https://reservationvehicules-91687.firebaseio.com/vehicules/' + userReservations[i].id_vehicule + '/.json';
         vehicule_info = JSON.parse($.get(url_getvehiculeInfo));
 
+        var agence = JSON.parse($.get("https://reservationvehicules-91687.firebaseio.com/agences/" + vehicule_info.id_agence + "/.json"));
         //js.alert(JSON.stringify(vehicule_info));
         finalData = {
             id_reservation: i,
@@ -24,13 +25,15 @@ function showReservations() {
             marque: vehicule_info.marque,
             model: vehicule_info.model,
             categorie: vehicule_info.categorie,
-            adresse: vehicule_info.adresse,
+            adresse: agence.adresse,
+            tel: agence.tel,
             pickup_date: userReservations[i].pickup_date,
             pickup_time: userReservations[i].pickup_time,
             return_date: userReservations[i].return_date,
             return_time: userReservations[i].return_time,
             code_reservation: userReservations[i].code_reservation,
             reservation_moment: userReservations[i].reservation_moment,
+            payer: userReservations[i].payer
 
         };
 
@@ -67,35 +70,65 @@ function PayementDelay(moment_reservation) {
     else return false;
 }
 
-function loadReservation_details(actual, id_reservation) {
+function loadReservation_details(actual, id_reservation, payer) {
+
+    js.saveData('payer', payer);
     js.saveData("actual", actual);
     js.saveData("id_reservation", id_reservation);
     remainingTime();
-    $.setInterval('remainingTime()', 1000);
+    if (payer == "false")
+        js.callRepeatedly('remainingTime()', 1000);
+
+
 }
 
 
 function remainingTime() {
 
-    var actual = js.getData("actual");
-    var passed = Date.now() - actual;
+    var payer = js.getData("payer");
+    //si la reservation et confirmer
+    if (payer != null && payer == "true") {
+        if ($('reservation_details_drawer.hourglass') !== null)
+            $('reservation_details_drawer.hourglass').val('srcImg', "checked-32.png");
+        if ($('reservation_details_drawer.timer') !== null)
+            $('reservation_details_drawer.timer').val('text', "Reserved");
+        if ($('reservation_details_drawer.compteur_msg') !== null)
+            $('reservation_details_drawer.compteur_msg').val('text', " ");
+    } else {
 
-    var nbsr = 24 * 3600 - Math.floor(passed * 0.001);
-    var nbh = Math.floor(nbsr / 3600);
-    var nbm = Math.floor(mod(nbsr, 3600) / 60);
-    var nbs = mod(mod(nbsr, 3600), 60);
+        var actual = js.getData("actual");
+        var passed = Date.now() - actual;
 
-    if (nbh <= 0 && nbm <= 0 && nbs <= 0) {
-        cancelReservation();
-        js.toast("reservation has been canceled");
-        js.navigateToPage("reservations_drawer");
+        var nbsr = 24 * 3600 - Math.floor(passed * 0.001);
+        var nbh = Math.floor(nbsr / 3600);
+        var nbm = Math.floor(mod(nbsr, 3600) / 60);
+        var nbs = mod(mod(nbsr, 3600), 60);
+
+        if (nbh <= 0 && nbm <= 0 && nbs <= 0) {
+            cancelReservation();
+            js.toast("reservation has been canceled");
+            js.navigateToPage("reservations_drawer");
+        }
+        if (nbh < 10) nbh = '0' + nbh;
+        if (nbm < 10) nbm = '0' + nbm;
+        if (nbs < 10) nbs = '0' + nbs;
+        var reste = nbh + ":" + nbm + ":" + nbs;
+
+        if ($('reservation_details_drawer.hourglass') !== null)
+            $('reservation_details_drawer.hourglass').val('srcImg', "hourglass-32.png");
+        if ($('reservation_details_drawer.timer') !== null)
+            $('reservation_details_drawer.timer').val('text', reste);
+        if ($('reservation_details_drawer.compteur_msg') !== null)
+            $('reservation_details_drawer.compteur_msg').val('text', "Before canceling");
+
     }
-    if (nbh < 10) nbh = '0' + nbh;
-    if (nbm < 10) nbm = '0' + nbm;
-    if (nbs < 10) nbs = '0' + nbs;
-    var reste = nbh + ":" + nbm + ":" + nbs;
 
-    $('reservation_details_drawer.timer').val('text', reste);
+}
+
+function cancelAndBack() {
+    cancelReservation();
+    js.toast("reservation canceled");
+    js.navigateToPage("reservations_drawer");
 }
 
 function cancelReservation() {
@@ -109,6 +142,8 @@ function cancelReservation() {
 
 function validationResevartionDate() {
 
+
+    js.toast('loading...');
     //js.showLoader();
 
     var pickup_date = $('reservation_date_drawer.pickup_date').val('value');
@@ -230,7 +265,7 @@ function geoSorting(offers) {
 
     var myLat = $.call('api.location.getLatitude()', {});
     var myLon = $.call('api.location.getLongitude()', {});
-    if (myLat == "" && myLon == "") js.toast("please activate localisation");
+    if (myLat == "" && myLon == "") js.toast("localisation is disabled");
     offers.data.sort(function(a, b) {
         return getDistance(myLat, myLon, a.latitude, a.longitude) - getDistance(myLat, myLon, b.latitude, b.longitude);
     });
@@ -303,6 +338,9 @@ function showOffers(pickup_date, return_date) {
 
             if (libre) {
 
+                var requete_agence = "https://reservationvehicules-91687.firebaseio.com/agences/" + vehicules[t].id_agence + "/.json";
+                var agence = JSON.parse($.get(requete_agence));
+
                 var prix = (vehicules[t].prix - vehicules[t].prix * vehicules[t].solde / 100);
 
                 finalData = {
@@ -321,7 +359,8 @@ function showOffers(pickup_date, return_date) {
                     code_acriss: vehicules[t].code_acriss,
                     ancien_prix: vehicules[t].prix,
                     latitude: vehicules[t].latitude,
-                    longitude: vehicules[t].longitude
+                    longitude: vehicules[t].longitude,
+                    adresse: agence.adresse
                 };
 
                 //$('offers_drawer.myList').addItem(JSON.stringify(finalData));
@@ -341,6 +380,7 @@ function showOffers(pickup_date, return_date) {
     //sort offers basing on geolocalisation
     offers = geoSorting(offers);
     js.navigateToPage('offers_drawer');
+
 
 }
 
@@ -384,6 +424,22 @@ function reserveVehicule(id_vehicule, prix) {
 
 }
 
+function backToDateChooser() {
+    js.navigateToPage('reservation_date_drawer');
+    $('reservation_date_drawer').reload('blank', '');
+}
+
+function backToReservations() {
+    js.navigateToPage('reservations_drawer');
+    $('reservations_drawer').reload('blank', '');
+}
+
+function backToOffers() {
+    js.navigateToPage('offers_drawer');
+    $('offers_drawer').reload('blank', '');
+}
+
+
 function loadOffers() {
 
     $.hideLoader();
@@ -407,7 +463,8 @@ function loadOffers() {
             categorie: offers.data[i].categorie,
             ancien_prix: offers.data[i].ancien_prix,
             latitude: offers.data[i].latitude,
-            longitude: offers.data[i].longitude
+            longitude: offers.data[i].longitude,
+            adresse: offers.data[i].adresse
         };
         $('offers_drawer.myList').addItem(JSON.stringify(car_info));
     }

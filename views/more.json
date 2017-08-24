@@ -1,218 +1,138 @@
 {
     "properties": {
-        "id": "1634549901",
-        "name": "Home",
-        "type": "DEFAULT",
-        "style": "pageStyle",
+        "id": "-82154955",
+        "name": "more",
+        "type": "CUSTOM",
+        "style": "",
         "parameters": "",
         "cache": "true",
-        "cacheDelay": 0,
-        "preloading": "false"
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
+        "title": ""
     },
     "components": {
-        "Image_68": {
-            "type": "PHOTO_ADAPTATIVE",
-            "align": "ALIGN_CENTER",
+        "Container_197": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
             "comment": "",
             "order": "0",
             "dataObject": "",
-            "style": "logo",
+            "style": "more_container",
             "styleSelection": "",
             "dynamic": "false",
-            "custom": {
-                "srcImg": "logo.png",
-                "async": "false"
-            },
-            "events": {
-                "onClick": "text_val()"
-            }
-        },
-        "Form_493": {
-            "type": "FORM",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "1",
-            "dataObject": "",
-            "style": "login_form",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {
-                "name": "form",
-                "actionType": "url",
-                "action": "http://screendydev.cloudapp.net/screendy/cloudCode/form/action.jsp",
-                "ParamsSeparator": "",
-                "FieldsSeparator": "",
-                "ActionSeparator": "",
-                "enctype": "text/plain",
-                "Target": "blank",
-                "method": "post",
-                "authType": "none",
-                "headers": "",
-                "username": "",
-                "password": "",
-                "parametersMarkup": "Parameters",
-                "progressTitle": "Sending data",
-                "parametersFormat": "KeyValue",
-                "progressMessage": "Uploading data, please wait ..."
-            },
+            "custom": {},
             "events": {},
             "components": {
-                "email": {
-                    "type": "INPUT",
-                    "align": "ALIGN_CENTER",
-                    "comment": "",
-                    "order": "0",
-                    "dataObject": "",
-                    "style": "input_field",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "name": "input",
-                        "type": "text",
-                        "size": "30",
-                        "required": "false",
-                        "value": "",
-                        "alertMessage": "",
-                        "validator": "email",
-                        "keyboard": "email",
-                        "returnKey": "default",
-                        "placeholder": "Email",
-                        "save": "false"
-                    },
-                    "events": {}
-                },
-                "password": {
-                    "type": "INPUT",
-                    "align": "ALIGN_CENTER",
-                    "comment": "",
-                    "order": "1",
-                    "dataObject": "",
-                    "style": "input_field",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "name": "input",
-                        "type": "password",
-                        "size": "30",
-                        "required": "false",
-                        "value": "",
-                        "alertMessage": "",
-                        "validator": "alphanumerique",
-                        "keyboard": "default",
-                        "returnKey": "default",
-                        "placeholder": "Password",
-                        "save": "false"
-                    },
-                    "events": {}
-                },
-                "Submit_384": {
-                    "type": "SUBMIT",
-                    "align": "ALIGN_CENTER",
-                    "comment": "",
-                    "order": "2",
-                    "dataObject": "",
-                    "style": "login_btn",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "name": "",
-                        "value": "Login",
-                        "parameters": ""
-                    },
-                    "events": {
-                        "onClick": "forTest()"
-                    }
-                },
-                "Spacer_86": {
+                "Spacer_292": {
                     "type": "SAUT_DE_LIGNE",
                     "align": "ALIGN_LEFT",
                     "comment": "",
-                    "order": "3",
+                    "order": "0",
                     "dataObject": "",
-                    "style": "grid_item_spacer",
+                    "style": "",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {},
                     "events": {}
                 },
-                "Internal_link_157": {
-                    "type": "LIEN_INTERNE",
-                    "align": "ALIGN_CENTER",
+                "Text_21": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
                     "comment": "",
-                    "order": "4",
+                    "order": "1",
                     "dataObject": "",
-                    "style": "simple_text",
+                    "style": "popup_title",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "title": "Forgot Password?",
-                        "internLink": "-803911705",
+                        "direction": "left",
+                        "text": "Informations supplémentaires"
+                    },
+                    "events": {}
+                },
+                "Spacer_274": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "miniSpacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Image_237": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "3",
+                    "dataObject": "",
+                    "style": "dot",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "dot-inside-a-circle.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_227": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "4",
+                    "dataObject": "",
+                    "style": "more_li",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Kilométrage illimité."
+                    },
+                    "events": {}
+                },
+                "Image_button_225": {
+                    "type": "LIEN_PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "5",
+                    "dataObject": "",
+                    "style": "dot",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "dot-inside-a-circle.png",
+                        "srcImgSelection": "",
+                        "async": "false",
+                        "linkType": "LIEN_INTERNE",
+                        "internLink": "-1",
+                        "targetLink": "HTTP",
+                        "externLink": "",
+                        "target": "blank",
                         "parameters": "",
-                        "Target": "popup",
                         "frame": "",
-                        "subStringToUnderline": ""
+                        "transition": "UIViewAnimationTransitionNone"
+                    },
+                    "events": {}
+                },
+                "Text_635": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "6",
+                    "dataObject": "",
+                    "style": "more_li",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Couverture dommage/collision (C.D.W) : franchise de MAD 25,000.00, TVA incluse."
                     },
                     "events": {}
                 }
             }
-        },
-        "Spacer_330": {
-            "type": "SAUT_DE_LIGNE",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "2",
-            "dataObject": "",
-            "style": "",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {}
-        },
-        "Image_654": {
-            "type": "PHOTO_ADAPTATIVE",
-            "align": "ALIGN_CENTER",
-            "comment": "",
-            "order": "3",
-            "dataObject": "",
-            "style": "hr",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {
-                "srcImg": "hr.png",
-                "async": "false"
-            },
-            "events": {}
-        },
-        "Internal_link_331": {
-            "type": "LIEN_INTERNE",
-            "align": "ALIGN_CENTER",
-            "comment": "",
-            "order": "4",
-            "dataObject": "",
-            "style": "link",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {
-                "title": "Sign Up! It’s free and always will be.",
-                "internLink": "-1489903249",
-                "parameters": "",
-                "Target": "blank",
-                "frame": "",
-                "subStringToUnderline": ""
-            },
-            "events": {}
-        },
-        "Spacer_286": {
-            "type": "SAUT_DE_LIGNE",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "5",
-            "dataObject": "",
-            "style": "",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {}
         }
     },
     "events": {}
