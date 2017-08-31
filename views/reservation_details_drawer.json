@@ -23,7 +23,7 @@
             "dynamic": "false",
             "custom": {
                 "initialPage": "-349600021",
-                "orientation": "right"
+                "orientation": "left"
             },
             "events": {},
             "components": {
@@ -33,7 +33,7 @@
                     "comment": "",
                     "order": "0",
                     "dataObject": "",
-                    "style": "",
+                    "style": "pageStyle",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {},
@@ -41,15 +41,15 @@
                     "components": {
                         "Image_10": {
                             "type": "PHOTO_ADAPTATIVE",
-                            "align": "ALIGN_LEFT",
+                            "align": "ALIGN_CENTER",
                             "comment": "",
                             "order": "0",
                             "dataObject": "",
-                            "style": "menu_image",
+                            "style": "logo",
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "srcImg": "road_1.png",
+                                "srcImg": "logo.png",
                                 "async": "false"
                             },
                             "events": {}
@@ -60,7 +60,7 @@
                             "comment": "",
                             "order": "1",
                             "dataObject": "",
-                            "style": "",
+                            "style": "drawer_container",
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {},
@@ -156,7 +156,7 @@
                                     "type": "LIEN_PHOTO_ADAPTATIVE",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "6",
+                                    "order": "4",
                                     "dataObject": "",
                                     "style": "icons-nav",
                                     "styleSelection": "",
@@ -166,7 +166,7 @@
                                         "srcImgSelection": "",
                                         "async": "false",
                                         "linkType": "LIEN_INTERNE",
-                                        "internLink": "-1",
+                                        "internLink": "-1106236725",
                                         "targetLink": "HTTP",
                                         "externLink": "",
                                         "target": "blank",
@@ -180,14 +180,14 @@
                                     "type": "LIEN_INTERNE",
                                     "align": "ALIGN_LEFT",
                                     "comment": "",
-                                    "order": "7",
+                                    "order": "5",
                                     "dataObject": "",
                                     "style": "menu_link",
                                     "styleSelection": "",
                                     "dynamic": "false",
                                     "custom": {
                                         "title": "Sign Out",
-                                        "internLink": "-1",
+                                        "internLink": "-1106236725",
                                         "parameters": "",
                                         "Target": "blank",
                                         "frame": "",
@@ -211,31 +211,19 @@
                     "custom": {},
                     "events": {},
                     "components": {
-                        "Image_button_553": {
-                            "type": "LIEN_PHOTO_ADAPTATIVE",
+                        "DrawerIcon_73": {
+                            "type": "DrawerIcon",
                             "align": "ALIGN_LEFT",
                             "comment": "",
                             "order": "0",
                             "dataObject": "",
-                            "style": "mapfriends-icons-left",
+                            "style": "mapfriends-icons-help",
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {
-                                "srcImg": "angle-left@2x.png",
-                                "srcImgSelection": "",
-                                "async": "false",
-                                "linkType": "LIEN_INTERNE",
-                                "internLink": "-1751626652",
-                                "targetLink": "HTTP",
-                                "externLink": "",
-                                "target": "blank",
-                                "parameters": "",
-                                "frame": "",
-                                "transition": "UIViewAnimationTransitionNone"
+                                "icon": ""
                             },
-                            "events": {
-                                "onClick": ""
-                            }
+                            "events": {}
                         },
                         "Text_699": {
                             "type": "TEXTE",
@@ -248,21 +236,7 @@
                             "dynamic": "false",
                             "custom": {
                                 "direction": "left",
-                                "text": ""
-                            },
-                            "events": {}
-                        },
-                        "DrawerIcon_73": {
-                            "type": "DrawerIcon",
-                            "align": "ALIGN_LEFT",
-                            "comment": "",
-                            "order": "2",
-                            "dataObject": "",
-                            "style": "mapfriends-icons-help",
-                            "styleSelection": "",
-                            "dynamic": "false",
-                            "custom": {
-                                "icon": ""
+                                "text": "Reservation details"
                             },
                             "events": {}
                         }

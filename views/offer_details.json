@@ -111,7 +111,7 @@
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "srcImg": "request.getParameter(image)",
+                        "srcImg": "$image;",
                         "async": "false"
                     },
                     "events": {}
@@ -319,7 +319,7 @@
                                     "dynamic": "false",
                                     "custom": {
                                         "direction": "left",
-                                        "text": "Incl. 250 free Kilometres"
+                                        "text": "Incl. 250 free Kilometres."
                                     },
                                     "events": {}
                                 },
@@ -532,7 +532,9 @@
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},
-            "events": {},
+            "events": {
+                "onClick": "animateReserveNow(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
+            },
             "components": {
                 "Submit_624": {
                     "type": "SUBMIT",
@@ -549,7 +551,7 @@
                         "parameters": ""
                     },
                     "events": {
-                        "onClick": "reserveVehicule(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
+                        "onClick": "animateReserveNow(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
                     }
                 },
                 "Image_164": {
@@ -565,7 +567,9 @@
                         "srcImg": "arrow-point-to-right.png",
                         "async": "false"
                     },
-                    "events": {}
+                    "events": {
+                        "onClick": "animateReserveNow(request.getParameter(id_vehicule), request.getParameter(prixTotal))"
+                    }
                 }
             }
         }

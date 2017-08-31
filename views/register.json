@@ -38,7 +38,7 @@
                         "srcImgSelection": "",
                         "async": "false",
                         "linkType": "LIEN_INTERNE",
-                        "internLink": "-1",
+                        "internLink": "-1106236725",
                         "targetLink": "HTTP",
                         "externLink": "",
                         "target": "blank",
@@ -309,7 +309,7 @@
             "dynamic": "false",
             "custom": {
                 "title": "Already have an account? Sign In",
-                "internLink": "-1",
+                "internLink": "-1106236725",
                 "parameters": "",
                 "Target": "blank",
                 "frame": "",

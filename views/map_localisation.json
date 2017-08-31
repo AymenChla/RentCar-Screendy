@@ -1,0 +1,163 @@
+{
+    "properties": {
+        "id": "-1955310582",
+        "name": "map_localisation",
+        "type": "CUSTOM",
+        "style": "whitebg",
+        "parameters": "",
+        "cache": "true",
+        "cacheDelay": "0",
+        "chargement": "false",
+        "preloading": "false",
+        "title": ""
+    },
+    "components": {
+        "Container_10": {
+            "type": "COMPOSANT",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "0",
+            "dataObject": "",
+            "style": "more_container",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {},
+            "events": {},
+            "components": {
+                "myMap": {
+                    "type": "MAP",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "0",
+                    "dataObject": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "DataObjectName": "",
+                        "showMyLocation": "TRUE",
+                        "PathColor": "",
+                        "image": "",
+                        "Itinerary": "TRUE"
+                    },
+                    "events": {},
+                    "components": {}
+                },
+                "Spacer_181": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "1",
+                    "dataObject": "",
+                    "style": "",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Container_515": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "2",
+                    "dataObject": "",
+                    "style": "reservation_details_dates",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_35": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "checked_icon",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "placeholder-24.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "adresse": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "adresse_details",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": ""
+                            },
+                            "events": {}
+                        },
+                        "Spacer_58": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "miniSpacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        },
+                        "Text_33": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "text_spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": ""
+                            },
+                            "events": {}
+                        },
+                        "Image_176": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "4",
+                            "dataObject": "",
+                            "style": "checked_icon",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "phone-receiver-24.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "tel": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "tel_details",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": ""
+                            },
+                            "events": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "events": {}
+}

@@ -47,7 +47,7 @@
                     "dynamic": "false",
                     "custom": {
                         "direction": "left",
-                        "text": "Informations supplémentaires"
+                        "text": "Additional Information"
                     },
                     "events": {}
                 },
@@ -57,7 +57,7 @@
                     "comment": "",
                     "order": "2",
                     "dataObject": "",
-                    "style": "miniSpacer",
+                    "style": "grid_item_spacer",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {},
@@ -89,7 +89,7 @@
                     "dynamic": "false",
                     "custom": {
                         "direction": "left",
-                        "text": "Kilométrage illimité."
+                        "text": "Unlimited mileage."
                     },
                     "events": {}
                 },
@@ -128,7 +128,175 @@
                     "dynamic": "false",
                     "custom": {
                         "direction": "left",
-                        "text": "Couverture dommage/collision (C.D.W) : franchise de MAD 25,000.00, TVA incluse."
+                        "text": "Damage / collision coverage (DCD.W): MAD 25,000.00 deductible, VAT included."
+                    },
+                    "events": {}
+                },
+                "Image_536": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "7",
+                    "dataObject": "",
+                    "style": "dot",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "dot-inside-a-circle.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_289": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "8",
+                    "dataObject": "",
+                    "style": "more_li",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Deductible in case of theft: approximately MAD 13,500.00, VAT included."
+                    },
+                    "events": {}
+                },
+                "Spacer_287": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "9",
+                    "dataObject": "",
+                    "style": "miniSpacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Text_786": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "10",
+                    "dataObject": "",
+                    "style": "popup_title",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Information for the driver"
+                    },
+                    "events": {}
+                },
+                "Spacer_233": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "11",
+                    "dataObject": "",
+                    "style": "grid_item_spacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Image_738": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "12",
+                    "dataObject": "",
+                    "style": "dot",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "dot-inside-a-circle.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_111": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "13",
+                    "dataObject": "",
+                    "style": "more_li",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Minimum Age: 21"
+                    },
+                    "events": {}
+                },
+                "Spacer_243": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "14",
+                    "dataObject": "",
+                    "style": "miniSpacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Text_198": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "15",
+                    "dataObject": "",
+                    "style": "popup_title",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Fuel Regulations"
+                    },
+                    "events": {}
+                },
+                "Spacer_327": {
+                    "type": "SAUT_DE_LIGNE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "16",
+                    "dataObject": "",
+                    "style": "grid_item_spacer",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {},
+                    "events": {}
+                },
+                "Image_327": {
+                    "type": "PHOTO_ADAPTATIVE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "17",
+                    "dataObject": "",
+                    "style": "dot",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "srcImg": "dot-inside-a-circle.png",
+                        "async": "false"
+                    },
+                    "events": {}
+                },
+                "Text_144": {
+                    "type": "TEXTE",
+                    "align": "ALIGN_LEFT",
+                    "comment": "",
+                    "order": "18",
+                    "dataObject": "",
+                    "style": "more_li",
+                    "styleSelection": "",
+                    "dynamic": "false",
+                    "custom": {
+                        "direction": "left",
+                        "text": "Fuel: the vehicle is delivered with full tank, and must be returned with the full to avoid having to pay the last full at a tariff determined by the agency."
                     },
                     "events": {}
                 }

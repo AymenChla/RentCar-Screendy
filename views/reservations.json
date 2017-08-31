@@ -64,11 +64,26 @@
                 }
             }
         },
+        "msg": {
+            "type": "TEXTE",
+            "align": "ALIGN_LEFT",
+            "comment": "",
+            "order": "1",
+            "dataObject": "",
+            "style": "noReservations",
+            "styleSelection": "",
+            "dynamic": "false",
+            "custom": {
+                "direction": "left",
+                "text": ""
+            },
+            "events": {}
+        },
         "myList": {
             "type": "LISTE_OBJECT",
             "align": "ALIGN_LEFT",
             "comment": "",
-            "order": "1",
+            "order": "2",
             "dataObject": "",
             "style": "myList",
             "styleSelection": "",
@@ -93,11 +108,13 @@
                     "dynamic": "false",
                     "custom": {
                         "internalLink": "2134592259",
-                        "parameters": "image=$image;&marque=$marque;&model=$model;&code_acriss=$code_acriss;&categorie=$categorie;&code_reservation=$code_reservation;&pickup_date=$pickup_date;&pickup_time=$pickup_time;&return_date=$return_date;&return_time=$return_time;&id_reservation=$id_reservation;&reservation_moment=$reservation_moment;&adresse=$adresse;&tel=$tel;&payer=$payer;",
+                        "parameters": "image=$image;&marque=$marque;&model=$model;&code_acriss=$code_acriss;&categorie=$categorie;&code_reservation=$code_reservation;&pickup_date=$pickup_date;&pickup_time=$pickup_time;&return_date=$return_date;&return_time=$return_time;&id_reservation=$id_reservation;&reservation_moment=$reservation_moment;&adresse=$adresse;&tel=$tel;&payer=$payer;&latitude=$latitude;&longitude=$longitude;",
                         "target": "Blank",
                         "root": ""
                     },
-                    "events": {},
+                    "events": {
+                        "onClick": ""
+                    },
                     "components": {
                         "Container_54": {
                             "type": "COMPOSANT",

@@ -114,7 +114,7 @@
                             "comment": "",
                             "order": "0",
                             "dataObject": "",
-                            "style": "",
+                            "style": "miniSpacer",
                             "styleSelection": "",
                             "dynamic": "false",
                             "custom": {},
@@ -359,6 +359,21 @@
                                     },
                                     "events": {},
                                     "components": {}
+                                },
+                                "Text_315": {
+                                    "type": "TEXTE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "4",
+                                    "dataObject": "",
+                                    "style": "msg_location",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "direction": "left",
+                                        "text": "Turn on location to show offers based on your position, otherwise offers will be displayed in a random way."
+                                    },
+                                    "events": {}
                                 }
                             }
                         },
@@ -389,7 +404,7 @@
             "dynamic": "false",
             "custom": {},
             "events": {
-                "onClick": "validationResevartionDate()"
+                "onClick": "animateShowOffers()"
             },
             "components": {
                 "Submit_91": {
@@ -407,7 +422,7 @@
                         "parameters": ""
                     },
                     "events": {
-                        "onClick": "validationResevartionDate()"
+                        "onClick": "animateShowOffers()"
                     }
                 },
                 "Image_7": {
@@ -424,7 +439,7 @@
                         "async": "false"
                     },
                     "events": {
-                        "onClick": "validationResevartionDate()"
+                        "onClick": "animateShowOffers()"
                     }
                 }
             }

@@ -1,6 +1,30 @@
+function animateWelcome() {
+
+    $('Home.title_2').fadeIn(1000, 0);
+    $('Home.msg_1').fadeIn(2000, 0);
+
+    $('Home.myText').fadeIn(1000, 0);
+    $('Home.msg3').fadeIn(2000, 0);
+
+    $('Home.titlz1').fadeIn(1000, 0);
+    $('Home.Text_1_51').fadeIn(2000, 0);
+
+    $('Home.title_8').fadeIn(1000, 0);
+    $('Home.Internal_link_p3').fadeIn(2000, 0);
+    $('Home.Internal_link_286').fadeIn(3000, 0);
+
+}
+
+function welcomeBtn() {
+
+    $('Home.Internal_link_p3').fadeIn(100, 0);
+    js.js.navigateToPage('register');
+
+}
+
+
 function showReservations() {
 
-    js.showLoader();
     //clear list objet
     $('reservations_drawer.myList').clear();
 
@@ -12,36 +36,57 @@ function showReservations() {
     var url_getvehiculeInfo;
     var finalData = {};
     var vehicule_info;
+    var noReservations = true;
     for (var i in userReservations) {
-        url_getvehiculeInfo = 'https://reservationvehicules-91687.firebaseio.com/vehicules/' + userReservations[i].id_vehicule + '/.json';
-        vehicule_info = JSON.parse($.get(url_getvehiculeInfo));
+        var moment_reservation = userReservations[i].reservation_moment;
+        var payer = userReservations[i].payer;
+        //si delay depasser sans payer
+        if (PayementDelay(moment_reservation) && !payer) {
+            js.saveData("id_reservation", i);
+            cancelReservation();
+        } else {
+            url_getvehiculeInfo = 'https://reservationvehicules-91687.firebaseio.com/vehicules/' + userReservations[i].id_vehicule + '/.json';
+            vehicule_info = JSON.parse($.get(url_getvehiculeInfo));
 
-        var agence = JSON.parse($.get("https://reservationvehicules-91687.firebaseio.com/agences/" + vehicule_info.id_agence + "/.json"));
-        //js.alert(JSON.stringify(vehicule_info));
-        finalData = {
-            id_reservation: i,
-            image: vehicule_info.image,
-            code_acriss: vehicule_info.code_acriss,
-            marque: vehicule_info.marque,
-            model: vehicule_info.model,
-            categorie: vehicule_info.categorie,
-            adresse: agence.adresse,
-            tel: agence.tel,
-            pickup_date: userReservations[i].pickup_date,
-            pickup_time: userReservations[i].pickup_time,
-            return_date: userReservations[i].return_date,
-            return_time: userReservations[i].return_time,
-            code_reservation: userReservations[i].code_reservation,
-            reservation_moment: userReservations[i].reservation_moment,
-            payer: userReservations[i].payer
+            var agence = JSON.parse($.get("https://reservationvehicules-91687.firebaseio.com/agences/" + vehicule_info.id_agence + "/.json"));
+            //js.alert(JSON.stringify(vehicule_info));
+            finalData = {
+                id_reservation: i,
+                image: vehicule_info.image,
+                code_acriss: vehicule_info.code_acriss,
+                marque: vehicule_info.marque,
+                model: vehicule_info.model,
+                categorie: vehicule_info.categorie,
+                adresse: agence.adresse,
+                tel: agence.tel,
+                latitude: agence.latitude,
+                longitude: agence.longitude,
+                pickup_date: userReservations[i].pickup_date,
+                pickup_time: userReservations[i].pickup_time,
+                return_date: userReservations[i].return_date,
+                return_time: userReservations[i].return_time,
+                code_reservation: userReservations[i].code_reservation,
+                reservation_moment: userReservations[i].reservation_moment,
+                payer: userReservations[i].payer
 
-        };
+            };
 
-        $('reservations_drawer.myList').addItem(JSON.stringify(finalData));
+            $('reservations_drawer.myList').addItem(JSON.stringify(finalData));
+            noReservations = false;
+
+        }
 
     }
 
-    js.hideLoader();
+    if (noReservations == true) {
+        //msg no reservations to show
+        // $('reservations_drawer.msg').val("text", "You don't have any reservation");
+        js.toast("You don't have any reservation");
+    }
+
+
+
+    //js.hideLoader();
 
 }
 
@@ -55,8 +100,64 @@ function generateCodeReservation() {
     return text;
 }
 
+
+function loadInfo() {
+    var adresse = js.getData('adresse');
+    var tel = js.getData('tel');
+    var latitude = js.getData('latitude');
+    var longitude = js.getData('longitude');
+    var setPosition = {
+        "object": "map_localisation_drawer.myMap",
+        "value": [{
+            "title": "Location",
+            "subTitle": "",
+            "latitude": latitude + "",
+            "longitude": longitude + "",
+            "positionIcon": "",
+            "root": "",
+            "parameters": ""
+        }]
+    };
+
+    //add position
+    js.execute("add()", JSON.stringify(setPosition));
+
+    if ($('map_localisation_drawer.adresse') != null)
+        $('map_localisation_drawer.adresse').val('text', adresse);
+    if ($('map_localisation_drawer.tel') != null)
+        $('map_localisation_drawer.tel').val('text', tel);
+
+}
+
+function backToReservations() {
+    js.navigateToPage('reservations_drawer');
+}
+
+function animateShowMap(adresse, tel, latitude, longitude) {
+    $('reservation_details_drawer.Container_272').move(500, 0, 'X');
+
+    js.saveData('adresse', adresse);
+    js.saveData('tel', tel);
+    js.saveData('latitude', latitude);
+    js.saveData('longitude', longitude);
+
+    $.setTimeout('showMap()', 1000);
+
+}
+
 function showMap() {
-    js.navigateToPage('map_localisation');
+
+    var adresse = js.getData('adresse');
+    var tel = js.getData('tel');
+    var latitude = js.getData('latitude');
+    var longitude = js.getData('longitude');
+
+
+    js.navigateToPage('map_localisation_drawer');
+    js.saveData('adresse', adresse);
+    js.saveData('tel', tel);
+    js.saveData('latitude', latitude);
+    js.saveData('longitude', longitude);
 }
 
 
@@ -75,9 +176,8 @@ function loadReservation_details(actual, id_reservation, payer) {
     js.saveData('payer', payer);
     js.saveData("actual", actual);
     js.saveData("id_reservation", id_reservation);
-    remainingTime();
     if (payer == "false")
-        js.callRepeatedly('remainingTime()', 1000);
+        remainingTime();
 
 
 }
@@ -123,15 +223,20 @@ function remainingTime() {
 
     }
 
+    $.setTimeout('remainingTime()', 1000);
+
+
 }
 
 function cancelAndBack() {
+    $('reservation_details_drawer.Image_button_534').bounce(100, 0);
     cancelReservation();
     js.toast("reservation canceled");
     js.navigateToPage("reservations_drawer");
 }
 
 function cancelReservation() {
+    js.toast('Canceling...');
     var id_reservation = js.getData("id_reservation");
     var requete = "https://reservationvehicules-91687.firebaseio.com/reservations/" + id_reservation + "/.json";
     var obj = JSON.stringify(JSON.parse($.get(requete)));
@@ -140,10 +245,18 @@ function cancelReservation() {
 
 }
 
+function animateShowOffers() {
+
+    $('reservation_date_drawer.Container_58').move(500, 0, 'X');
+    js.toast('Loading...');
+    $.setTimeout('validationResevartionDate()', 1000);
+}
+
 function validationResevartionDate() {
 
 
-    js.toast('loading...');
+
+
     //js.showLoader();
 
     var pickup_date = $('reservation_date_drawer.pickup_date').val('value');
@@ -237,7 +350,7 @@ function validationResevartionDate() {
 
     if (valide) {
         //js.hideLoader();
-        $.showLoader();
+        //$.showLoader();
         showOffers(pickup_ms, return_ms);
     }
 
@@ -263,9 +376,10 @@ function deg2rad(deg) {
 
 function geoSorting(offers) {
 
+    js.toast('Loading...');
+
     var myLat = $.call('api.location.getLatitude()', {});
     var myLon = $.call('api.location.getLongitude()', {});
-    if (myLat == "" && myLon == "") js.toast("localisation is disabled");
     offers.data.sort(function(a, b) {
         return getDistance(myLat, myLon, a.latitude, a.longitude) - getDistance(myLat, myLon, b.latitude, b.longitude);
     });
@@ -274,6 +388,7 @@ function geoSorting(offers) {
 }
 
 function showOffers(pickup_date, return_date) {
+    js.toast('loading...');
 
     //calcule nombre de jour de reservation
     var nbjour = (return_date - pickup_date) / 1000 / 3600 / 24;
@@ -358,8 +473,8 @@ function showOffers(pickup_date, return_date) {
                     prixTotal: Math.round(prix * nbjour * 100) / 100,
                     code_acriss: vehicules[t].code_acriss,
                     ancien_prix: vehicules[t].prix,
-                    latitude: vehicules[t].latitude,
-                    longitude: vehicules[t].longitude,
+                    latitude: agence.latitude,
+                    longitude: agence.longitude,
                     adresse: agence.adresse
                 };
 
@@ -384,8 +499,20 @@ function showOffers(pickup_date, return_date) {
 
 }
 
-function reserveVehicule(id_vehicule, prix) {
+function animateReserveNow(id_vehicule, prix) {
 
+    $('offer_details_drawer.Container_58').move(500, 0, 'X');
+    js.toast('Booking...');
+    js.saveData('id_vehicule', id_vehicule);
+    js.saveData('prix', prix);
+    $.setTimeout('reserveVehicule()', 1000);
+}
+
+function reserveVehicule() {
+    var id_vehicule = js.getData('id_vehicule');
+    var prix = js.getData('prix');
+
+    // js.showLoader();
 
     var id_client = js.getData('idClient');
     var pickup_date = js.getData('pickup_date');
@@ -425,6 +552,7 @@ function reserveVehicule(id_vehicule, prix) {
 }
 
 function backToDateChooser() {
+    $('offers_drawer.Image_button_274').rotate(1000, 0, 0);
     js.navigateToPage('reservation_date_drawer');
     $('reservation_date_drawer').reload('blank', '');
 }
@@ -442,7 +570,7 @@ function backToOffers() {
 
 function loadOffers() {
 
-    $.hideLoader();
+    //$.hideLoader();
     var car_info = {};
     //var offers = js.getData('offers');
     //js.alert(JSON.stringify(offers));
@@ -518,10 +646,12 @@ function AddUser(len) {
 }
 
 function signOut() {
-    js.navigateToPage('Home', 'self', '');
+    js.navigateToPage('signin', 'self', '');
 }
 
 function signUp() {
+
+    $('register.Submit_239').fadeIn(100, 0);
 
     var firstName = $('register.firstName').val('value');
     var lastName = $('register.lastName').val('value');
@@ -559,26 +689,22 @@ function signUp() {
         js.saveData("idClient", len)
         //js.navigateToPage('gridlist_offres');
         js.navigateToPage('reservation_date_drawer');
-
+        js.toast('WELCOME');
 
     }
 }
 
-function forTest() {
-    js.navigateToPage('reservation_date_drawer');
-    js.saveData('idClient', 1);
-}
 
 function signIn() {
+    $('signin.Submit_384').fadeIn(100, 0);
 
-    email = $('Home.email').val('value');
-    pass = $('Home.password').val('value');
+    email = $('signin.email').val('value');
+    pass = $('signin.password').val('value');
     var url = 'https://reservationvehicules-91687.firebaseio.com/clients/.json?orderBy="email"&startAt="' + email + '"&endAt="' + email + '"';
 
     if (pass == "" || email == "") {
         $.toast("Please fill in all the fields");
     } else {
-        $.showLoader();
         $.get(url, onSignInSuccess, onSignInFailure);
     }
 }
@@ -597,11 +723,10 @@ function onSignInSuccess(data) {
             }
         }
         //$.alert(index);
-        $.hideLoader();
+        //$.hideLoader();
         if (found == true) {
             js.saveData("idClient", index);
             js.navigateToPage('reservation_date_drawer');
-            //$('reservation_date_drawer').fadeIn(100, -1);
         } else {
             $.toast("Email or Password incorrect !");
         }
@@ -609,6 +734,5 @@ function onSignInSuccess(data) {
 }
 
 function onSignInFailure(err) {
-    $.hideLoader();
     $.toast("Error: " + err);
 }

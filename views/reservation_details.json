@@ -116,7 +116,7 @@
                         }
                     }
                 },
-                "Image_22": {
+                "image": {
                     "type": "PHOTO_ADAPTATIVE",
                     "align": "ALIGN_CENTER",
                     "comment": "",
@@ -126,10 +126,12 @@
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {
-                        "srcImg": "request.getParameter(image)",
+                        "srcImg": "$image;",
                         "async": "false"
                     },
-                    "events": {}
+                    "events": {
+                        "onClick": "loadingImage()"
+                    }
                 },
                 "Container_311": {
                     "type": "COMPOSANT",
@@ -191,11 +193,12 @@
                         "Image_button_534": {
                             "type": "LIEN_PHOTO_ADAPTATIVE",
                             "align": "ALIGN_LEFT",
-                            "dynamic": "FALSE",
-                            "dataObject": "",
                             "comment": "",
+                            "order": "3",
+                            "dataObject": "",
                             "style": "logo_infos_car",
                             "styleSelection": "",
+                            "dynamic": "false",
                             "custom": {
                                 "srcImg": "cancel-64.png",
                                 "srcImgSelection": "",
@@ -211,8 +214,7 @@
                             },
                             "events": {
                                 "onClick": "cancelAndBack()"
-                            },
-                            "order": 3
+                            }
                         }
                     }
                 },
@@ -375,23 +377,23 @@
                         "Text_126": {
                             "type": "TEXTE",
                             "align": "ALIGN_LEFT",
-                            "dynamic": "FALSE",
-                            "dataObject": "",
                             "comment": "",
+                            "order": "10",
+                            "dataObject": "",
                             "style": "text_spacer",
                             "styleSelection": "",
+                            "dynamic": "false",
                             "custom": {
                                 "direction": "left",
                                 "text": ""
                             },
-                            "events": {},
-                            "order": 10
+                            "events": {}
                         },
                         "Image_61": {
                             "type": "PHOTO_ADAPTATIVE",
                             "align": "ALIGN_LEFT",
                             "comment": "",
-                            "order": "10",
+                            "order": "11",
                             "dataObject": "",
                             "style": "checked_icon",
                             "styleSelection": "",
@@ -406,7 +408,7 @@
                             "type": "TEXTE",
                             "align": "ALIGN_LEFT",
                             "comment": "",
-                            "order": "11",
+                            "order": "12",
                             "dataObject": "",
                             "style": "tel_details",
                             "styleSelection": "",
@@ -431,7 +433,9 @@
             "styleSelection": "",
             "dynamic": "false",
             "custom": {},
-            "events": {},
+            "events": {
+                "onClick": "animateShowMap(request.getParameter(adresse),request.getParameter(tel),request.getParameter(latitude),request.getParameter(longitude))"
+            },
             "components": {
                 "Submit_30": {
                     "type": "SUBMIT",
@@ -448,7 +452,7 @@
                         "parameters": ""
                     },
                     "events": {
-                        "onClick": ""
+                        "onClick": "animateShowMap(request.getParameter(adresse),request.getParameter(tel),request.getParameter(latitude),request.getParameter(longitude))"
                     }
                 },
                 "Image_39": {
@@ -464,10 +468,14 @@
                         "srcImg": "arrow-point-to-right.png",
                         "async": "false"
                     },
-                    "events": {}
+                    "events": {
+                        "onClick": "animateShowMap(request.getParameter(adresse),request.getParameter(tel),request.getParameter(latitude),request.getParameter(longitude))"
+                    }
                 }
             }
         }
     },
-    "events": {}
+    "events": {
+        "onLoad": ""
+    }
 }

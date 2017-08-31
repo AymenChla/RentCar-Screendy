@@ -10,210 +10,629 @@
         "preloading": "false"
     },
     "components": {
-        "Image_68": {
-            "type": "PHOTO_ADAPTATIVE",
+        "Slideshow_1": {
+            "type": "SLIDESHOW",
             "align": "ALIGN_CENTER",
             "comment": "",
             "order": "0",
             "dataObject": "",
-            "style": "logo",
+            "style": "SlideShow001-slide",
             "styleSelection": "",
             "dynamic": "false",
-            "custom": {
-                "srcImg": "logo.png",
-                "async": "false"
-            },
-            "events": {
-                "onClick": "text_val()"
-            }
-        },
-        "Form_493": {
-            "type": "FORM",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "1",
-            "dataObject": "",
-            "style": "login_form",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {
-                "name": "form",
-                "actionType": "url",
-                "action": "http://screendydev.cloudapp.net/screendy/cloudCode/form/action.jsp",
-                "ParamsSeparator": "",
-                "FieldsSeparator": "",
-                "ActionSeparator": "",
-                "enctype": "text/plain",
-                "Target": "blank",
-                "method": "post",
-                "authType": "none",
-                "headers": "",
-                "username": "",
-                "password": "",
-                "parametersMarkup": "Parameters",
-                "progressTitle": "Sending data",
-                "parametersFormat": "KeyValue",
-                "progressMessage": "Uploading data, please wait ..."
-            },
+            "custom": {},
             "events": {},
             "components": {
-                "email": {
-                    "type": "INPUT",
-                    "align": "ALIGN_CENTER",
+                "Container_1": {
+                    "type": "COMPOSANT",
+                    "align": "ALIGN_LEFT",
                     "comment": "",
                     "order": "0",
                     "dataObject": "",
-                    "style": "input_field",
+                    "style": "SlideShow001-container",
                     "styleSelection": "",
                     "dynamic": "false",
-                    "custom": {
-                        "name": "input",
-                        "type": "text",
-                        "size": "30",
-                        "required": "false",
-                        "value": "",
-                        "alertMessage": "",
-                        "validator": "email",
-                        "keyboard": "email",
-                        "returnKey": "default",
-                        "placeholder": "Email",
-                        "save": "false"
-                    },
-                    "events": {}
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_1": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "logo",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "logo.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "title_2": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "SlideShow001-title",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Welcome to Car Rental"
+                            },
+                            "events": {
+                                "onClick": ""
+                            }
+                        },
+                        "msg_1": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "SlideShow001-text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Book rental cars closest to your location"
+                            },
+                            "events": {}
+                        },
+                        "Container_31": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "container_dots",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_101": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "bigdot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "bigdot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_199": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_534": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_211": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "3",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Spacer_1": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "SlideShow001-spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        }
+                    }
                 },
-                "password": {
-                    "type": "INPUT",
+                "Container_2": {
+                    "type": "COMPOSANT",
                     "align": "ALIGN_CENTER",
                     "comment": "",
                     "order": "1",
                     "dataObject": "",
-                    "style": "input_field",
+                    "style": "SlideShow001-container",
                     "styleSelection": "",
                     "dynamic": "false",
-                    "custom": {
-                        "name": "input",
-                        "type": "password",
-                        "size": "30",
-                        "required": "false",
-                        "value": "",
-                        "alertMessage": "",
-                        "validator": "alphanumerique",
-                        "keyboard": "default",
-                        "returnKey": "default",
-                        "placeholder": "Password",
-                        "save": "false"
-                    },
-                    "events": {}
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_1": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "logo",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "logo.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "myText": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "SlideShow001-title",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Booking"
+                            },
+                            "events": {}
+                        },
+                        "msg3": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "SlideShow001-text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Once you have the list of offers sorting according to your location, you can check out the offers and book a vehicle"
+                            },
+                            "events": {}
+                        },
+                        "Container_656": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "container_dots",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_223": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_4": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "bigdot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "bigdot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_184": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_527": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "3",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Spacer_1": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "SlideShow001-spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        }
+                    }
                 },
-                "Submit_384": {
-                    "type": "SUBMIT",
+                "Container_3": {
+                    "type": "COMPOSANT",
                     "align": "ALIGN_CENTER",
                     "comment": "",
                     "order": "2",
                     "dataObject": "",
-                    "style": "login_btn",
-                    "styleSelection": "",
-                    "dynamic": "false",
-                    "custom": {
-                        "name": "",
-                        "value": "Login",
-                        "parameters": ""
-                    },
-                    "events": {
-                        "onClick": "forTest()"
-                    }
-                },
-                "Spacer_86": {
-                    "type": "SAUT_DE_LIGNE",
-                    "align": "ALIGN_LEFT",
-                    "comment": "",
-                    "order": "3",
-                    "dataObject": "",
-                    "style": "grid_item_spacer",
+                    "style": "SlideShow001-container",
                     "styleSelection": "",
                     "dynamic": "false",
                     "custom": {},
-                    "events": {}
+                    "events": {},
+                    "components": {
+                        "Image_1": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "logo",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "logo.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "titlz1": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "SlideShow001-title",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Countdown"
+                            },
+                            "events": {}
+                        },
+                        "Text_1_51": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "SlideShow001-text",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Now after the booking is complete you have 24 hours to pay the bill before canceling the reservation."
+                            },
+                            "events": {}
+                        },
+                        "Container_220": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "container_dots",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_59": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_307": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_28": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "bigdot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "bigdot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_23": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "3",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Spacer_1": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "SlideShow001-spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        }
+                    }
                 },
-                "Internal_link_157": {
-                    "type": "LIEN_INTERNE",
+                "Container_4": {
+                    "type": "COMPOSANT",
                     "align": "ALIGN_CENTER",
                     "comment": "",
-                    "order": "4",
+                    "order": "3",
                     "dataObject": "",
-                    "style": "simple_text",
+                    "style": "SlideShow001-container",
                     "styleSelection": "",
                     "dynamic": "false",
-                    "custom": {
-                        "title": "Forgot Password?",
-                        "internLink": "-803911705",
-                        "parameters": "",
-                        "Target": "popup",
-                        "frame": "",
-                        "subStringToUnderline": ""
-                    },
-                    "events": {}
+                    "custom": {},
+                    "events": {},
+                    "components": {
+                        "Image_1": {
+                            "type": "PHOTO_ADAPTATIVE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "0",
+                            "dataObject": "",
+                            "style": "logo",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "srcImg": "logo.png",
+                                "async": "false"
+                            },
+                            "events": {}
+                        },
+                        "title_8": {
+                            "type": "TEXTE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "1",
+                            "dataObject": "",
+                            "style": "SlideShow001-title",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "direction": "left",
+                                "text": "Start booking"
+                            },
+                            "events": {}
+                        },
+                        "Internal_link_p3": {
+                            "type": "LIEN_INTERNE",
+                            "align": "ALIGN_CENTER",
+                            "comment": "",
+                            "order": "2",
+                            "dataObject": "",
+                            "style": "SlideShow001-button",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "title": "Sign up for free",
+                                "internLink": "-1489903249",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
+                            },
+                            "events": {
+                                "onClick": "welcomeBtn()"
+                            }
+                        },
+                        "Internal_link_286": {
+                            "type": "LIEN_INTERNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "3",
+                            "dataObject": "",
+                            "style": "SlideShow001-link",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {
+                                "title": "Already have an account? Sign In",
+                                "internLink": "-1106236725",
+                                "parameters": "",
+                                "Target": "blank",
+                                "frame": "",
+                                "subStringToUnderline": ""
+                            },
+                            "events": {}
+                        },
+                        "Container_42": {
+                            "type": "COMPOSANT",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "4",
+                            "dataObject": "",
+                            "style": "container_dots",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {},
+                            "components": {
+                                "Image_568": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "0",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_1245": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "1",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_284": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "2",
+                                    "dataObject": "",
+                                    "style": "dot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "smalldot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                },
+                                "Image_112": {
+                                    "type": "PHOTO_ADAPTATIVE",
+                                    "align": "ALIGN_LEFT",
+                                    "comment": "",
+                                    "order": "3",
+                                    "dataObject": "",
+                                    "style": "bigdot",
+                                    "styleSelection": "",
+                                    "dynamic": "false",
+                                    "custom": {
+                                        "srcImg": "bigdot.png",
+                                        "async": "false"
+                                    },
+                                    "events": {}
+                                }
+                            }
+                        },
+                        "Spacer_1": {
+                            "type": "SAUT_DE_LIGNE",
+                            "align": "ALIGN_LEFT",
+                            "comment": "",
+                            "order": "5",
+                            "dataObject": "",
+                            "style": "SlideShow001-spacer",
+                            "styleSelection": "",
+                            "dynamic": "false",
+                            "custom": {},
+                            "events": {}
+                        }
+                    }
                 }
             }
-        },
-        "Spacer_330": {
-            "type": "SAUT_DE_LIGNE",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "2",
-            "dataObject": "",
-            "style": "",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {}
-        },
-        "Image_654": {
-            "type": "PHOTO_ADAPTATIVE",
-            "align": "ALIGN_CENTER",
-            "comment": "",
-            "order": "3",
-            "dataObject": "",
-            "style": "hr",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {
-                "srcImg": "hr.png",
-                "async": "false"
-            },
-            "events": {}
-        },
-        "Internal_link_331": {
-            "type": "LIEN_INTERNE",
-            "align": "ALIGN_CENTER",
-            "comment": "",
-            "order": "4",
-            "dataObject": "",
-            "style": "link",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {
-                "title": "Sign Up! It’s free and always will be.",
-                "internLink": "-1489903249",
-                "parameters": "",
-                "Target": "blank",
-                "frame": "",
-                "subStringToUnderline": ""
-            },
-            "events": {}
-        },
-        "Spacer_286": {
-            "type": "SAUT_DE_LIGNE",
-            "align": "ALIGN_LEFT",
-            "comment": "",
-            "order": "5",
-            "dataObject": "",
-            "style": "",
-            "styleSelection": "",
-            "dynamic": "false",
-            "custom": {},
-            "events": {}
         }
     },
-    "events": {}
+    "events": {
+        "onLoad": "animateWelcome()"
+    }
 }
